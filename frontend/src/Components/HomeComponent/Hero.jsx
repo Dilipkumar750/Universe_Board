@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import forklift from '../../assets/forklift.jpeg';
 import logo from '../../assets/logo.png';
 import hero from '../../assets/hero.png';
-import swiper1 from '../../assets/swiper1.jpeg';
-import swiper2 from '../../assets/swiper2.png';
-import swiper3 from '../../assets/swiper3.jpeg';
+import swiper1 from '../../assets/swiper1.jpg';
+import swiper2 from '../../assets/swiper2.jpg';
+import swiper3 from '../../assets/swiper3.jpg';
 import swiper4 from '../../assets/swiper8.jpg';
-import swiper5 from '../../assets/swiper5.png';
+import swiper5 from '../../assets/projector1.jpg';
 import swiper6 from '../../assets/swiper6.png';
 import swiper7 from '../../assets/swiper7.png';
 
@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex md:h-[400px] md:w-[450px] p-2  flex-col" data-aos="fade-left">
+        <div className="hidden md:flex md:h-[400px] md:w-[550px] p-2  flex-col" data-aos="fade-left">
           {/* Custom carousel with automatic scroll */}
           <div className="relative w-full h-full overflow-hidden rounded-lg p-1"> {/* Added padding here */}
             {swiperImages.map((image, index) => (
