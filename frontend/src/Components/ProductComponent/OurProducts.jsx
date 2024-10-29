@@ -123,25 +123,18 @@ const CategorySection = () => {
   return (
     <div className="h-full">
       <div
-        className="relative text-black py-16 px-8 font-sans bg-white sm:bg-cover sm:bg-center"
+        className="relative text-black py-8 px-8 font-sans bg-white sm:bg-cover sm:bg-center"
         style={{ backgroundImage: `url(${productImage})` }}>
-        <div className="container flex gap-4 items-center">
-          <div className=" md:text-left">
-            <h2 className="text-3xl mb-4 font-bold text-white-500">
+        <div className="flex justify-between items-center">
+          <div className=" md:text-left w-96">
+            <h2 className="text-2xl mb-4 font-bold text-white-500">
               Transform Your Learning Environment with Universe Educational
               Visuals
             </h2>
-            <p className="text-base text-blue font-bold text-justify">
-              Discover our extensive range of educational tools, including
-              interactive boards, smart boards, projectors, ceramic and magnetic
-              writing boards, display boards with stands, notice boards, welcome
-              boards with gold frames, sliding glass door notice boards, key
-              boards, maps and charts, and more. Enhance your classroom
-              experience with our innovative solutions!
-            </p>
+            <p className="text-base text-blue font-bold text-justify leading-5">Explore our range of educational tools, from interactive and smart boards to projectors and notice boards. Enhance your classroom experience with innovative solutions and engaging displays. Transform your teaching with our extensive offerings!</p>
           </div>
 
-          <div className="w-full">
+          <div className="w-fit">
             <Link to={"/Contact"}>
               <button
                 type="button"
@@ -210,7 +203,7 @@ const CategorySection = () => {
           </div>
 
           <div className=" md:col-span-2 h-fit gap-6">
-            {/* {Products?.length === 0 ? (
+            {Products?.length === 0 ? (
               <div className="text-center text-red-600">
                 No products available.
               </div>
@@ -230,8 +223,7 @@ const CategorySection = () => {
                   })
                 )}
               </>
-            )} */}
-            <ProductDetails />
+            )}
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import medical from '../../assets/medical.png';
 
 const InputField = ({ label, type, placeholder }) => (
   <div>
-    <label className="text-gray-800 text-sm block mb-2">{label}</label>
+    <label className="text-gray-200 text-sm block mb-2">{label}</label>
     <input
       type={type}
       placeholder={placeholder}
@@ -30,9 +30,17 @@ const Contact = () => {
   return (
     <div className="font-[sans-serif]">
 
-      <div className="bg-gradient-to-r from-blue-700 to-blue-300 w-full h-80">
-        <img src={packing} alt="Banner Image" className="w-full h-full object-cover" />
-      </div>
+<div
+  className="bg-gradient-to-r from-blue-700 to-blue-300 w-full h-80"
+  style={{
+    backgroundImage: `url(${packing})`,
+    backgroundSize: 'cover',
+    backgroundPosition: `center 1250px`,
+  }}
+>
+  {/* <img src={packing} alt="Banner Image" className="w-full h-full object-cover " /> */}
+</div>
+
 
       <div className="-mt-16 mb-6 px-4">
         <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-black rounded-md">

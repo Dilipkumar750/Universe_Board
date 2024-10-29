@@ -1,6 +1,5 @@
 import React from "react";
 import vector from "../../assets/vector.jpg";
-import experts from "../../assets/experts.png";
 import { Link } from "react-router-dom";
 import industry from "../../assets/industry.jpg";
 
@@ -14,7 +13,7 @@ const Innovation = () => {
               <img
                 alt=""
                 src={industry}
-                className="absolute inset-0 h-full w-full object-cover rounded-3xl"
+                className="absolute inset-0 h-full w-full object-cover md:rounded-3xl"
                 data-aos="fade-right"
               />
             </div>
