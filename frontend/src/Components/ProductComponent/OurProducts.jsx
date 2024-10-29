@@ -11,40 +11,37 @@ const categories = {
     "Interactive Flat Panel",
     "Led Touch Screen Interactive Board",
     "Interactive Whiteboard Smart Classroom Set",
-    "Smart Class Speaker"
+    "Smart Class Speaker",
   ],
   "Writing Boards": [
     "Magnetic White Marker Writing Board",
     "Ceramic Green Chalk Writing Board",
     "E3 Ceramic Whiteboard 8X4FT",
-    "Ceramic White Marker Writing Board"
+    "Ceramic White Marker Writing Board",
   ],
   "Display Boards": [
     "Pin Up Notice Boards",
     "Welcome Board",
     "Exhibition Display Boards",
-    "Lobby Information Board"
+    "Lobby Information Board",
   ],
   "Classroom Furniture": [
     "Two Seating Classroom Desk",
     "SS Steel Desk Bench",
     "School Chair & Desks",
-    "Single Seating Desk"
+    "Single Seating Desk",
   ],
-  "Stands For Display Board": [
-    "Four Leg Display Stand",
-    "Map Storage Stand"
-  ],
+  "Stands For Display Board": ["Four Leg Display Stand", "Map Storage Stand"],
   "Digital Podium": [],
   "Combination Boards": [
     "Green Board with Notice/Pinup Board",
-    "Whiteboard and Notice Board"
+    "Whiteboard and Notice Board",
   ],
   "Glass Covered Notice Boards": [
     "Notice Board With Wooden Frame",
-    "Notice Board with Sliding Door"
+    "Notice Board with Sliding Door",
   ],
-  "Projectors": [
+  Projectors: [
     "Benq",
     "EPSON",
     "HITACHI",
@@ -52,46 +49,23 @@ const categories = {
     "LG",
     "DELL",
     "PANASONIC",
-    "INFOCUS"
+    "INFOCUS",
   ],
   "Schedule Planning Boards": [
     "Weekly Planner",
-    "Monthly Planner Display Board"
+    "Monthly Planner Display Board",
   ],
-  "Sign Boards": [
-    "Lactern Podium",
-    "Fixograph Letter Boards"
-  ],
-  "Projector Screens": [
-    "Whiteboard Projector Screen"
-  ],
-  "Sliding Glass Notice Boards": [
-    "Notice Board With Glass Door"
-  ],
-  "Kids Indoor Game Equipment": [
-    "Indoor Slide"
-  ],
-  "Display Board Accessories": [
-    "Magnetic Letters"
-  ],
-  "Digital Classroom Solutions": [
-    "Digital Classroom Solutions"
-  ],
-  "Outdoor Play Equipments": [
-    "Multiplay system"
-  ],
-  "Digital Projectors": [
-    "BenQ MX808PST Digital Projector"
-  ],
-  "Keyring Display Cabinets": [
-    "Key cabinets"
-  ],
-  "Outdoor Playground Equipment": [
-    "Kids play equipment"
-  ],
-  "Facilities": [
-    "Digital Library"
-  ]
+  "Sign Boards": ["Lactern Podium", "Fixograph Letter Boards"],
+  "Projector Screens": ["Whiteboard Projector Screen"],
+  "Sliding Glass Notice Boards": ["Notice Board With Glass Door"],
+  "Kids Indoor Game Equipment": ["Indoor Slide"],
+  "Display Board Accessories": ["Magnetic Letters"],
+  "Digital Classroom Solutions": ["Digital Classroom Solutions"],
+  "Outdoor Play Equipments": ["Multiplay system"],
+  "Digital Projectors": ["BenQ MX808PST Digital Projector"],
+  "Keyring Display Cabinets": ["Key cabinets"],
+  "Outdoor Playground Equipment": ["Kids play equipment"],
+  Facilities: ["Digital Library"],
 };
 
 const CategorySection = () => {
@@ -134,11 +108,11 @@ const CategorySection = () => {
     setOpenCategory(openCategory === category ? null : category);
     setSelectedCategory(category);
     setSelectedSubCategory(null);
-    setShowProductDetails(false)
+    setShowProductDetails(false);
   };
 
   const handleSubCategory = (subCategory) => {
-    setShowProductDetails(false)
+    setShowProductDetails(false);
     setSelectedSubCategory(subCategory);
   };
 
@@ -147,25 +121,27 @@ const CategorySection = () => {
   }, [dispatch]);
 
   return (
-    <div className="h-full mb-10">
+    <div className="h-full">
       <div
         className="relative text-black py-16 px-8 font-sans bg-white sm:bg-cover sm:bg-center"
-        style={{ backgroundImage: `url(${productImage})` }}
-        >
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-x-6 gap-y-8">
-          <div className="md:w-2/5 md:text-left">
+        style={{ backgroundImage: `url(${productImage})` }}>
+        <div className="container flex gap-4 items-center">
+          <div className=" md:text-left">
             <h2 className="text-3xl mb-4 font-bold text-white-500">
-              Elevate Your Business with Quality Machinery
+              Transform Your Learning Environment with Universe Educational
+              Visuals
             </h2>
-            <p className="text-base text-blue font-bold">
-              Explore our premium range of forklifts and medical machinery
-              designed to enhance your productivity and efficiency. Enroll now
-              to access exclusive offers and expert advice on the right
-              equipment for your needs!
+            <p className="text-base text-blue font-bold text-justify">
+              Discover our extensive range of educational tools, including
+              interactive boards, smart boards, projectors, ceramic and magnetic
+              writing boards, display boards with stands, notice boards, welcome
+              boards with gold frames, sliding glass door notice boards, key
+              boards, maps and charts, and more. Enhance your classroom
+              experience with our innovative solutions!
             </p>
           </div>
 
-          <div className="md:w-1/2 flex">
+          <div className="w-full">
             <Link to={"/Contact"}>
               <button
                 type="button"
@@ -180,8 +156,8 @@ const CategorySection = () => {
         {/* <h2 className="text-3xl text-white font-bold text-center mt-10">
           Product Categories
         </h2> */}
-        <div className="mt-6 flex flex-col md:flex-row">
-          <div className="sm:sticky top-2 h-full w-full md:w-1/4 md:mr-10 bg-pink shadow-md">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="md:sticky top-2 h-full w-full md:mr-10 bg-pink shadow-md">
             <div className="border-b border-green">
               <h2 className="px-4 py-2 bg-slate-800 ">
                 <button
@@ -233,8 +209,8 @@ const CategorySection = () => {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-center md:w-3/4 h-fit gap-6">
-            {Products?.length === 0 ? (
+          <div className=" md:col-span-2 h-fit gap-6">
+            {/* {Products?.length === 0 ? (
               <div className="text-center text-red-600">
                 No products available.
               </div>
@@ -244,11 +220,18 @@ const CategorySection = () => {
                   <ProductDetails />
                 ) : (
                   Products?.map((product, index) => {
-                    return <ProductCard key={index} setShowProductDetails={setShowProductDetails} product={product} />;
+                    return (
+                      <ProductCard
+                        key={index}
+                        setShowProductDetails={setShowProductDetails}
+                        product={product}
+                      />
+                    );
                   })
                 )}
               </>
-            )}
+            )} */}
+            <ProductDetails />
           </div>
         </div>
       </div>

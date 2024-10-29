@@ -8,27 +8,26 @@ import experts1 from '../../assets/experts 1.jpg';
 import { Link } from 'react-router-dom'
 const MainProducts = () => {
   const products = [
-    { image: graining, title: 'Graining Processing Machine', description: 'Efficient graining process for higher output.' },
-    { image: agri, title: 'Agricultural Machinery', description: 'Innovative  for advanced farming.' },
-    { image: amusement, title: 'Amusement Rides', description: 'High-quality, safe amusement rides.' },
-    { image: forklift, title: 'Forklift Machines', description: 'Heavy-duty forklifts for industrial use.' },
+    { image: graining, title: 'Projector', description: 'We Are Selling Top Brand Projectors.Like, Benq, Epson, Hitachi, Sony, Lg,Dell, Panasonic, Infocus' },
+    { image: agri, title: 'Whiteboard Projector Screen', description: 'Elevate your presentations with our Projector Screen with Whiteboard, ideal for education, seminars, and conferences.' },
+    { image: amusement, title: 'Kids indoor game equipment', description: 'Prominent & Leading Manufacturer from Tiruchirappalli, we offer indoor slide.' },
   ];
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-black">
+    <div className="flex flex-col items-center min-h-screen bg-black py-5">
    
       <h2 className="text-4xl font-bold mb-8 text-orange-500">Major Products</h2>
 
      
-      <div className="flex flex-wrap justify-center gap-6 b" data-aos="fade-down">
+      <div className="grid md:grid-cols-3 gap-6 b" data-aos="fade-down">
         {products.map((product, index) => (
           <div
             key={index}
             className="bg-white shadow-md rounded-xl w-80 border border-orange-500"
           >
-            <div className="p-4 text-center">
+            <div className="p-4 text-center h-32">
               <h3 className="text-lg font-semibold">{product.title}</h3>
-              <p className="text-sm text-gray-600 mt-2 w-full">{product.description}</p>
+              <p className="text-sm text-gray-600 mt-2">{product.description}</p>
             </div>
             <div className="overflow-hidden rounded-t-xl h-64 group p-3 rounded-sm">
               <img
@@ -42,7 +41,7 @@ const MainProducts = () => {
             <div className="flex justify-center p-4">
 
               <a href='https://wa.me/8048955493'>
-                <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                <button className="bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-slate-600">
                   Chat Now..
                 </button>
               </a>
@@ -51,33 +50,33 @@ const MainProducts = () => {
           </div>
         ))}
       </div>
-      <div class=" font-[sans-serif] relative mx-auto rounded overflow-hidden mt-4 w-full bg-black">
+      <div className=" font-[sans-serif] relative mx-auto rounded overflow-hidden mt-4 w-full bg-black">
 
-        <div class="flex flex-col sm:flex-row items-center gap-10 py-10 border-y-8 border-orange-400">
+        <div className="flex flex-col sm:flex-row items-center gap-10 py-10 border-y-8 border-orange-400">
 
 
-          <div class="flex justify-center sm:justify-start w-full sm:w-auto" data-aos="fade-right">
-            <img src={experts} class="h-64 w-64 rounded-full object-cover border-4 border-white" alt="machinery image" />
+          <div className="flex justify-center sm:justify-start w-full sm:w-auto" data-aos="fade-right">
+            <img src={experts} className="h-64 w-64 rounded-full object-cover border-4 border-white" alt="machinery image" />
           </div>
 
 
-          <div class="text-center px-6 sm:flex-1" data-aos="fade-up">
-            <h3 class="font-extrabold text-5xl text-orange-500 leading-tight">
-              <span class="text-white">Precision</span> Machinery Manufacturing
+          <div className="text-center px-6 sm:flex-1" data-aos="fade-up">
+            <h3 className="font-extrabold text-5xl text-orange-500 leading-tight">
+              <span className="text-white">Precision</span> Machinery Manufacturing
             </h3>
-            <h6 class="text-2xl text-white mt-2">Quality You Can Trust</h6>
-            <p class="text-white text-base leading-relaxed mt-4">
+            <h6 className="text-2xl text-white mt-2">Quality You Can Trust</h6>
+            <p className="text-white text-base leading-relaxed mt-4">
               Delivering high-performance machinery built with precision engineering. Our manufacturing process ensures durability, efficiency, and innovative design for industrial excellence.
             </p>
 
             <Link to={"/Contact"}>
-              <button type="button" class="bg-gradient-to-r from-white to-white hover:bg-white-500 text-black tracking-wide font-semibold text-sm py-3 px-6 rounded-lg w-max mt-8">
+              <button type="button" className="bg-gradient-to-r from-white to-white hover:bg-white-500 text-black tracking-wide font-semibold text-sm py-3 px-6 rounded-lg w-max mt-8">
                 Explore Our Machines
               </button>
             </Link>
           </div>
-          <div class="flex justify-center sm:justify-end w-full sm:w-auto" data-aos="fade-left">
-            <img src={experts1} class="h-64 w-64 rounded-full object-cover border-4 border-white" alt="machinery image" />
+          <div className="flex justify-center sm:justify-end w-full sm:w-auto" data-aos="fade-left">
+            <img src={experts1} className="h-64 w-64 rounded-full object-cover border-4 border-white" alt="machinery image" />
           </div>
 
         </div>
