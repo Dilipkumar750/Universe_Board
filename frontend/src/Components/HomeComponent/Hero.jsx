@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import forklift from '../../assets/forklift.jpeg';
 import logo from '../../assets/logo.png';
-import hero from '../../assets/hero.png';
+import hero from '../../assets/hero.jpg';
 import swiper1 from '../../assets/swiper1.jpg';
 import swiper2 from '../../assets/swiper2.jpg';
 import swiper3 from '../../assets/swiper3.jpg';
-import swiper4 from '../../assets/swiper8.jpg';
+import swiper4 from '../../assets/swiper8.png';
 import swiper5 from '../../assets/projector1.jpg';
-import swiper6 from '../../assets/swiper6.png';
+import swiper6 from '../../assets/swiper6.jpg';
 import swiper7 from '../../assets/swiper7.png';
 
 const swiperImages = [hero, swiper1, swiper2, swiper3, swiper4, swiper5, swiper6, swiper7];

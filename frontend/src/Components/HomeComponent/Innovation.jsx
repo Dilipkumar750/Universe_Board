@@ -20,15 +20,15 @@ const Innovation = () => {
             </div>
           </div>
 
-          <div className="relative flex items-center bg-gray-100 md:rounded-r-3xl">
-            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100 md:rounded-l-3xl"></span>
+          <div className="relative flex items-center bg-black md:rounded-r-3xl">
+            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-black md:rounded-l-3xl"></span>
 
             <div className="p-5 sm:p-16 lg:p-24" data-aos="fade-left">
-              <h2 className="text-2xl font-bold sm:text-3xl">
+              <h2 className="text-2xl font-bold sm:text-3xl text-white">
                 Our Educational Tools in Action: Real Success Stories
               </h2>
 
-              <p className="mt-4 text-gray-600 text-justify">
+              <p className="mt-4 text-white text-justify">
                 At Universe Educational Visuals, innovation drives everything we
                 create. We offer a wide range of products, including smart
                 boards, projectors, and various writing boards—both ceramic and
