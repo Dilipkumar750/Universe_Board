@@ -1,0 +1,1 @@
+// export const BASE_URL="https://gravity-global-exports-do75.onrender.com"
