@@ -8,6 +8,14 @@ import vision from '../../assets/vision.jpg'
 import mission from '../../assets/mission.jpg'
 import selling from '../../assets/selling.jpg'
 import { Link } from 'react-router-dom';
+import CompanyProfile from './CompanyProfile';
+import WarehousingPackaging from './WarehousingPackaging';
+
+
+
+
+
+
 
 // Example products array with correct image references
 const products = [
@@ -32,8 +40,8 @@ const About = () => {
           </p>
           <Link to={"/Contact"}>
             <button type="button" className="bg-black border-2 mt-12 text-white font-bold text-sm rounded-xl px-6 py-2.5 item-center">Get Started</button>
-          </Link>      
-            </div>
+          </Link>
+        </div>
 
         <div className="lg:h-[480px] flex items-center" data-aos="fade-left">
           <img src={about} className="w-full h-full  rounded-3xl p-2" alt="About Our Company" />
@@ -41,9 +49,9 @@ const About = () => {
       </div>
 
       <div className="flex flex-col bg-black items-center mt-5 mb-5 p-4">
-       
+
         <h1 className='text-3xl font-bold mb-4 text-center text-orange-500'>Our Famous Products</h1>
-        
+
         <div className="flex flex-wrap justify-center gap-6" data-aos="fade-up">
           {products.map((product, index) => (
             <div
@@ -72,61 +80,64 @@ const About = () => {
           We prioritize clear communication, effective resource allocation, and timely delivery to meet client expectations.
           With a focus on innovation and quality, we drive successful project outcomes. Our dedicated team works closely
           with clients to achieve their goals on time and within budget.
-        </p> 
+        </p>
       </div>
       <div className='bg-black'>
-      <div className="mt-8 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-      
-        <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
-         
-          <div className="lg:w-3/4 p-4 lg:text-left text-center" data-aos="fade-right">
-            <h1 className="text-3xl font-bold mb-4 text-orange-500">Vision</h1>
-            <p className='text-xl text-justify text-white'>
-              Our vision is to be a global leader in delivering innovative and sustainable solutions. We aim to empower businesses to achieve excellence while driving positive change worldwide, creating a lasting impact for future generations.
-            </p>
-          </div>
-         
-          <div className="lg:w-1/2 p-4 flex justify-center">
-            <img src={vision} alt="Vision Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-left" />
-          </div>
-        </div>
+        <div className="mt-8 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
 
-      
-        <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between mb-8">
-          
-          <div className="lg:w-3/4 p-4 lg:text-right text-center" data-aos="fade-left">
-            <h1 className="text-3xl font-bold mb-4 text-orange-500">Mission</h1>
-            <p className='text-xl text-justify text-white'>
-              Our mission is to provide top-quality services and products through cutting-edge technology, expert collaboration, and customer-centric approaches. We aim to build lasting partnerships, enhance global connectivity, and contribute to sustainable growth for our clients and communities.
-            </p>
-          </div>
-          
-          <div className="lg:w-1/2 p-4 flex justify-center" data-aos="fade-right">
-            <img src={mission} alt="Mission Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-right" />
-          </div>
-        </div>
+          <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
 
-      
-        <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
-         
-          <div className="lg:w-3/4 p-4 lg:text-left text-center" data-aos="fade-right">
-            <h1 className="text-3xl font-bold mb-4 text-orange-500">Selling</h1>
-            <p className='text-xl text-justify text-white'>
-              We specialize in sourcing and customizing a wide range of products, including machinery, spare parts, and various online categories, tailored to meet customer requirements. Our expertise spans imports from China, India, Taiwan, and Thailand. We ensure high-quality products that align with your specifications. Let us handle your sourcing needs with precision and reliability.
-            </p>
+            <div className="lg:w-3/4 p-4 lg:text-left text-center" data-aos="fade-right">
+              <h1 className="text-3xl font-bold mb-4 text-orange-500">Vision</h1>
+              <p className='text-xl text-justify text-white'>
+              Universe Educational Visuals envisions being a global leader in providing premium, innovative, and reliable educational and display products. Our goal is to empower institutions, corporate entities, and homes worldwide by offering solutions that enhance visual communication, enrich learning experiences, and inspire environments to foster creativity and productivity.
+              </p>
+            </div>
+
+            <div className="lg:w-1/2 p-4 flex justify-center">
+              <img src={vision} alt="Vision Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-left" />
+            </div>
           </div>
-         
-          <div className="lg:w-1/2 p-4 flex justify-center">
-            <img src={selling} alt="Selling Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-left" />
+
+
+          <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between mb-8">
+
+            <div className="lg:w-3/4 p-4 lg:text-right text-center" data-aos="fade-left">
+              <h1 className="text-3xl font-bold mb-4 text-orange-500">Mission</h1>
+              <p className='text-xl text-justify text-white'>
+              Our mission is to consistently deliver quality products that exceed client expectations through a commitment to excellence, reliability, and innovation. By working closely with reputable vendors and maintaining a strong distribution network, we aim to ensure our clients have seamless access to world-class display and communication solutions, meeting their unique needs in both national and international markets.
+              </p>
+            </div>
+
+            <div className="lg:w-1/2 p-4 flex justify-center" data-aos="fade-right">
+              <img src={mission} alt="Mission Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-right" />
+            </div>
+          </div>
+
+
+          <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
+
+            <div className="lg:w-3/4 p-4 lg:text-left text-center" data-aos="fade-right">
+              <h1 className="text-3xl font-bold mb-4 text-orange-500">Value</h1>
+              <p className='text-xl text-justify text-white'>
+              Guided by integrity, customer satisfaction, and a commitment to quality, we value strong partnerships and innovation. We continually strive to build lasting relationships with our clients and partners, driven by the inspiring leadership of Mrs. Meena Harikrishnan. Her vision of excellence fuels our dedication to setting new standards and leading the industry in delivering exceptional products and experiences.
+              </p>
+            </div>
+
+            <div className="lg:w-1/2 p-4 flex justify-center">
+              <img src={selling} alt="Selling Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-left" />
+            </div>
+
           </div>
         </div>
       </div>
-      </div>
 
-
+      <CompanyProfile />
+      <WarehousingPackaging />
 
 
     </div>
+
   );
 };
 
