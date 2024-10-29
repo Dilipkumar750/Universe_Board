@@ -18,7 +18,7 @@ const Home = () => {
         <>
             <Hero />
             <Innovation />
-            <Turnover/>
+            {/* <Turnover/> */}
             <MainProducts />
         </>
     )
