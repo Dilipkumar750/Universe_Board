@@ -18,7 +18,7 @@ const ColorFoot = () => (
             <a
               href="#"
               aria-label="Facebook"
-              className="text-white hover:bg-gray-300">
+              className="text-white text-2xl hover:bg-gray-300">
               <SiFacebook />
             </a>
           </li>
@@ -26,7 +26,7 @@ const ColorFoot = () => (
             <a
               href="#"
               aria-label="Instagram"
-              className="text-white hover:bg-gray-300">
+              className="text-white text-2xl hover:bg-gray-300">
               <FaInstagram />
             </a>
           </li>
@@ -34,7 +34,7 @@ const ColorFoot = () => (
             <a
               href="#"
               aria-label="YouTube"
-              className="text-white hover:bg-gray-300">
+              className="text-white text-2xl hover:bg-gray-300">
               <FaYoutube />
             </a>
           </li>
@@ -42,7 +42,7 @@ const ColorFoot = () => (
             <a
               href="https://wa.me/8048955493"
               aria-label="WhatsApp"
-              className="text-white hover:bg-gray-300">
+              className="text-white text-2xl hover:bg-gray-300">
               <FaWhatsapp />
             </a>
           </li>

@@ -1,10 +1,10 @@
 import React from 'react';
 import agri from '../../assets/agri.jpg';
-import amusement from '../../assets/amusement.jpeg';
+import amusement from '../../assets/amusement (1).jpeg';
 import graining from '../../assets/graining.jpeg';
 import forklift from '../../assets/forklift 1.jpg';
-import experts from '../../assets/experts.png';
-import experts1 from '../../assets/experts 1.jpg';
+import experts from '../../assets/experts.jpg';
+import experts1 from '../../assets/pordium.jpg';
 import { Link } from 'react-router-dom'
 const MainProducts = () => {
   const products = [
@@ -61,17 +61,15 @@ const MainProducts = () => {
 
 
           <div className="text-center px-6 sm:flex-1" data-aos="fade-up">
-            <h3 className="font-extrabold text-5xl text-orange-500 leading-tight">
-              <span className="text-white">Precision</span> Machinery Manufacturing
+            <h3 className="font-extrabold text-5xl text-white leading-tight">
+            Universal Boards
             </h3>
             <h6 className="text-2xl text-white mt-2">Quality You Can Trust</h6>
-            <p className="text-white text-base leading-relaxed mt-4">
-              Delivering high-performance machinery built with precision engineering. Our manufacturing process ensures durability, efficiency, and innovative design for industrial excellence.
-            </p>
+            <p className="text-white text-base leading-relaxed mt-4">Providing high-quality school equipment crafted for durability and functionality. From boards and chairs to podiums and kids' play area items, our products are designed to support educational excellence and enhance learning environments.</p>
 
             <Link to={"/Contact"}>
               <button type="button" className="bg-gradient-to-r from-white to-white hover:bg-white-500 text-black tracking-wide font-semibold text-sm py-3 px-6 rounded-lg w-max mt-8">
-                Explore Our Machines
+                Explore
               </button>
             </Link>
           </div>
