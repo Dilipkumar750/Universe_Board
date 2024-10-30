@@ -30,16 +30,16 @@ const Contact = () => {
   return (
     <div className="font-[sans-serif]">
 
-<div
-  className="bg-gradient-to-r from-blue-700 to-blue-300 w-full h-80"
-  style={{
-    backgroundImage: `url(${packing})`,
-    backgroundSize: 'cover',
-    backgroundPosition: `center 1250px`,
-  }}
->
-  {/* <img src={packing} alt="Banner Image" className="w-full h-full object-cover " /> */}
-</div>
+      <div
+        className="bg-gradient-to-r from-blue-700 to-blue-300 w-full h-96"
+        style={{
+          backgroundImage: `url(${packing})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+      </div>
+
 
 
       <div className="-mt-16 mb-6 px-4">
@@ -56,9 +56,9 @@ const Contact = () => {
               </p>
               <p className="mt-4 font-semibold text-orange-500">Address:</p>
               Universe Educational Visuals<br />
-              9/W, 1A, Akilandeswari Nagar,<br/>
-               Canara Bank Colony,Ammapatti Salai, <br/>
-               Thuraiyur, Dhan Lakshmi Nagar<br/>
+              9/W, 1A, Akilandeswari Nagar,<br />
+              Canara Bank Colony,Ammapatti Salai, <br />
+              Thuraiyur, Dhan Lakshmi Nagar<br />
               Tiruchirappalli - 621010, Tamil Nadu.
               <p className="mt-4 font-semibold text-orange-500">Phone:</p>
               <p>+8048955493</p>
