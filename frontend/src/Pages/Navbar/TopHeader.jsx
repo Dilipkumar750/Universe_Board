@@ -7,15 +7,15 @@ function TopHeader() {
     <section className="d-flex flex-column flex-md-row align-items-center justify-content-between bg-black text-white py-2 px-3">
       <div className="d-flex align-items-center mb-2 mb-md-0 ms-md-3">
         <i className="fa-solid fa-envelope pe-2"></i>
-        <a href="mailto:info@gravityglobalexports.com" className="text-white">
-          info@gravityglobalexports.com
+        <a href="mailto:info@universeeducationalvisuals.com" className="text-white">
+               info@universeeducationalvisuals.com
         </a>
       </div>
 
 
       <div className="d-flex align-items-center mb-2 mb-md-0 ms-md-3">
-        <a href="tel:+8048955493" className="text-white">
-          +8048955493
+        <a href="tel:8048955493" className="text-white">
+          8048955493
         </a>
       </div>
 
