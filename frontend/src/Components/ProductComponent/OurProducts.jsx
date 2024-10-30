@@ -7,6 +7,7 @@ import ProductCard from "./ProductCard";
 import ProductDetails from "./ProductDetails";
 
 const categories = {
+  "Digital Podium": [],
   "Interactive ClassroomSolution": [
     "Interactive Flat Panel",
     "Led Touch Screen Interactive Board",
@@ -32,7 +33,6 @@ const categories = {
     "Single Seating Desk",
   ],
   "Stands For Display Board": ["Four Leg Display Stand", "Map Storage Stand"],
-  "Digital Podium": [],
   "Combination Boards": [
     "Green Board with Notice/Pinup Board",
     "Whiteboard and Notice Board",
