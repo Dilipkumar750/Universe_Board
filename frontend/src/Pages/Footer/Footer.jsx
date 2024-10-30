@@ -47,8 +47,8 @@ const ColorFoot = () => (
             </a>
           </li>
         </ul>
-        <address className="font-bold text-white text-sm">
-          Universe Educational Visuals
+        <address className="font-bold text-white text-sm space-y-1">
+          <span className="text-orange-600 font-bold text-2xl">Universe Educational Visuals</span>
           <br />
           9/W, 1A, Akilandeswari Nagar,
           <br />
@@ -58,6 +58,7 @@ const ColorFoot = () => (
           <br />
           Tiruchirappalli - 621010, Tamil Nadu.
         </address>
+
       </div>
 
       <div>
@@ -152,7 +153,7 @@ const ColorFoot = () => (
             <a
               href="mailto:info@universeeducationalvisuals.com"
               className="text-white hover:text-green-300 text-sm">
-                   info@universeeducationalvisuals.com
+              info@universeeducationalvisuals.com
             </a>
           </li>
           <li>
