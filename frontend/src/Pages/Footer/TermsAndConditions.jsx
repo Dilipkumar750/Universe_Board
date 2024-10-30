@@ -142,7 +142,7 @@ const TermsAndConditions = () => {
           <br />
           Phone: +91 80489 55493
           <br />
-          Email: info@gravityglobalexports.com
+          Email: info@universeeducationalvisuals.com
         </p>
       </div>
     </div>

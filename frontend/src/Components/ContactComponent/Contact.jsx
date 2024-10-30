@@ -63,7 +63,7 @@ const Contact = () => {
               <p className="mt-4 font-semibold text-orange-500">Phone:</p>
               <p>+8048955493</p>
               <p className="mt-4 font-semibold text-orange-500">Email:</p>
-              <p>info@gravityglobalexports.com</p>
+              <p>info@universeeducationalvisuals.com</p>
             </div>
             <div className="md:flex-1 flex justify-center">
               <img src={medical} alt="Medical Services" className="w-80 h-96" data-aos="fade-left" />
