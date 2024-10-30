@@ -52,9 +52,10 @@ const AddProduct = () => {
     setDetails(values);
   };
   const handleSubmit = () => {
-    // dispatch(addProduct({ productDetails, image, details }));
-    console.log(productDetails, image, details);
+    // console.log(productDetails, image, details); // Log values
+    dispatch(addProduct({ productDetails, image, details }));
   };
+  
 
   const categories = {
     "Interactive ClassroomSolution": [

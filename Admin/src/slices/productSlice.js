@@ -41,7 +41,7 @@ export const getImageUrl = (filename) => {
 
 export const updateProduct = createAsyncThunk(
   "product/updateProduct",
-  async ({ productDetails,image}, { rejectWithValue }) => {
+  async ({ productDetails,image,details}, { rejectWithValue }) => {
     const { _id, category, subCategory, title, description } = productDetails;
     const formData = new FormData();
     formData.append("category", category);
@@ -49,6 +49,7 @@ export const updateProduct = createAsyncThunk(
     formData.append("title", title);
     formData.append("description", description);
     formData.append("file", image);
+    formData.append("details", JSON.stringify(details));
     try {
       const response = await axios.post(
         `${BASE_URL}/product/update_product/${_id}`,
@@ -101,13 +102,14 @@ export const deleteProduct = createAsyncThunk(
 
 export const addProduct = createAsyncThunk(
   "product/addProduct",
-  async ({ productDetails, image }, { rejectWithValue }) => {
+  async ({ productDetails, image,details }, { rejectWithValue }) => {
     const { category, subCategory, title, description } = productDetails;
     const formData = new FormData();
     formData.append("category", category);
     formData.append("subCategory", subCategory);
     formData.append("title", title);
     formData.append("description", description);
+    formData.append("details", JSON.stringify(details));
     formData.append("file", image);
     try {
       const response = await axios.post(

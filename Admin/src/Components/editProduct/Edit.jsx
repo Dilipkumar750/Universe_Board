@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { getImageUrl, getOneProduct, updateProduct } from "../../slices/productSlice";
 import { useParams, useNavigate } from "react-router-dom";
 
-
 const Edit = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -18,113 +17,104 @@ const Edit = () => {
     _id: "",
     title: "",
     description: "",
-    image: "", 
+    image: "",
     category: "",
     subCategory: "",
   });
+  const [details, setDetails] = useState([{ name: "", value: "" }]); // New state for product details
+
 
   const categories = {
-    "All Category": [],
-    Forklift: [],
-    "Amusement Equipment": [],
-    "Other Machinery": [],
-    "Medical Apparatus and Instruments": ["Mask machine"],
-    "Engineering Machinery": [
-      "Wood sawdust pellet heating fireplace",
-      "Wood Pellet Mill",
-      "Beach sand Cleaning Machine",
-      "Brick machine",
-      "Diesel Fan Heater",
-      "Snow thrower",
-      "Steel rebar cutting machine",
-      "Rebar Bending Machine",
-      "Stone crusher",
-      "Forklift",
-      "Lift Tables",
-      "Hoisting machinery",
-      "Loader machine",
-      "Tracked transporter",
-      "Truck crane",
-      "Tricycle",
+    "Interactive ClassroomSolution": [
+      "Interactive Flat Panel",
+      "Led Touch Screen Interactive Board",
+      "Interactive Whiteboard Smart Classroom Set",
+      "Smart Class Speaker"
     ],
-    "Food Machinery": [
-      "Juicer",
-      "Rice puffing machine",
-      "Corn popper",
-      "Popcorn Maker",
-      "Sawmill",
-      "Ice Machines",
-      "Hot dogs egg baking Machine",
-      "Donut machine",
-      "Vegetable cutter",
-      "Starch separator",
-      "Ice cream machine",
-      "Bread machine",
-      "Oil press",
+    "Writing Boards": [
+      "Magnetic White Marker Writing Board",
+      "Ceramic Green Chalk Writing Board",
+      "E3 Ceramic Whiteboard 8X4FT",
+      "Ceramic White Marker Writing Board"
     ],
-    "Electric Motorcycle": [],
-    "Ranch Machinery": ["Sheep shears"],
-    "Packaging Machine": [
-      "Vacuum Packing Machines",
-      "Small Sealing Machine",
-      "Other packing machine",
+    "Display Boards": [
+      "Pin Up Notice Boards",
+      "Welcome Board",
+      "Exhibition Display Boards",
+      "Lobby Information Board"
     ],
-    "Grain Processing Machinery": [],
-    "Farm Machinery": [
-      "Stump grinder",
-      "Animal Feeders",
-      "Plucker",
-      "Egg Incubators",
-      "Other Farm Machines",
+    "Classroom Furniture": [
+      "Two Seating Classroom Desk",
+      "SS Steel Desk Bench",
+      "School Chair & Desks",
+      "Single Seating Desk"
     ],
-    "Animal Husbandry Machinery": [],
-    "Tools": [],
-    "Agricultural Product Processing Machinery": [],
-    "Garden Tool": [],
-    "Cultivator": [],
-    "Surface Drill": ["Excavator"],
-    "Rubber V Belt and Timing Belts": [
-      "Agricultural machinery Belt",
-      "PK Belts",
-      "Automotive timing Belt",
-      "Industrial timing Belt",
-      "Classical wrapped V belt",
-      "Narrow wrapped V belt",
-      "Multi Joint V common V belt",
-      "Conveyer Belt",
-      "Synchronous Pulley and Belt",
+    "Stands For Display Board": [
+      "Four Leg Display Stand",
+      "Map Storage Stand"
     ],
-    "Farm Implements": [
-      "Water Well Drilling Machine",
-      "Walking tractor",
-      "Tractor",
-      "Cultivator",
-      "Rice transplanter",
-      "Mini mower",
-      "Road snow sweeper",
-      "Shellers",
-      "Vegetable Seed Planter",
-      "Fertilizer Spreaders",
-      "Drum lawn Mower",
-      "Other farm machine",
-      "Balers",
-      "Wheat corn seeder",
-      "Rotary Tiller",
-      "Subsoiler",
-      "Front End Loader",
-      "Potato seeder",
-      "Tractor Trailer",
-      "Disc Harrow",
-      "Furrow Plough",
-      "Harvester",
+    "Digital Podium": [],
+    "Combination Boards": [
+      "Green Board with Notice/Pinup Board",
+      "Whiteboard and Notice Board"
     ],
-    Ungrouped: [],
+    "Glass Covered Notice Boards": [
+      "Notice Board With Wooden Frame",
+      "Notice Board with Sliding Door"
+    ],
+    "Projectors": [
+      "Benq",
+      "EPSON",
+      "HITACHI",
+      "SONY",
+      "LG",
+      "DELL",
+      "PANASONIC",
+      "INFOCUS"
+    ],
+    "Schedule Planning Boards": [
+      "Weekly Planner",
+      "Monthly Planner Display Board"
+    ],
+    "Sign Boards": [
+      "Lactern Podium",
+      "Fixograph Letter Boards"
+    ],
+    "Projector Screens": [
+      "Whiteboard Projector Screen"
+    ],
+    "Sliding Glass Notice Boards": [
+      "Notice Board With Glass Door"
+    ],
+    "Kids Indoor Game Equipment": [
+      "Indoor Slide"
+    ],
+    "Display Board Accessories": [
+      "Magnetic Letters"
+    ],
+    "Digital Classroom Solutions": [
+      "Digital Classroom Solutions"
+    ],
+    "Outdoor Play Equipments": [
+      "Multiplay system"
+    ],
+    "Digital Projectors": [
+      "BenQ MX808PST Digital Projector"
+    ],
+    "Keyring Display Cabinets": [
+      "Key cabinets"
+    ],
+    "Outdoor Playground Equipment": [
+      "Kids play equipment"
+    ],
+    "Facilities": [
+      "Digital Library"
+    ]
   };
 
   const changeHandler = (e) => {
     setProductDetails({ ...productDetails, [e.target.name]: e.target.value });
   };
-
 
   const imageHandler = (e) => {
     setImage(e.target.files[0]);
@@ -137,27 +127,47 @@ const Edit = () => {
   useEffect(() => {
     if (product) {
       setProductDetails(product);
-     
+      setDetails(product.details || [{ name: "", value: "" }]); // Initialize details from product
       setImage(null);
     }
   }, [product]);
 
   const updateProductHandler = async () => {
     try {
-      await dispatch(updateProduct({ productDetails, image }));
+      await dispatch(updateProduct({ productDetails, image, details })); // Include details in update
       navigate("/listproduct");
     } catch (error) {
       console.error("Failed to update product:", error);
     }
   };
 
+  const handleDetailChange = (index, event) => {
+    const { name, value } = event.target;
+    setDetails((prevDetails) => {
+      const updatedDetails = [...prevDetails]; // Create a shallow copy of the details array
+      updatedDetails[index] = { ...updatedDetails[index], [name]: value }; // Create a new object for the specific detail
+      return updatedDetails; // Return the updated array
+    });
+  };
+
+  const handleAddDetail = () => {
+    setDetails([...details, { name: "", value: "" }]);
+  };
+
+  const handleDeleteDetail = (index) => {
+    const values = [...details];
+    values.splice(index, 1);
+    setDetails(values);
+  };
+
   if (loading) return <p>Loading product details...</p>;
   if (fetchError) return <p>Error loading product data: {fetchError}</p>;
 
-  const existingImageUrl = getImageUrl(product?.image)
+  const existingImageUrl = getImageUrl(product?.image);
 
   return (
     <div className="addproduct">
+      {/* Product title, description, category, and subcategory inputs */}
       <div className="addproduct-itemfield">
         <p>Product Title</p>
         <input
@@ -218,25 +228,57 @@ const Edit = () => {
         </div>
       </div>
 
+      {/* Product Details Section */}
+      <div className="addproduct-itemfield">
+        <label>Product Details</label>
+        {details.map((detail, index) => (
+          <div key={index} className="d-flex mb-2">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className="flex-1 border border-gray-300 rounded p-2"
+              value={detail.name}
+              onChange={(e) => handleDetailChange(index, e)}
+            />
+            <input
+              type="text"
+              name="value"
+              placeholder="Value"
+              className="flex-1 border border-gray-300 rounded p-2"
+              value={detail.value}
+              onChange={(e) => handleDetailChange(index, e)}
+            />
+            <button
+              type="button"
+              onClick={handleAddDetail}
+              className="text-blue-500 font-bold"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              onClick={() => handleDeleteDetail(index)}
+              className="text-red-500"
+            >
+              -
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {/* Image Upload Section */}
       <div className="addproduct-itemfield">
         <p>Upload Image</p>
-
         <label htmlFor="file-input">
           <img
             className="addproduct-thumbnail-img"
-            src={!image ? existingImageUrl: URL.createObjectURL(image)}
+            src={!image ? existingImageUrl : URL.createObjectURL(image)}
             alt=""
             style={{ width: "100px", height: "100px", objectFit: "cover", cursor: "pointer" }}
           />
         </label>
-
-        <input
-          onChange={imageHandler}
-          type="file"
-          name="image"
-          id="file-input"
-          
-        />
+        <input onChange={imageHandler} type="file" name="image" id="file-input" />
       </div>
 
       <button
