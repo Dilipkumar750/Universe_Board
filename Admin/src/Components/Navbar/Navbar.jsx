@@ -5,8 +5,8 @@ import navprofileIcon from '../Assets/nav-profile.svg';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg shadow-sm mb-1" style={{ backgroundColor: 'black' }}>
-      <div className="container d-flex justify-content-center">
+    <nav className="navbar navbar-expand-lg shadow-sm mb-1" style={{ backgroundColor: 'black', maxHeight: '100px' }}>
+      <div className="container d-flex justify-content-center align-items-center">
         <a href="/" className="navbar-brand d-flex align-items-center">
           <img src={navlogo} className="img-fluid" style={{ width: '200px' }} alt="Logo" />
         </a>
