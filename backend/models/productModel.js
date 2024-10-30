@@ -20,6 +20,12 @@ const productSchema = mongoose.Schema(
     imageId: {
       type: String,
     },
+    details: [
+      {
+        name: { type: String },
+        value: { type: String },
+      }
+    ]
   },
   {
     timestamps: true,

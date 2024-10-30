@@ -10,7 +10,7 @@ mongoose.connection.once("open", () => {
 
 exports.addProduct = async (req, res) => {
   try {
-    const { category, subCategory, title, description } = req.body;
+    const { category, subCategory, title, description,details } = req.body;
     if (!category || !title || !description || !req.file) {
       return res.status(404).json({
         success: false,
@@ -29,6 +29,7 @@ exports.addProduct = async (req, res) => {
         description,
         image: req.file.originalname,
         imageId: uploadStream.id,
+        details
       });
 
       await newProduct.save();
