@@ -10,31 +10,31 @@ function ProductDetails() {
         <div>
           <img src="" alt="" />
         </div>
-        <div class="max-w-2xl shadow overflow-hidden md:col-span-2 ">
+        <div className="max-w-2xl shadow overflow-hidden md:col-span-2 ">
           <dl>
-            <div class=" p-2 grid grid-cols-3 gap-4 px-6">
-              <dt class="text-sm font-medium text-gray-500">Full name</dt>
-              <dd class="text-sm text-gray-300 mt-0 col-span-2">
+            <div className=" p-2 grid grid-cols-3 gap-4 px-6">
+              <dt className="text-sm font-medium text-gray-500">Full name</dt>
+              <dd className="text-sm text-gray-300 mt-0 col-span-2">
                 Mickael Poulaz
               </dd>
             </div>
-            <div class="p-2 grid grid-cols-3 gap-4 px-6">
-              <dt class="text-sm font-medium text-gray-500">Best techno</dt>
-              <dd class="text-sm text-gray-300 mt-0 col-span-2">React JS</dd>
+            <div className="p-2 grid grid-cols-3 gap-4 px-6">
+              <dt className="text-sm font-medium text-gray-500">Best techno</dt>
+              <dd className="text-sm text-gray-300 mt-0 col-span-2">React JS</dd>
             </div>
-            <div class=" p-2 grid grid-cols-3 gap-4 px-6">
-              <dt class="text-sm font-medium text-gray-500">Email address</dt>
-              <dd class="text-sm text-gray-300 mt-0 col-span-2">
+            <div className=" p-2 grid grid-cols-3 gap-4 px-6">
+              <dt className="text-sm font-medium text-gray-500">Email address</dt>
+              <dd className="text-sm text-gray-300 mt-0 col-span-2">
                 m.poul@example.com
               </dd>
             </div>
-            <div class="p-2 grid grid-cols-3 gap-4 px-6">
-              <dt class="text-sm font-medium text-gray-500">Salary</dt>
-              <dd class="text-sm text-gray-300 mt-0 col-span-2">$10,000</dd>
+            <div className="p-2 grid grid-cols-3 gap-4 px-6">
+              <dt className="text-sm font-medium text-gray-500">Salary</dt>
+              <dd className="text-sm text-gray-300 mt-0 col-span-2">$10,000</dd>
             </div>
-            <div class=" p-2 grid grid-cols-3 gap-4 px-6">
-              <dt class="text-sm font-medium text-gray-500">About</dt>
-              <dd class="text-sm text-gray-300 mt-0 col-span-2">
+            <div className=" p-2 grid grid-cols-3 gap-4 px-6">
+              <dt className="text-sm font-medium text-gray-500">About</dt>
+              <dd className="text-sm text-gray-300 mt-0 col-span-2">
                 To get social media testimonials like these, keep your customers
                 engaged with your social media accounts by posting regularly
                 yourself

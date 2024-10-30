@@ -125,7 +125,7 @@ const CategorySection = () => {
       <div
         className="relative text-black py-8 px-8 font-sans bg-white sm:bg-cover sm:bg-center"
         style={{ backgroundImage: `url(${productImage})` }}>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center">
           <div className=" md:text-left w-96">
             <h2 className="text-2xl mb-4 font-bold text-white-500">
               Transform Your Learning Environment with Universe Educational
@@ -138,7 +138,7 @@ const CategorySection = () => {
             <Link to={"/Contact"}>
               <button
                 type="button"
-                className="bg-white text-gray-800 py-3 px-6 font-semibold rounded">
+                className="bg-black text-white py-3 px-6 font-semibold rounded">
                 Contact Us Today
               </button>
             </Link>
