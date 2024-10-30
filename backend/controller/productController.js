@@ -10,7 +10,8 @@ mongoose.connection.once("open", () => {
 
 exports.addProduct = async (req, res) => {
   try {
-    const { category, subCategory, title, description,details } = req.body;
+    const { category, subCategory, title, description } = req.body;
+    const details = JSON.parse(req.body.details)
     if (!category || !title || !description || !req.file) {
       return res.status(404).json({
         success: false,

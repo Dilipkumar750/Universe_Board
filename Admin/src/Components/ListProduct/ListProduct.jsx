@@ -44,6 +44,7 @@ const ListProduct = () => {
             <th scope="col">Title</th>
             <th scope="col">Category</th>
             <th scope="col">Subcategory</th>
+            <th scope="col">Details</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -63,6 +64,19 @@ const ListProduct = () => {
                 <td>{e.title}</td>
                 <td>{e.category}</td>
                 <td>{e.subCategory}</td>
+                <td>
+                  {e.details && e.details.length > 0 ? (
+                    <ul>
+                      {e.details.map((detail, index) => (
+                        <li key={index}>
+                          {detail.name}: {detail.value}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>No details available</p>
+                  )}
+                </td>
                 <td>
                   <button
                     type="button"
