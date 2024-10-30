@@ -83,7 +83,7 @@ const About = () => {
                 <img
                   src={product.image}
                   alt={`Product ${index + 1}`}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110 rounded-md"
                 />
               </div>
             </div>
@@ -176,7 +176,7 @@ const About = () => {
               <b className="text-white text-xl">
                 Following are the features of our range of products :
               </b>
-              <ul class="list-disc text-start text-white md:ps-10 mt-3">
+              <ul className="list-disc text-start text-white md:ps-10 mt-3">
                 <li>Non-fading writing surfaces</li>
                 <li>Soft texture</li>
                 <li>Durable & user friendly</li>
@@ -220,7 +220,7 @@ const About = () => {
                 seminars to our workforce so that they can pace with the dynamic
                 market and client requirements.
               </p>
-              <ul class="list-disc text-start text-white md:ps-10  mt-3">
+              <ul className="list-disc text-start text-white md:ps-10  mt-3">
                 <li>Quality of Raw materials</li>
                 <li>Excellence Finished Product</li>
                 <li>Comparative Price</li>
@@ -247,7 +247,7 @@ const About = () => {
               </h1>
               <p className="text-xl text-justify text-white mb-2">We at Universe were focused and strive to deal with the growing needs of the client, comprising technology, quality, durability and reliability. Serving with the best quality and competitive price we stand out as one of the leader in our domain. Backed by a team of professional with rich experience we are engaged in manufacturing and supplying of various stationary products like Ceramic Writing Boards, Magnetic & Non-Magnetic Writing Boards, Display Board with Stand, Notice/Pinup Boards, Pressgraph (Letter Pressing Board), Welcome Board with Gold frame & Golden letters, Notice board with sliding Glass Door, Key Boards.</p>
               <b className="text-white text-xl">Major distinctive features are :</b>
-              <ul class="list-disc text-start text-white md:ps-10  mt-3">
+              <ul className="list-disc text-start text-white md:ps-10  mt-3">
                 <li>Flawless quality of raw and finished product</li>
                 <li>Competitive price</li>
                 <li>Innovative designs and perfect finishing</li>
@@ -269,7 +269,7 @@ const About = () => {
         </div>
       </div>
 
-      <CompanyProfile />
+      {/* <CompanyProfile /> */}
       {/* <WarehousingPackaging /> */}
     </div>
   );

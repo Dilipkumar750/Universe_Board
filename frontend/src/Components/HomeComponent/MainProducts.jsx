@@ -69,7 +69,7 @@ const MainProducts = () => {
 
             <Link to={"/Contact"}>
               <button type="button" className="bg-gradient-to-r from-white to-white hover:bg-white-500 text-black tracking-wide font-semibold text-sm py-3 px-6 rounded-lg w-max mt-8">
-                Explore
+                Explore Now
               </button>
             </Link>
           </div>
