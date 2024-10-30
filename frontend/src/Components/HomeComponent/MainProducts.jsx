@@ -56,7 +56,7 @@ const MainProducts = () => {
 
 
           <div className="flex justify-center sm:justify-start w-full sm:w-auto" data-aos="fade-right">
-            <img src={experts} className="h-64 w-64 rounded-full object-cover border-4 border-white" alt="machinery image" />
+            <img src={experts} className="h-64 w-64 rounded-3xl object-cover border-4 border-white" alt="machinery image" />
           </div>
 
 
@@ -74,13 +74,11 @@ const MainProducts = () => {
             </Link>
           </div>
           <div className="flex justify-center sm:justify-end w-full sm:w-auto" data-aos="fade-left">
-            <img src={experts1} className="h-64 w-64 rounded-full object-cover border-4 border-white" alt="machinery image" />
+            <img src={experts1} className="h-64 w-64 rounded-3xl object-cover border-4 border-white" alt="machinery image" />
           </div>
 
         </div>
       </div>
-
-
     </div>
 
 

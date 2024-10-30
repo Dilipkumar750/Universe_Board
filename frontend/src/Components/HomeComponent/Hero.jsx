@@ -33,8 +33,7 @@ const Hero = () => {
             <span className="rotate-90 inline-block mr-2 mb-2">|</span> Universe Educational Visuals
           </p>
           <h2 className="text-gray-800 md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[55px]">
-            Powering Progress with Precision-Engineered Machinery
-          </h2>
+          Enriching Classrooms with Quality School Essentials.          </h2>
           <p className="mt-5 text-base text-gray-500 leading-relaxed">
           Enhance the learning environment with our carefully selected school essentials, delivered right to your door. Transform your space into an inspiring place to learn today.          </p>
 

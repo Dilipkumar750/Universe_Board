@@ -150,7 +150,7 @@ const ColorFoot = () => (
         <ul className="space-y-4">
           <li>
             <a
-              href="          "mailto:info@universeeducationalvisuals.com"
+              href="mailto:info@universeeducationalvisuals.com"
               className="text-white hover:text-green-300 text-sm">
                    info@universeeducationalvisuals.com
             </a>
