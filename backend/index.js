@@ -16,7 +16,7 @@ app.use('/auth',userRoute)
 app.use('/product',productRoute)
 
 app.get('/',(req,res)=>{
-    res.send('Gravity Backend Running')
+    res.send('Universe Backend Running')
 })
 
 app.listen(PORT ,()=>{
