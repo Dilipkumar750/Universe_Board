@@ -142,9 +142,10 @@ exports.getOneProductBySubCategory = async (req, res) => {
 exports.updateProduct = async (req, res) => {
   try {
     const { id } = req.params;
-    const data = { ...req.body };
+    const {category,subCategory,title,description} = req.body;
+    const details = JSON.parse(req.body.details)
     if (!req.file) {
-      const result = await Product.findByIdAndUpdate(id, data, {
+      const result = await Product.findByIdAndUpdate(id, {details,category,subCategory,title,description}, {
         new: true,
         runValidators: true,
       });
@@ -164,7 +165,7 @@ exports.updateProduct = async (req, res) => {
 
     uploadStream.on("finish", async () => {
       const imageId = uploadStream.id;
-      const updatedData = { image: req.file.originalname, imageId, ...data };
+      const updatedData = { image: req.file.originalname, imageId,details, category,subCategory,title,description };
 
       const result = await Product.findByIdAndUpdate(id, updatedData, {
         new: true,
