@@ -96,13 +96,7 @@ const About = () => {
             Project Management
           </h1>
           <p className="text-center md:text-left font-serif text-xl leading-relaxed">
-            Our Project Management team ensures seamless coordination and
-            efficient execution of every project from start to finish. We
-            prioritize clear communication, effective resource allocation, and
-            timely delivery to consistently exceed client expectations. With a
-            commitment to innovation and quality, our team drives successful
-            project outcomes by working closely with clients to achieve their
-            goals on time and within budget.
+            Our Project Management team ensures seamless coordination and efficient execution of every project from start to finish. We prioritize clear communication, effective resource allocation, and timely delivery to consistently exceed client expectations. With a commitment to innovation and quality, our team drives successful project outcomes by working closely with clients to achieve their goals on time and within budget.
           </p>
         </div>
 
