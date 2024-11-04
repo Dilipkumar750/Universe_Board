@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import forklift from '../../assets/forklift.jpeg';
-import logo from '../../assets/logo.png';
+import { useEffect, useState } from 'react';
 import hero from '../../assets/hero.jpg';
 import swiper1 from '../../assets/swiper1.jpg';
 import swiper2 from '../../assets/swiper2.jpg';

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import productImage from "../../assets/mission.jpg";
 import { useSelector, useDispatch } from "react-redux";
-import { getAllProduct, getImageUrl } from "../../slices/productSlice";
+import { getAllProduct } from "../../slices/productSlice";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import ProductDetails from "./ProductDetails";
@@ -128,10 +128,9 @@ const CategorySection = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className=" md:text-left w-96">
             <h2 className="text-2xl mb-4 font-bold text-white-500">
-              Transform Your Learning Environment with Universe Educational
-              Visuals
+            Transform Your Learning Environment with Universe Educational Visuals
             </h2>
-            <p className="text-base text-blue font-bold text-justify leading-5">Explore our range of educational tools, from interactive and smart boards to projectors and notice boards. Enhance your classroom experience with innovative solutions and engaging displays. Transform your teaching with our extensive offerings!</p>
+            <p className="text-base text-blue font-bold text-justify leading-5">Explore our range of educational tools, from interactive and smart boards to projectors and notice boards. Enhance your classroom experience with innovative solutions and captivating displays. Elevate your teaching with our extensive offerings!</p>
           </div>
 
           <div className="w-fit">

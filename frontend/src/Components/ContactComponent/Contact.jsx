@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import packing from '../../assets/packing.jpg';
 import medical from '../../assets/medical.png';
 
@@ -50,7 +50,7 @@ const Contact = () => {
           <div className="mt-6 text-white flex flex-col md:flex-row">
             <div className="md:flex-1" data-aos="fade-right">
               <p>
-                At Universe Educational Visuals, we're always here to help you connect, grow, and explore new opportunities.
+                At Universe Educational Visuals, We are always here to help you connect, grow, and explore new opportunities.
                 Whether you have a question, need more information about our services, or want to discuss a potential partnership,
                 we would love to hear from you. Feel free to reach out to us through any of the following ways:
               </p>

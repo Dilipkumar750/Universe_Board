@@ -1,4 +1,3 @@
-import React from "react";
 import worldmap from "../../assets/worldmap.png";
 
 const Turnover = () => {
