@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import CompanyProfile from "./CompanyProfile";
 import WarehousingPackaging from "./WarehousingPackaging";
 
-// Example products array with correct image references
 const products = [
   { image: imageOne },
   { image: imageTwo },
