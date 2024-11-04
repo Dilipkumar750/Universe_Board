@@ -1,8 +1,6 @@
-import React from 'react';
 import agri from '../../assets/agri.jpg';
 import amusement from '../../assets/amusement (1).jpeg';
 import graining from '../../assets/graining.jpeg';
-import forklift from '../../assets/forklift 1.jpg';
 import experts from '../../assets/experts.jpg';
 import experts1 from '../../assets/pordium.jpg';
 import { Link } from 'react-router-dom'
@@ -65,7 +63,7 @@ const MainProducts = () => {
             Universal Boards
             </h3>
             <h6 className="text-2xl text-white mt-2">Quality You Can Trust</h6>
-            <p className="text-white text-base leading-relaxed mt-4">Providing high-quality school equipment crafted for durability and functionality. From boards and chairs to podiums and kids' play area items, our products are designed to support educational excellence and enhance learning environments.</p>
+            <p className="text-white text-base leading-relaxed mt-4">Providing high-quality school equipment crafted for durability and functionality. From boards and chairs to podiums and kids play area items, our products are designed to support educational excellence and enhance learning environments.</p>
 
             <Link to={"/Contact"}>
               <button type="button" className="bg-gradient-to-r from-white to-white hover:bg-white-500 text-black tracking-wide font-semibold text-sm py-3 px-6 rounded-lg w-max mt-8">

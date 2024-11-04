@@ -1,4 +1,3 @@
-import React from "react";
 import about from "../../assets/Exhibition Display Boards.png";
 import imageOne from "../../assets/greenchalk borad.png";
 import imageTwo from "../../assets/kinds- school-desk.png";
@@ -10,8 +9,7 @@ import lowPrice from "../../assets/low-price.jpg";
 import ourTeam from "../../assets/ourTeam.jpg";
 import whyUs from "../../assets/whyUs.jpg";
 import { Link } from "react-router-dom";
-import CompanyProfile from "./CompanyProfile";
-import WarehousingPackaging from "./WarehousingPackaging";
+import Projectmagement from "../../assets/project.jpg"
 
 const products = [
   { image: imageOne },
@@ -26,34 +24,35 @@ const About = () => {
       <div className="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-black">
         <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
-          data-aos="fade-right">
+          data-aos="fade-right"
+        >
           <h2 className="text-white lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
           <p className="text-white mt-6 text-base leading-relaxed justify-center text-justify">
-            Universe Educational Visuals believe aim at providing our clients
-            with the best product range and therefore procure the products from
-            reliable vendors. This has also been made possible with the undying
-            support of our reputed vendors, who only deliver world class
-            products. With our products, we have been able to stand up to the
-            expectations of various entities like hotels and restaurants, upper
-            class homes, hospitals, management institutes and corporate offices.
-            Moreover, with our wide distribution network, we have been able to
-            cater to the bulk requirements of a huge client base. Our well
-            contented clients have enabled us to be one of the topmost players
-            at national and international arenas.
+            Universe Educational Visuals aims to provide our clients with the
+            best range of products by procuring them from reliable vendors. This
+            success is made possible by the unwavering support of our esteemed
+            vendors, who deliver world-class products. With our offerings, we
+            meet the expectations of various entities, including hotels,
+            restaurants, upscale homes, hospitals, management institutes, and
+            corporate offices. <br />
+            Additionally, our extensive distribution network allows us to cater
+            to the bulk requirements of a large client base. Our satisfied
+            clients have helped us become one of the top players in both
+            national and international markets.
           </p>
           <br />
           <p className="text-white mt-4 text-base leading-relaxed text-justify">
             Under the inspiring leadership of Mrs. Meena Harikrishnan, we have
-            achieved goodwill in the industry. With an aim of leading the market
-            in our domain, we have been putting in all of our efforts to make
-            sure that we provide nothing but the best.
+            built goodwill in the industry. To lead the market in our domain, we
+            are committed to providing nothing but the best.
           </p>
           <Link to={"/Contact"}>
             <button
               type="button"
-              className="bg-black border-2 mt-12 text-white font-bold text-sm rounded-xl px-6 py-2.5 item-center">
+              className="bg-black border-2 mt-12 text-white font-bold text-sm rounded-xl px-6 py-2.5 item-center"
+            >
               Get Started
             </button>
           </Link>
@@ -77,7 +76,8 @@ const About = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="shadow-md rounded-xl w-full sm:w-80 border border-orange-500">
+              className="shadow-md rounded-xl w-full sm:w-80 border border-orange-500"
+            >
               <div className="overflow-hidden rounded-t-xl h-64 group p-3 rounded-sm">
                 <img
                   src={product.image}
@@ -90,28 +90,48 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-8 bg-gray-300">
-        <h1 className="text-3xl font-bold mb-4 text-center text-orange-500">
-          Project Management
-        </h1>
-        <p className="w-full sm:w-1/2 mx-auto text-center">Our Project Management team ensures seamless coordination and efficient execution of each project from start to finish. We prioritize clear communication, effective resource allocation, and timely delivery to exceed client expectations. With a commitment to innovation and quality, our team drives successful project outcomes, working closely with clients to achieve their goals on time and within budget.</p>
+      <div className="py-8 bg-white flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 p-4">
+          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-orange-500">
+            Project Management
+          </h1>
+          <p className="text-center md:text-left font-serif text-xl leading-relaxed">
+            Our Project Management team ensures seamless coordination and
+            efficient execution of every project from start to finish. We
+            prioritize clear communication, effective resource allocation, and
+            timely delivery to consistently exceed client expectations. With a
+            commitment to innovation and quality, our team drives successful
+            project outcomes by working closely with clients to achieve their
+            goals on time and within budget.
+          </p>
+        </div>
+
+        <div className="md:w-1/2 p-4">
+          <img
+            src={Projectmagement}
+            alt="Project Management"
+            className="w-full h-fit object-fit"
+          />
+        </div>
       </div>
+
       <div className="bg-black">
         <div className="mt-8 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
             <div
               className="lg:w-3/4 p-4 lg:text-left text-center"
-              data-aos="fade-right">
+              data-aos="fade-right"
+            >
               <h1 className="text-3xl font-bold mb-4 text-orange-500">
                 Vision
               </h1>
               <p className="text-xl text-justify text-white">
-                Universe Educational Visuals envisions being a global leader in
-                providing premium, innovative, and reliable educational and
-                display products. Our goal is to empower institutions, corporate
+                Universe Educational Visuals aims to be a global leader in
+                premium, innovative, and reliable educational and display
+                products. Our goal is to empower institutions, corporate
                 entities, and homes worldwide by offering solutions that enhance
                 visual communication, enrich learning experiences, and inspire
-                environments to foster creativity and productivity.
+                creativity and productivity.
               </p>
             </div>
 
@@ -128,7 +148,8 @@ const About = () => {
           <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between mb-8">
             <div
               className="lg:w-3/4 p-4 lg:text-right text-center"
-              data-aos="fade-left">
+              data-aos="fade-left"
+            >
               <h1 className="text-3xl font-bold mb-4 text-orange-500">
                 Mission
               </h1>
@@ -145,7 +166,8 @@ const About = () => {
 
             <div
               className="lg:w-1/2 p-4 flex justify-center"
-              data-aos="fade-right">
+              data-aos="fade-right"
+            >
               <img
                 src={mission}
                 alt="Mission Image"
@@ -158,19 +180,19 @@ const About = () => {
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
             <div
               className="lg:w-3/4 p-4 lg:text-left text-center"
-              data-aos="fade-right">
+              data-aos="fade-right"
+            >
               <h1 className="text-3xl font-bold mb-4 text-orange-500">
                 Our Products
               </h1>
               <p className="text-xl text-justify text-white mb-2">
-                We are engaged in manufacturing and supplying of stationary
-                products including like - Ceramic Writing Boards, Magnetic &
-                Non-Magnetic Writing Boards, Display Board with stand,
-                Notice/Pinup Boards, Pressgraph (Letter pressing board), Welcome
-                Board with Gold frame & Golden letters, Notice board with
-                sliding Glass Door, Key Boards.These are manufactured with the
-                best quality of raw material sourced from reliable and trusted
-                vendors.
+                We manufacture and supply stationery products, including Ceramic
+                Writing Boards, Magnetic and Non-Magnetic Writing Boards,
+                Display Boards with stands, Notice/Pinup Boards, Pressgraph
+                (letter pressing boards), Welcome Boards with gold frames and
+                golden letters, Notice Boards with sliding glass doors, and Key
+                Boards. These products are made from high-quality raw materials
+                sourced from reliable and trusted vendors.
               </p>
               <b className="text-white text-xl">
                 Following are the features of our range of products :
@@ -200,24 +222,26 @@ const About = () => {
           <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between mb-8">
             <div
               className="lg:w-3/4 p-4 lg:text-right text-center"
-              data-aos="fade-right">
+              data-aos="fade-left"
+            >
               <h1 className="text-3xl font-bold mb-4 text-orange-500">
                 Our Team
               </h1>
               <p className="text-xl text-justify text-white mb-2">
-                The name which we have gained to envy on is due to the sincere
-                and remitting efforts of our workforce. In our team we have
-                skilled engineers, quality controllers, warehouse personnel and
-                dynamic sales & marketing executives. Their skill and expertise
-                mixed with our business ethics enable us to offer a quality
-                range of products and ensure utmost client satisfaction.
+                The name that we have earned the envy of others is due to the
+                sincere and dedicated efforts of our workforce. In our team, we
+                have skilled engineers, quality controllers, warehouse
+                personnel, and dynamic sales and marketing executives. Their
+                skills and expertise, combined with our business ethics, allow
+                us to provide a high-quality range of products and ensure
+                maximum client satisfaction.
               </p>
               <p className="text-xl text-justify text-white mb-2">
-                Aiming high-quality for our products our professional work in
-                close coordination with each other ensuring smooth and effective
-                production of stationary products. Also we provide training and
-                seminars to our workforce so that they can pace with the dynamic
-                market and client requirements.
+                We aim for high quality in our products, and our professionals
+                work in close coordination to ensure smooth and effective
+                production of stationery products. We also provide training and
+                seminars to our workforce so that they can keep pace with the
+                dynamic market and client requirements.
               </p>
               <ul className="list-disc text-start text-white md:ps-10  mt-3">
                 <li>Quality of Raw materials</li>
@@ -233,19 +257,34 @@ const About = () => {
                 src={ourTeam}
                 alt="Selling Image"
                 className="w-52 h-52 object-cover rounded-full"
-                data-aos="fade-left"
+                data-aos="fade-right"
               />
             </div>
           </div>
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
             <div
               className="lg:w-3/4 p-4 lg:text-left text-center"
-              data-aos="fade-right">
+              data-aos="fade-right"
+            >
               <h1 className="text-3xl font-bold mb-4 text-orange-500">
-              Why Us?
+                Why Us?
               </h1>
-              <p className="text-xl text-justify text-white mb-2">We at Universe were focused and strive to deal with the growing needs of the client, comprising technology, quality, durability and reliability. Serving with the best quality and competitive price we stand out as one of the leader in our domain. Backed by a team of professional with rich experience we are engaged in manufacturing and supplying of various stationary products like Ceramic Writing Boards, Magnetic & Non-Magnetic Writing Boards, Display Board with Stand, Notice/Pinup Boards, Pressgraph (Letter Pressing Board), Welcome Board with Gold frame & Golden letters, Notice board with sliding Glass Door, Key Boards.</p>
-              <b className="text-white text-xl">Major distinctive features are :</b>
+              <p className="text-xl text-justify text-white mb-2">
+                We at Universe are focused and strive to address the growing
+                needs of our clients, comprising technology, quality,
+                durability, and reliability. Serving with the best quality and
+                competitive price, we stand out as one of the leaders in our
+                domain. Backed by a team of professionals with rich experience,
+                we are engaged in manufacturing and supplying various stationery
+                products such as ceramic writing boards, magnetic and
+                non-magnetic writing boards, display boards with stands,
+                notice/pinup boards, Pressgraph (letter pressing board), welcome
+                boards with gold frames and golden letters, notice boards with
+                sliding glass doors, and key boards.
+              </p>
+              <b className="text-white text-xl">
+                Major distinctive features are :
+              </b>
               <ul className="list-disc text-start text-white md:ps-10  mt-3">
                 <li>Flawless quality of raw and finished product</li>
                 <li>Competitive price</li>
