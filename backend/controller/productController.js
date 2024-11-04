@@ -92,6 +92,7 @@ exports.getAllProduct = async (req, res) => {
  
 exports.getOneProduct = async (req, res) => {
   const { id } = req.params;
+  console.log("id",id)
   if (!id) {
     return res.status(404).json({ success: false, message: "id is not get" });
   }

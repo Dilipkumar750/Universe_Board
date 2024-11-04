@@ -19,7 +19,7 @@ import Turnover from './Components/HomeComponent/Turnover';
 import PrivacyPolicy from './Pages/Footer/PrivacyPolicy';
 import TermsAndConditions from './Pages/Footer/TermsAndConditions';
 import ScrollToTop from '../src/Components/ScrollToTop'
-
+import ProductDetails from "../src/Components/ProductComponent/ProductDetails";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -42,7 +42,7 @@ function App() {
         <Route path='/MainProducts' element={<MainProducts />} />
         <Route path='/About' element={<About />} />
         <Route path='/OurProducts' element={<OurProducts />} />
-        <Route path='/Turnover' element={<Turnover />} />
+        <Route path="/product/:id" element={<ProductDetails />} />        <Route path='/Turnover' element={<Turnover />} />
         <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
         <Route path='/TermsAndConditions' element={<TermsAndConditions />} />
       </Routes>

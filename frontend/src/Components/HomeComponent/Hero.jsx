@@ -26,7 +26,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="font-[sans-serif] max-w-6xl max-md:max-w-md mx-auto">
+    <div className="font-[sans-serif] max-w-6xl max-md:max-w-md mx-auto ">
       <div className="grid md:grid-cols-2 items-center md:gap-10 gap-6">
         <div className="max-md:order-1 max-md:text-center">
           <p className="mt-4 text-3xl font-bold text-orange-500">
@@ -50,7 +50,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex md:h-[400px] md:w-[550px] p-2  flex-col" data-aos="fade-left">
+        <div className="hidden md:flex md:h-[400px] md:w-[550px] p-2 overflow-x-hidden  flex-col" data-aos="fade-left">
           {/* Custom carousel with automatic scroll */}
           <div className="relative w-full h-full overflow-hidden rounded-lg p-1"> {/* Added padding here */}
             {swiperImages.map((image, index) => (
