@@ -41,7 +41,7 @@ const categories = {
     "Notice Board With Wooden Frame",
     "Notice Board with Sliding Door",
   ],
-  Projectors: [
+  "Projectors": [
     "Benq",
     "EPSON",
     "HITACHI",
@@ -65,7 +65,7 @@ const categories = {
   "Digital Projectors": ["BenQ MX808PST Digital Projector"],
   "Keyring Display Cabinets": ["Key cabinets"],
   "Outdoor Playground Equipment": ["Kids play equipment"],
-  Facilities: ["Digital Library"],
+  "Facilities": ["Digital Library"],
 };
 
 const CategorySection = () => {
@@ -172,9 +172,8 @@ const CategorySection = () => {
                     {category}
                     {categories[category].length > 0 && (
                       <span
-                        className={`transition-transform transform text-white-500 ${
-                          openCategory === category ? "rotate-90" : ""
-                        }`}>
+                        className={`transition-transform transform text-white-500 ${openCategory === category ? "rotate-90" : ""
+                          }`}>
                         ➔
                       </span>
                     )}
@@ -182,9 +181,8 @@ const CategorySection = () => {
                 </h2>
                 {categories[category].length > 0 && (
                   <div
-                    className={`${
-                      openCategory === category ? "block" : "hidden"
-                    }`}>
+                    className={`${openCategory === category ? "block" : "hidden"
+                      }`}>
                     <div className="text-black bg-slate-300">
                       {categories[category].map((subCategory, subIndex) => (
                         <button
@@ -201,7 +199,7 @@ const CategorySection = () => {
             ))}
           </div>
 
-          <div className=" md:col-span-2 h-fit gap-6">
+          <div className="md:col-span-2 h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {Products?.length === 0 ? (
               <div className="text-center text-red-600">
                 No products available.
@@ -209,7 +207,9 @@ const CategorySection = () => {
             ) : (
               <>
                 {showProductDetails ? (
-                  <ProductDetails />
+                  <div className="col-span-full">
+                    <ProductDetails />
+                  </div>
                 ) : (
                   Products?.map((product, index) => {
                     return (
@@ -224,6 +224,7 @@ const CategorySection = () => {
               </>
             )}
           </div>
+
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ export const getAllProduct = createAsyncThunk(
 );
 export const getAllCategory = createAsyncThunk(
   "product/getAllCategory",
-  async ({category}, { rejectWithValue }) => {
+  async ({ category }, { rejectWithValue }) => {
     try {
       const response = await axios.get(`${BASE_URL}/product/get_category/${category}`);
       return response.data;
@@ -24,9 +24,20 @@ export const getAllCategory = createAsyncThunk(
     }
   }
 );
+export const getProductById = createAsyncThunk(
+  "product/getProductById",
+  async ({ id }, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(`${BASE_URL}/product/get_one_product/${id}`);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data)
+    }
+  }
+)
 export const getAllSubCategory = createAsyncThunk(
   "product/getAllSubCategory",
-  async ({subCategory}, { rejectWithValue }) => {
+  async ({ subCategory }, { rejectWithValue }) => {
     try {
       const response = await axios.get(`${BASE_URL}/product/get_subcategory/${subCategory}`);
       return response.data;
@@ -49,6 +60,7 @@ const productSlice = createSlice({
     getAllCategory: { data: null, isLoading: false, error: null },
     getAllSubCategory: { data: null, isLoading: false, error: null },
     getAllProduct: { data: null, isLoading: false, error: null },
+    getProductById: { data: null, isLoading: false, error: null },
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -89,6 +101,20 @@ const productSlice = createSlice({
         state.getAllProduct.isLoading = false;
         state.getAllProduct.error = action.payload;
       })
+      // get ProductByid
+      .addCase(getProductById.pending, (state) => {
+        state.getProductById.loading = true;
+        state.getProductById.error = null;
+      })
+      .addCase(getProductById.fulfilled, (state, action) => {
+        state.getProductById.loading = false;
+        state.getProductById.data = action.payload; // Store the product data
+      })
+      .addCase(getProductById.rejected, (state, action) => {
+        state.getProductById.loading = false;
+        state.getProductById.error = action.error; // Store the error
+      });
+
   },
 });
 

@@ -1,62 +1,124 @@
+import React, { useEffect } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { getProductById, getImageUrl } from "../../slices/productSlice";
 
-function ProductDetails() {
+const ProductDetails = () => {
+  const { id } = useParams(); // Get product ID from URL parameters
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  // Get product data, loading state, and error from Redux state
+  const { data: product, loading, error } = useSelector((state) => state.product.getProductById);
+
+  useEffect(() => {
+    if (id) {
+      dispatch(getProductById({ id })).then(() => {
+        // console.log("Fetched product data:", product);
+      });
+      // console.log("Fetching product with ID:", id);
+    }
+  }, [dispatch, id]);
+
+
+  // console.log("Current product state:", product?.data?.category);
+  // console.log("Current product state:", product);
+
+
+  // Display loading message
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  // Handle any errors from the API call
+  if (error) {
+    console.error("Error fetching product:", error);
+    return <div className="text-center text-red-500">Error: {error.message}</div>;
+  }
+
+  // Ensure the product object is defined and has the expected structure
+  if (!product?.data || !product?.data?._id) {
+    return <div className="text-center text-red-500">Product not found.</div>;
+  }
+
+  // Get the image URL from the product data
+  const imageUrl = getImageUrl(product?.data?.image);
+
   return (
-    <>
-      <center>
-        <h1 className=" text-3xl font-bold text-white mb-4 ">product name</h1>
-      </center>
-      <div className=" grid md:grid-cols-3 ">
-        <div>
-          <img src="" alt="" />
+    <div className="container bg-white p-4 my-4 rounded relative">
+      <h1 className="text-3xl font-bold text-black mb-4 text-center">Details of {product?.data?.title}</h1>
+      <div className="grid md:grid-cols-3 gap-4">
+        <div className="flex justify-center">
+          <img
+            src={imageUrl}
+            alt={product?.data?.title}
+            className="max-w-full h-auto rounded"
+          />
         </div>
-        <div className="max-w-2xl shadow overflow-hidden md:col-span-2 ">
+        <div className="max-w-2xl shadow overflow-hidden md:col-span-2 p-4">
           <dl>
-            <div className=" p-2 grid grid-cols-3 gap-4 px-6">
-              <dt className="text-sm font-medium text-gray-500">Full name</dt>
-              <dd className="text-sm text-gray-300 mt-0 col-span-2">
-                Mickael Poulaz
+            <div className="grid grid-cols-3 gap-4 mb-2">
+              <dt className="text-sm font-medium text-black">Category</dt>
+              <dd className="text-sm text-black col-span-2">{product?.data?.category}</dd>
+            </div>
+            <div className="grid grid-cols-3 gap-4 mb-2">
+              <dt className="text-sm font-medium text-black">Subcategory</dt>
+              <dd className="text-sm text-black col-span-2">{product?.data?.subCategory}</dd>
+            </div>
+            <div className="grid grid-cols-3 gap-4 mb-2">
+              <dt className="text-sm font-medium text-black">Details:</dt>
+              <dd className="text-sm text-black col-span-2">
+                {product?.data?.details && product?.data?.details.length > 0 ? (
+                  <table className="min-w-full border border-gray-300">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="border border-gray-300 px-4 py-2 text-left">Detail Name</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {product?.data?.details.map((detail) => (
+                        <tr key={detail._id} className="bg-white">
+                          <td className="border border-gray-300 px-4 py-2">
+                            <strong>{detail.name}</strong>
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2">
+                            {detail.value}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                ) : (
+                  <p>No details available</p>
+                )}
               </dd>
             </div>
-            <div className="p-2 grid grid-cols-3 gap-4 px-6">
-              <dt className="text-sm font-medium text-gray-500">Best techno</dt>
-              <dd className="text-sm text-gray-300 mt-0 col-span-2">React JS</dd>
-            </div>
-            <div className=" p-2 grid grid-cols-3 gap-4 px-6">
-              <dt className="text-sm font-medium text-gray-500">Email address</dt>
-              <dd className="text-sm text-gray-300 mt-0 col-span-2">
-                m.poul@example.com
-              </dd>
-            </div>
-            <div className="p-2 grid grid-cols-3 gap-4 px-6">
-              <dt className="text-sm font-medium text-gray-500">Salary</dt>
-              <dd className="text-sm text-gray-300 mt-0 col-span-2">$10,000</dd>
-            </div>
-            <div className=" p-2 grid grid-cols-3 gap-4 px-6">
-              <dt className="text-sm font-medium text-gray-500">About</dt>
-              <dd className="text-sm text-gray-300 mt-0 col-span-2">
-                To get social media testimonials like these, keep your customers
-                engaged with your social media accounts by posting regularly
-                yourself
+
+            <div className="grid grid-cols-3 gap-4 mb-2">
+              <dt className="text-sm font-medium text-black">Description</dt>
+              <dd className="text-sm text-black col-span-2">
+                {product?.data?.description || "No description available"}
               </dd>
             </div>
           </dl>
         </div>
       </div>
-      <div className=" text-gray-300 ">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ducimus
-          rem assumenda architecto voluptas optio, iste amet? Minus animi illo
-          maxime cupiditate provident, perspiciatis tempore, odit voluptatem,
-          similique inventore odio!
-        </p>
-      </div>
-      <div className="flex justify-center">
-        <button className=" bg-slate-700 text-slate-300 py-2 px-3 rounded-md ">
-          Contact
+      <div className="flex justify-center mb-4">
+        <button
+          className="bg-slate-700 text-slate-300 py-2 px-3 rounded-md me-2"
+          onClick={() => navigate(-1)}
+        >
+          Back
         </button>
+        <Link to="/Contact">
+          <button className="bg-slate-700 text-slate-300 py-2 px-3 rounded-md">
+            Contact
+          </button>
+        </Link>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default ProductDetails;
