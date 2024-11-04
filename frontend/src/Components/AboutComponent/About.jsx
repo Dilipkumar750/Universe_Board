@@ -1,10 +1,16 @@
 import React from "react";
 import about from "../../assets/Exhibition Display Boards.png";
-import imageOne from "../../assets/greenchalk borad.png";
+import imageOne from "../../assets/product1.png";
 import imageTwo from "../../assets/kinds- school-desk.png";
 import imageThree from "../../assets/projector.png";
 import imageFour from "../../assets/single seating desk.png";
+import imageFive from "../../assets/product2.png";
+import imageSix from "../../assets/product3.png";
+import imageSeven from "../../assets/product4.png";
 import vision from "../../assets/vision.jpg";
+import Projectmagement from "../../assets/project-management.png";
+
+
 import mission from "../../assets/mission.jpg";
 import lowPrice from "../../assets/low-price.jpg";
 import ourTeam from "../../assets/ourTeam.jpg";
@@ -18,6 +24,9 @@ const products = [
   { image: imageTwo },
   { image: imageThree },
   { image: imageFour },
+  { image: imageFive },
+  { image: imageSix },
+  { image: imageSeven },
 ];
 
 const About = () => {
@@ -53,7 +62,7 @@ const About = () => {
           <Link to={"/Contact"}>
             <button
               type="button"
-              className="bg-black border-2 mt-12 text-white font-bold text-sm rounded-xl px-6 py-2.5 item-center">
+              className="hover:bg-green-300 border-2 mt-12 text-white font-bold text-sm rounded-xl px-6 py-2.5">
               Get Started
             </button>
           </Link>
@@ -82,7 +91,7 @@ const About = () => {
                 <img
                   src={product.image}
                   alt={`Product ${index + 1}`}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110 rounded-md"
+                  className="object-fit w-full h-full transition-transform duration-300 group-hover:scale-110 rounded-md"
                 />
               </div>
             </div>
@@ -90,12 +99,26 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-8 bg-gray-300">
-        <h1 className="text-3xl font-bold mb-4 text-center text-orange-500">
-          Project Management
-        </h1>
-        <p className="w-full sm:w-1/2 mx-auto text-center">Our Project Management team ensures seamless coordination and efficient execution of each project from start to finish. We prioritize clear communication, effective resource allocation, and timely delivery to exceed client expectations. With a commitment to innovation and quality, our team drives successful project outcomes, working closely with clients to achieve their goals on time and within budget.</p>
-      </div>
+      <div className="py-8 bg-white flex flex-col md:flex-row items-center">
+  
+  <div className="md:w-1/2 p-4">
+    <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-orange-500">
+      Project Management
+    </h1>
+    <p className="text-center md:text-left font-serif text-xl leading-relaxed">
+      Our Project Management team ensures seamless coordination and efficient execution of each project from start to finish. We prioritize clear communication, effective resource allocation, and timely delivery to exceed client expectations. With a commitment to innovation and quality, our team drives successful project outcomes, working closely with clients to achieve their goals on time and within budget.
+    </p>
+  </div>
+
+  <div className="md:w-1/2 p-4">
+    <img
+      src={Projectmagement} 
+      alt="Project Management"
+      className="w-full h-fit object-fit"
+    />
+  </div>
+</div>
+
       <div className="bg-black">
         <div className="mt-8 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
