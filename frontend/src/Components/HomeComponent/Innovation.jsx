@@ -1,5 +1,3 @@
-import React from "react";
-import vector from "../../assets/vector.jpg";
 import { Link } from "react-router-dom";
 import industry from "../../assets/industry.jpg";
 
@@ -24,21 +22,11 @@ const Innovation = () => {
 
             <div className="p-5 sm:p-16 lg:p-24" data-aos="fade-left">
               <h2 className="text-2xl font-bold sm:text-3xl text-white">
-                Our Educational Tools in Action: Real Success Stories
+              Our Educational Tools in Action: Real Success Stories
               </h2>
 
               <p className="mt-4 text-white text-justify">
-                At Universe Educational Visuals, innovation drives everything we
-                create. We offer a wide range of products, including smart
-                boards, projectors, and various writing boards—both ceramic and
-                magnetic—to enhance your educational experience. Our dedicated
-                team continuously develops tools like display boards, notice
-                boards with sliding glass doors, and pressgraph boards, ensuring
-                they meet the evolving needs of educators and learners. With our
-                premium selection, including welcome boards with gold frames and
-                educational instruments, we are committed to shaping the future
-                of education, making it more interactive and engaging for
-                everyone.
+              At Universe Educational Visuals, innovation drives everything we create. We offer a wide range of products, including smart boards, projectors, and various writing boards, both ceramic and magnetic, to enhance your educational experience. <br/>Our dedicated team continually develops tools such as display boards, notice boards with sliding glass doors, and press graph boards, ensuring they meet the changing needs of educators and students. With our premium selection, including welcome boards with gold frames and educational tools, we are committed to shaping the future of education, making it more interactive and engaging for all.
               </p>
 
               <div data-aos="zoom-in">

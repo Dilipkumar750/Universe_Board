@@ -1,4 +1,3 @@
-import React from 'react'
 import { getImageUrl } from '../../slices/productSlice'
 
 function ProductCard({product,setShowProductDetails}) {
