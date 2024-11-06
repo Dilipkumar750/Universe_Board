@@ -40,7 +40,7 @@ const Login = () => {
               name="username"
               value={loginDetails.username}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             />
           </div>
@@ -51,13 +51,13 @@ const Login = () => {
               name="password"
               value={loginDetails.password}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+            className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition duration-300"
           >
             Login
           </button>

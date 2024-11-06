@@ -68,7 +68,7 @@ const Turnover = () => {
       <div className="relative z-10 flex flex-col space-y-6 ml-auto text-white bg-opacity-80 p-6 rounded-lg shadow-lg bg-gray-400">
         {/* Manufacturing Card */}
         <div className="shadow-md bg-gray-900 border border-white p-6 rounded-lg text-center text-white">
-          <h3 className="text-lg font-semibold text-orange-500 mb-2">
+          <h3 className="text-lg font-semibold text-red-500 mb-2">
             Manufacturing
           </h3>
           <p className="text-white">
@@ -79,7 +79,7 @@ const Turnover = () => {
 
         {/* Quality Card */}
         <div className="shadow-md bg-gray-900 border border-white p-6 rounded-lg text-center">
-          <h3 className="text-lg font-semibold text-orange-500 mb-2">Quality</h3>
+          <h3 className="text-lg font-semibold text-red-500 mb-2">Quality</h3>
           <p className="text-white">
             We focus on top-quality materials and craftsmanship, ensuring our
             products exceed client expectations.
@@ -88,7 +88,7 @@ const Turnover = () => {
 
         {/* Target Market Card */}
         <div className="shadow-md bg-gray-900 border border-white p-6 rounded-lg text-center">
-          <h3 className="text-lg font-semibold text-orange-500 mb-2">
+          <h3 className="text-lg font-semibold text-red-500 mb-2">
             Target Market
           </h3>
           <p className="text-white">
@@ -99,7 +99,7 @@ const Turnover = () => {
 
         {/* Unique Selling Proposition Cards */}
         <div className="shadow-md bg-gray-900 border border-white p-6 rounded-lg text-center">
-          <h3 className="text-lg font-semibold text-orange-500 mb-2">
+          <h3 className="text-lg font-semibold text-red-500 mb-2">
             Unique Selling Proposition
           </h3>
           {companyUSPData.map((item, index) => (

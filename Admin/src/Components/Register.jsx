@@ -51,7 +51,7 @@ const Signup = () => {
               name="name"
               value={registerDetails.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             />
           </div>
@@ -62,7 +62,7 @@ const Signup = () => {
               name="username"
               value={registerDetails.username}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             />
           </div>
@@ -73,7 +73,7 @@ const Signup = () => {
               name="password"
               value={registerDetails.password}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             />
           </div>
@@ -84,13 +84,13 @@ const Signup = () => {
               name="confirmPassword"
               value={registerDetails.confirmPassword}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+            className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition duration-300"
           >
             Signup
           </button>

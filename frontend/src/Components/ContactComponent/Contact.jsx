@@ -8,7 +8,7 @@ const InputField = ({ label, type, placeholder }) => (
     <input
       type={type}
       placeholder={placeholder}
-      className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-orange-500"
+      className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-red-500"
       required
     />
   </div>
@@ -31,7 +31,7 @@ const Contact = () => {
     <div className="font-[sans-serif]">
 
       <div
-        className="bg-gradient-to-r from-blue-700 to-blue-300 w-full h-96"
+        className="bg-gradient-to-r from-red-700 to-red-300 w-full h-96"
         style={{
           backgroundImage: `url(${packing})`,
           backgroundSize: 'cover',
@@ -43,8 +43,8 @@ const Contact = () => {
 
 
       <div className="-mt-16 mb-6 px-4">
-        <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-black rounded-md">
-          <h2 className="text-4xl text-orange-500 font-bold text-center">Product Inquiry</h2>
+        <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-blue-500 rounded-md">
+          <h2 className="text-4xl text-red-500 font-bold text-center">Product Inquiry</h2>
 
 
           <div className="mt-6 text-white flex flex-col md:flex-row">
@@ -54,15 +54,15 @@ const Contact = () => {
                 Whether you have a question, need more information about our services, or want to discuss a potential partnership,
                 we would love to hear from you. Feel free to reach out to us through any of the following ways:
               </p>
-              <p className="mt-4 font-semibold text-orange-500">Address:</p>
+              <p className="mt-4 font-semibold text-red-500">Address:</p>
               Universe Educational Visuals<br />
               9/W, 1A, Akilandeswari Nagar,<br />
               Canara Bank Colony,Ammapatti Salai, <br />
               Thuraiyur, Dhan Lakshmi Nagar<br />
               Tiruchirappalli - 621010, Tamil Nadu.
-              <p className="mt-4 font-semibold text-orange-500">Phone:</p>
+              <p className="mt-4 font-semibold text-red-500">Phone:</p>
               <p>+8048955493</p>
-              <p className="mt-4 font-semibold text-orange-500">Email:</p>
+              <p className="mt-4 font-semibold text-red-500">Email:</p>
               <p>info@universeeducationalvisuals.com</p>
             </div>
             <div className="md:flex-1 flex justify-center">
@@ -84,7 +84,7 @@ const Contact = () => {
               <textarea
                 placeholder="Message"
                 rows="6"
-                className="w-full rounded-md px-4 border border-gray-300 text-sm pt-3 outline-orange-500"
+                className="w-full rounded-md px-4 border border-gray-300 text-sm pt-3 outline-red-500"
                 required
               />
             </div>
@@ -96,17 +96,13 @@ const Contact = () => {
               </label>
             </div>
 
-            <button type="submit" className="text-white w-max bg-orange-500 hover:bg-orange-600 tracking-wide rounded-md text-sm px-6 py-3 mt-4" disabled={loading}>
-              {loading ? (
-                <span>Sending...</span>
-              ) : (
-                <>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="#fff" className="mr-2 inline" viewBox="0 0 548.244 548.244">
-                    <path fillRule="evenodd" d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z" clipRule="evenodd" />
-                  </svg>
-                  Send Message
-                </>
-              )}
+            <button class="border hover:scale-95 duration-300 relative group cursor-pointer text-sky-50  overflow-hidden h-12 w-48 rounded-full bg-sky-200 p-2 flex justify-center items-center font-extrabold">
+
+              <div class="absolute right-32 -top-4  group-hover:top-1 group-hover:right-2 z-10 w-40 h-40 rounded-full group-hover:scale-150 duration-500 bg-red-600"></div>
+              <div class="absolute right-2 -top-4  group-hover:top-1 group-hover:right-2 z-10 w-32 h-32 rounded-full group-hover:scale-150  duration-500 bg-red-500"></div>
+              <div class="absolute -right-12 top-4 group-hover:top-1 group-hover:right-2 z-10 w-24 h-24 rounded-full group-hover:scale-150  duration-500 bg-red-400"></div>
+              <div class="absolute right-20 -top-4 group-hover:top-1 group-hover:right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-500 bg-red-600"></div>
+              <p class="z-10">Send Message</p>
             </button>
           </form>
         </div>

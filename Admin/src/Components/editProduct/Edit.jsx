@@ -252,7 +252,7 @@ const Edit = () => {
             <button
               type="button"
               onClick={handleAddDetail}
-              className="text-blue-500 font-bold"
+              className="text-red-500 font-bold"
             >
               +
             </button>
