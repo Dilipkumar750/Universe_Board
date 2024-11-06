@@ -29,24 +29,24 @@ const Navbar = () => {
                 </button>
 
                 <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-0 border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-orange-700">
+                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-0 border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-red-700">
                         <li>
-                            <Link to="/" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-black md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-black md:dark:hover:bg-transparent">
+                            <Link to="/" className="block py-2 px-3 text-black-900 rounded hover:bg-red-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500 md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-red-700 dark:hover:text-black md:dark:hover:bg-transparent">
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link to="/About" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-black md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-black md:dark:hover:bg-transparent">
+                            <Link to="/About" className="block py-2 px-3 text-black-900 rounded hover:bg-red-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500 md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-red-700 dark:hover:text-black md:dark:hover:bg-transparent">
                                 About us
                             </Link>
                         </li>
                         <li>
-                            <Link to="OurProducts" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-black md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-black md:dark:hover:bg-transparent">
+                            <Link to="OurProducts" className="block py-2 px-3 text-black-900 rounded hover:bg-red-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500 md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-red-700 dark:hover:text-black md:dark:hover:bg-transparent">
                                 Our Products
                             </Link>
                         </li>
                         <li>
-                            <Link to="/Contact" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-black md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-black md:dark:hover:bg-transparent">
+                            <Link to="/Contact" className="block py-2 px-3 text-black-900 rounded hover:bg-red-100 md:hover:bg-transparent md:border-0 md:hover:text-red-500 md:p-0 dark:text-black md:dark:hover:text-red-500 dark:hover:bg-red-700 dark:hover:text-black md:dark:hover:bg-transparent">
                                 Contact
                             </Link>
                         </li>

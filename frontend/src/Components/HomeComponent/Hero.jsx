@@ -27,15 +27,15 @@ const Hero = () => {
     <div className="font-[sans-serif] max-w-6xl max-md:max-w-md mx-auto ">
       <div className="grid md:grid-cols-2 items-center md:gap-10 gap-6">
         <div className="max-md:order-1 max-md:text-center">
-          <p className="mt-4 text-3xl font-bold text-orange-500">
-            <span className="rotate-90 inline-block mr-2 mb-2">|</span> Universe Educational Visuals
+          <p className="mt-4 text-5xl font-extrabold text-red-500">
+             Universe Educational Visuals
           </p>
-          <h2 className="text-gray-800 md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[55px]">
+          <h2 className="text-gray-800 md:text-5xl text-3xl font-bold mb-4 md:!leading-[55px]">
           Enriching Classrooms with Quality School Essentials.          </h2>
           <p className="mt-5 text-base text-gray-500 leading-relaxed">
           Enhance the learning environment with our carefully selected school essentials, delivered right to your door. Transform your space into an inspiring place to learn today.          </p>
 
-          <div className="mt-10 flex px-4 py-4 rounded-lg bg-gray-100 overflow-hidden">
+          <div className="mt-10 flex px-4 py-4 rounded-lg bg-gray-100 overflow-hidden border-solid border-2 border-black">
             <input type="email" placeholder="Search Something..." className="w-full outline-none bg-transparent text-sm" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -99,6 +99,7 @@ const Hero = () => {
         <img src="https://readymadeui.com/linkedin-logo.svg" className="w-28 mx-auto" alt="linkedin-logo" data-aos="fade-up" />
         <img src="https://readymadeui.com/pinterest-logo.svg" className="w-28 mx-auto" alt="pinterest-logo" data-aos="fade-down" />
       </div>
+      
     </div>
   );
 };

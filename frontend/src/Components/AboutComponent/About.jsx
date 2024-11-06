@@ -12,16 +12,16 @@ import { Link } from "react-router-dom";
 import Projectmagement from "../../assets/project.jpg"
 
 const products = [
-  { image: imageOne },
-  { image: imageTwo },
-  { image: imageThree },
-  { image: imageFour },
+  { image: imageOne, quote: "Make Every Presentation Shine – Top-Quality Projectors on Sale!" },
+  { image: imageTwo, quote: "Unbeatable Price, Unmatched Quality – Get Your Green School Board Today!" },
+  { image: imageThree, quote: "Learning and Fun Meet Here – Kindergarten Tables on Sale!" },
+  { image: imageFour, quote: "Encourage Learning and Creativity with a Kid-Friendly Table!" },
 ];
 
 const About = () => {
   return (
     <div className="font-sans">
-      <div className="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-black">
+      <div className="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-blue-400">
         <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
@@ -49,10 +49,7 @@ const About = () => {
             are committed to providing nothing but the best.
           </p>
           <Link to={"/Contact"}>
-            <button
-              type="button"
-              className="bg-black border-2 mt-12 text-white font-bold text-sm rounded-xl px-6 py-2.5 item-center"
-            >
+            <button class="w-[150px] bg-white h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-red-500 before:to-red-600 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-black">
               Get Started
             </button>
           </Link>
@@ -67,32 +64,41 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col bg-black items-center mt-5 mb-5 p-4">
-        <h1 className="text-3xl font-bold mb-4 text-center text-orange-500">
+      <div className="flex flex-col items-center mt-5 mb-5 p-4 ">
+        <h1 className="text-3xl font-bold mb-4 text-center text-red-500">
           Our Famous Products
         </h1>
 
-        <div className="flex flex-wrap justify-center gap-6" data-aos="fade-up">
+        <div className="flex flex-wrap justify-center gap-6 border-solid border-spacing-3 border-black" data-aos="fade-up">
           {products.map((product, index) => (
             <div
               key={index}
-              className="shadow-md rounded-xl w-full sm:w-80 border border-orange-500"
+              className="relative shadow-md rounded-xl w-full sm:w-80 border border-red-500 overflow-hidden"
             >
-              <div className="overflow-hidden rounded-t-xl h-64 group p-3 rounded-sm">
+              <div className="overflow-hidden rounded-t-xl h-64 group p-3 relative">
+                {/* {/ Image /} */}
                 <img
                   src={product.image}
                   alt={`Product ${index + 1}`}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110 rounded-md"
+                  className="object-cover w-full h-full transition-transform duration-300 group-hover:translate-y-full rounded-md"
                 />
+
+                {/* {/ Overlay /} */}
+                <div className="absolute inset-0 bg-white bg-opacity-80 flex items-center justify-center transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
+                  <p className="text-black text-xl font-semibold text-center px-4">
+                    {product.quote}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
 
+
       <div className="py-8 bg-white flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 p-4">
-          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-orange-500">
+          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-red-500">
             Project Management
           </h1>
           <p className="text-center md:text-left font-serif text-xl leading-relaxed">
@@ -109,14 +115,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="bg-black">
+      <div className="bg-blue-400">
         <div className="mt-8 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
             <div
               className="lg:w-3/4 p-4 lg:text-left text-center"
               data-aos="fade-right"
             >
-              <h1 className="text-3xl font-bold mb-4 text-orange-500">
+              <h1 className="text-3xl font-bold mb-4 text-red-500">
                 Vision
               </h1>
               <p className="text-xl text-justify text-white">
@@ -144,7 +150,7 @@ const About = () => {
               className="lg:w-3/4 p-4 lg:text-right text-center"
               data-aos="fade-left"
             >
-              <h1 className="text-3xl font-bold mb-4 text-orange-500">
+              <h1 className="text-3xl font-bold mb-4 text-red-500">
                 Mission
               </h1>
               <p className="text-xl text-justify text-white">
@@ -176,7 +182,7 @@ const About = () => {
               className="lg:w-3/4 p-4 lg:text-left text-center"
               data-aos="fade-right"
             >
-              <h1 className="text-3xl font-bold mb-4 text-orange-500">
+              <h1 className="text-3xl font-bold mb-4 text-red-500">
                 Our Products
               </h1>
               <p className="text-xl text-justify text-white mb-2">
@@ -218,7 +224,7 @@ const About = () => {
               className="lg:w-3/4 p-4 lg:text-right text-center"
               data-aos="fade-left"
             >
-              <h1 className="text-3xl font-bold mb-4 text-orange-500">
+              <h1 className="text-3xl font-bold mb-4 text-red-500">
                 Our Team
               </h1>
               <p className="text-xl text-justify text-white mb-2">
@@ -260,7 +266,7 @@ const About = () => {
               className="lg:w-3/4 p-4 lg:text-left text-center"
               data-aos="fade-right"
             >
-              <h1 className="text-3xl font-bold mb-4 text-orange-500">
+              <h1 className="text-3xl font-bold mb-4 text-red-500">
                 Why Us?
               </h1>
               <p className="text-xl text-justify text-white mb-2">

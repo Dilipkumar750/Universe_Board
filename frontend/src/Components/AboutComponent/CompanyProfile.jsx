@@ -68,7 +68,7 @@
 //         <div className="flex flex-col md:flex-row items-center">
 //           {/* Text Section - Left Side */}
 //           <div className="md:w-1/2 mb-6 md:mb-0">
-//             <h3 className="text-2xl font-bold text-blue-600 mb-4">
+//             <h3 className="text-2xl font-bold text-red-600 mb-4">
 //               Warehousing & Packaging
 //             </h3>
 //             <p className="text-gray-700 mb-4">

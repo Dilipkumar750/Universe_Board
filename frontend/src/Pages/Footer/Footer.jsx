@@ -47,7 +47,7 @@ const ColorFoot = () => (
           </li>
         </ul>
         <address className="font-bold text-white text-sm space-y-1">
-          <span className="text-orange-600 font-bold text-2xl">Universe Educational Visuals</span>
+          <span className="text-red-600 font-bold text-2xl">Universe Educational Visuals</span>
           <br />
           9/W, 1A, Akilandeswari Nagar,
           <br />
@@ -61,7 +61,7 @@ const ColorFoot = () => (
       </div>
 
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-orange-500">
+        <h4 className="text-lg font-semibold mb-6 text-red-500">
           Product List
         </h4>
         <ul className="space-y-4">
@@ -104,7 +104,7 @@ const ColorFoot = () => (
       </div>
 
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-orange-500">
+        <h4 className="text-lg font-semibold mb-6 text-red-500">
           Information
         </h4>
         <ul className="space-y-4">
@@ -144,7 +144,7 @@ const ColorFoot = () => (
         </ul>
       </div>
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-orange-500">
+        <h4 className="text-lg font-semibold mb-6 text-red-500">
           Contact Us
         </h4>
         <ul className="space-y-4">
