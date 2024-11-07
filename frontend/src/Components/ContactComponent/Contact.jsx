@@ -43,7 +43,7 @@ const Contact = () => {
 
 
       <div className="-mt-16 mb-6 px-4">
-        <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-blue-500 rounded-md">
+        <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-gray-500 rounded-md">
           <h2 className="text-4xl text-red-500 font-bold text-center">Product Inquiry</h2>
 
 

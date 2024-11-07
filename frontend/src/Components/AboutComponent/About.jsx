@@ -21,15 +21,15 @@ const products = [
 const About = () => {
   return (
     <div className="font-sans">
-      <div className="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-blue-400">
+      <div className="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-gray-400">
         <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
         >
-          <h2 className="text-white lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
+          <h2 className="text-black lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
-          <p className="text-white mt-6 text-base leading-relaxed justify-center text-justify">
+          <p className="text-black mt-6 text-base leading-relaxed justify-center text-justify">
             Universe Educational Visuals aims to provide our clients with the
             best range of products by procuring them from reliable vendors. This
             success is made possible by the unwavering support of our esteemed
@@ -43,7 +43,7 @@ const About = () => {
             national and international markets.
           </p>
           <br />
-          <p className="text-white mt-4 text-base leading-relaxed text-justify">
+          <p className="text-black mt-4 text-base leading-relaxed text-justify">
             Under the inspiring leadership of Mrs. Meena Harikrishnan, we have
             built goodwill in the industry. To lead the market in our domain, we
             are committed to providing nothing but the best.
@@ -115,7 +115,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="bg-blue-400">
+      <div className="bg-gray-500">
         <div className="mt-8 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
             <div
@@ -197,7 +197,7 @@ const About = () => {
               <b className="text-white text-xl">
                 Following are the features of our range of products :
               </b>
-              <ul className="list-disc text-start text-white md:ps-10 mt-3">
+              <ul className="list-disc text-start text-white md:ps-10 mt-3 text-xl">
                 <li>Non-fading writing surfaces</li>
                 <li>Soft texture</li>
                 <li>Durable & user friendly</li>
@@ -243,7 +243,7 @@ const About = () => {
                 seminars to our workforce so that they can keep pace with the
                 dynamic market and client requirements.
               </p>
-              <ul className="list-disc text-start text-white md:ps-10  mt-3">
+              <ul className="list-disc text-start text-white md:ps-10 text-xl mt-3">
                 <li>Quality of Raw materials</li>
                 <li>Excellence Finished Product</li>
                 <li>Comparative Price</li>
@@ -285,7 +285,7 @@ const About = () => {
               <b className="text-white text-xl">
                 Major distinctive features are :
               </b>
-              <ul className="list-disc text-start text-white md:ps-10  mt-3">
+              <ul className="list-disc text-start text-white md:ps-10 text-xl mt-3">
                 <li>Flawless quality of raw and finished product</li>
                 <li>Competitive price</li>
                 <li>Innovative designs and perfect finishing</li>

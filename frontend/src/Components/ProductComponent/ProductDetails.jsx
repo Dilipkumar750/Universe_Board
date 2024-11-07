@@ -109,10 +109,10 @@ const ProductDetails = () => {
           className="bg-slate-700 text-slate-300 py-2 px-3 rounded-md me-2"
           onClick={() => navigate(-1)}
         >
-          Back
+         ← Back 
         </button>
         <Link to="/Contact">
-          <button className="bg-slate-700 text-slate-300 py-2 px-3 rounded-md">
+          <button className="bg-green-500 text-white py-2 px-3 rounded-md">
             Contact
           </button>
         </Link>
