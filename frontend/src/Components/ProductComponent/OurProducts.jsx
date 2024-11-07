@@ -128,7 +128,7 @@ const CategorySection = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className=" md:text-left w-96">
             <h2 className="text-2xl mb-4 font-bold text-white-500">
-            Transform Your Learning Environment with Universe Educational Visuals
+              Transform Your Learning Environment with Universe Educational Visuals
             </h2>
             <p className="text-base text-red font-bold text-justify leading-5">Explore our range of educational tools, from interactive and smart boards to projectors and notice boards. Enhance your classroom experience with innovative solutions and captivating displays. Elevate your teaching with our extensive offerings!</p>
           </div>
@@ -145,90 +145,90 @@ const CategorySection = () => {
         </div>
       </div>
       <div className="bg-white p-8 rounded-lg shadow-lg">
-  {/* Optional Heading */}
-  {/* <h2 className="text-3xl text-white font-bold text-center mb-8">Product Categories</h2> */}
+        {/* Optional Heading */}
+        {/* <h2 className="text-3xl text-white font-bold text-center mb-8">Product Categories</h2> */}
 
-  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-    {/* Sidebar */}
-    <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-purple-800 via-blue-800 to-blue-300 rounded-lg shadow-lg p-6">
-      <div className="border-b border-gray-700 mb-4">
-        <h2 className="px-4 py-3 bg-slate-800 rounded-md">
-          <button
-            className="flex justify-between w-full text-left text-lg font-semibold text-white hover:text-pink-200 transition duration-200 ease-in-out"
-            onClick={() => {
-              setSelectedCategory(null);
-              setSelectedSubCategory(null);
-              setProducts(allProduct);
-            }}
-          >
-            All Categories
-          </button>
-        </h2>
-      </div>
-      
-      {Object.keys(categories).map((category, index) => (
-        <div className="border-b border-gray-700 mb-4" key={index}>
-          <h2 className="bg-slate-600 px-4 py-3 rounded-xl">
-            <button
-              className="flex justify-between w-full text-left text-md font-medium text-white hover:text-pink-200 transition duration-200 ease-in-out"
-              onClick={() => toggleCategory(category)}
-            >
-              {category}
-              {categories[category].length > 0 && (
-                <span
-                  className={`transition-transform transform ${openCategory === category ? "rotate-90" : ""}`}
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Sidebar */}
+          <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-purple-800 via-blue-800 to-blue-300 rounded-lg shadow-lg p-6">
+            <div className="border-b border-gray-700 mb-4">
+              <h2 className="px-4 py-3 bg-slate-800 rounded-md">
+                <button
+                  className="flex justify-between w-full text-left text-lg font-semibold text-white hover:text-pink-200 transition duration-200 ease-in-out"
+                  onClick={() => {
+                    setSelectedCategory(null);
+                    setSelectedSubCategory(null);
+                    setProducts(allProduct);
+                  }}
                 >
-                  ➔
-                </span>
-              )}
-            </button>
-          </h2>
+                  All Categories
+                </button>
+              </h2>
+            </div>
 
-          {categories[category].length > 0 && (
-            <div className={`${openCategory === category ? "block" : "hidden"} bg-slate-700 ml-16 rounded-md mt-2`}>
-              <div className="text-gray-300">
-                {categories[category].map((subCategory, subIndex) => (
+            {Object.keys(categories).map((category, index) => (
+              <div className="border-b border-gray-700 mb-4" key={index}>
+                <h2 className="bg-slate-600 px-4 py-3 rounded-xl">
                   <button
-                    onClick={() => handleSubCategory(subCategory)}
-                    key={subIndex}
-                    className="text-sm pl-8 pr-3 py-2 block text-slate-300 hover:text-white hover:bg-slate-500 transition duration-200 ease-in-out"
+                    className="flex justify-between w-full text-left text-md font-medium text-white hover:text-pink-200 transition duration-200 ease-in-out"
+                    onClick={() => toggleCategory(category)}
                   >
-                    {subCategory}
+                    {category}
+                    {categories[category].length > 0 && (
+                      <span
+                        className={`transition-transform transform ${openCategory === category ? "rotate-90" : ""}`}
+                      >
+                        ➔
+                      </span>
+                    )}
                   </button>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+                </h2>
 
-    {/* Product Grid */}
-    <div className="md:col-span-2 h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      {Products?.length === 0 ? (
-        <div className="text-center text-red-500 font-semibold text-lg">
-          No products available.
+                {categories[category].length > 0 && (
+                  <div className={`${openCategory === category ? "block" : "hidden"} bg-slate-700 ml-16 rounded-md mt-2`}>
+                    <div className="text-gray-300">
+                      {categories[category].map((subCategory, subIndex) => (
+                        <button
+                          onClick={() => handleSubCategory(subCategory)}
+                          key={subIndex}
+                          className="text-sm pl-8 pr-3 py-2 block text-slate-300 hover:text-white hover:bg-slate-500 transition duration-200 ease-in-out"
+                        >
+                          {subCategory}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Product Grid */}
+          <div className="md:col-span-2 h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {Products?.length === 0 ? (
+              <div className="text-center text-red-500 font-semibold text-lg">
+                No products available.
+              </div>
+            ) : (
+              <>
+                {showProductDetails ? (
+                  <div className="col-span-full">
+                    <ProductDetails />
+                  </div>
+                ) : (
+                  Products?.map((product, index) => (
+                    <ProductCard
+                      key={index}
+                      setShowProductDetails={setShowProductDetails}
+                      product={product}
+                    />
+                  ))
+                )}
+              </>
+            )}
+          </div>
         </div>
-      ) : (
-        <>
-          {showProductDetails ? (
-            <div className="col-span-full">
-              <ProductDetails />
-            </div>
-          ) : (
-            Products?.map((product, index) => (
-              <ProductCard
-                key={index}
-                setShowProductDetails={setShowProductDetails}
-                product={product}
-              />
-            ))
-          )}
-        </>
-      )}
-    </div>
-  </div>
-</div>
+      </div>
 
     </div>
   );
