@@ -58,7 +58,7 @@ const Innovation = () => {
           <div className="about-cards flex gap-10 -mt-[8.5rem] md1000:flex-col"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
             <div className="mt-[6rem] relative col-span-1">
-              <h2 className="text-3xl md:text-[36px] font-semibold leading-tight mb-6 text-gray-900">
+              <h2 className="text-3xl md:text-[36px] font-semibold leading-tight mb-6 text-blue-700">
                 Innovative Technology Solutions for Your Business
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify">
@@ -131,7 +131,7 @@ const Innovation = () => {
           <div className="relative flex items-center bg-gray-400 md:rounded-r-3xl">
             <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-400 md:rounded-l-3xl"></span>
             <div className="p-5 sm:p-16 lg:p-24" data-aos="fade-left">
-              <h2 className="text-2xl font-bold sm:text-3xl text-black">
+              <h2 className="text-2xl font-bold sm:text-3xl text-blue-800">
                 Our Educational Tools in Action: Real Success Stories
               </h2>
               <p className="mt-4 text-black text-justify">

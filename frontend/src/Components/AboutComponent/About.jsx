@@ -26,7 +26,7 @@ const About = () => {
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
         >
-          <h2 className="text-black lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
+          <h2 className="text-blue-700 lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
           <p className="text-black mt-6 text-base leading-relaxed justify-center text-justify">
@@ -65,7 +65,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-col items-center mt-5 mb-5 p-4 ">
-        <h1 className="text-3xl font-bold mb-4 text-center text-red-500">
+        <h1 className="text-3xl font-bold mb-4 text-center text-blue-500">
           Our Famous Products
         </h1>
 
@@ -98,7 +98,7 @@ const About = () => {
 
       <div className="py-8 bg-white flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 p-4">
-          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-red-500">
+          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-blue-500">
             Project Management
           </h1>
           <p className="text-center md:text-left font-serif text-xl leading-relaxed">
@@ -115,7 +115,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="bg-gray-500">
+      <div className="bg-gray-600">
         <div className="mt-8 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
             <div
