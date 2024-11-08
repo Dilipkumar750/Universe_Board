@@ -61,7 +61,7 @@ const Contact = () => {
               Thuraiyur, Dhan Lakshmi Nagar<br />
               Tiruchirappalli - 621010, Tamil Nadu.
               <p className="mt-4 font-semibold text-black">Phone:</p>
-              <p>+8048955493</p>
+              <p>+9965085475</p>
               <p className="mt-4 font-semibold text-black">Email:</p>
               <p>info@universeeducationalvisuals.com</p>
             </div>

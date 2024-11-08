@@ -11,6 +11,7 @@ import whyUs from "../../assets/whyUs.jpg";
 import { Link } from "react-router-dom";
 import Projectmagement from "../../assets/project.jpg"
 
+
 const products = [
   { image: imageOne, quote: "Make Every Presentation Shine – Top-Quality Projectors on Sale!" },
   { image: imageTwo, quote: "Unbeatable Price, Unmatched Quality – Get Your Green School Board Today!" },
@@ -97,7 +98,7 @@ const About = () => {
 
 
       <div className="py-8 bg-white flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 p-4">
+        <div className="md:w-1/2 p-4" data-aos="fade-right">
           <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-blue-500">
             Project Management
           </h1>
@@ -106,7 +107,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="md:w-1/2 p-4">
+        <div className="md:w-1/2 p-4" data-aos="fade-left">
           <img
             src={Projectmagement}
             alt="Project Management"
