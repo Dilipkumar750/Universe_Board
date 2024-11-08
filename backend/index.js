@@ -4,6 +4,7 @@ require("dotenv").config()
 const userRoute = require('./routes/adminRoutes')
 const productRoute = require('./routes/productRoutes')
 const connectDb = require('./config/db')
+const testimonialsRouter = require('./routes/testimonials');
 
 const app = express()
 const PORT = process.env.PORT || 8000
@@ -14,6 +15,7 @@ app.use(express.json())
 
 app.use('/auth',userRoute)
 app.use('/product',productRoute)
+app.use('/testimonials', testimonialsRouter);
 
 app.get('/',(req,res)=>{
     res.send('Universe Backend Running')
