@@ -39,7 +39,7 @@ const ColorFoot = () => (
           </li>
           <li>
             <a
-              href="https://wa.me/8048955493"
+              href="https://wa.me/9965085475"
               aria-label="WhatsApp"
               className="text-white text-2xl hover:bg-gray-300">
               <FaWhatsapp />
@@ -157,9 +157,9 @@ const ColorFoot = () => (
           </li>
           <li>
             <a
-              href="tel:8048955493"
+              href="tel:9965085475"
               className="text-white hover:text-green-300 text-sm">
-              8048955493
+              9965085475
             </a>
           </li>
         </ul>

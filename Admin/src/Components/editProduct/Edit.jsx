@@ -135,7 +135,7 @@ const Edit = () => {
   const updateProductHandler = async () => {
     try {
       await dispatch(updateProduct({ productDetails, image, details })); // Include details in update
-      navigate("/listproduct");
+      navigate("/home/listproduct");
     } catch (error) {
       console.error("Failed to update product:", error);
     }
