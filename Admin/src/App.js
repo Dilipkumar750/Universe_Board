@@ -7,6 +7,8 @@ import HomeLayout from "./layout/HomeLayout";
 import AddProduct from "./Components/AddProduct/AddProduct";
 import ListProduct from "./Components/ListProduct/ListProduct";
 import Edit from "./Components/editProduct/Edit";
+import Testimonials from "./Components/Testimonials/Testimonials";
+import ListTestimonials from "./Components/Testimonials/ListTestimonials";
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Route path="/home" element={<HomeLayout />}>
           <Route index element={<AddProduct />} />
           <Route path="listproduct" element={<ListProduct />} />
+          <Route path="Testimonials" element={<Testimonials />} />
+          <Route path="ListTestimonials" element={<ListTestimonials />} />
           <Route path="edit/:id" element={<Edit />} />
         </Route>
       </Routes>
