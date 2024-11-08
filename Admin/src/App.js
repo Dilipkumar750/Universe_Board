@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-// import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import Admin from "./Pages/Admin";
 import Login from "./Components/Login";
@@ -15,16 +14,15 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/" element={<HomeLayout />}>
+        <Route path="/home" element={<HomeLayout />}>
           <Route index element={<AddProduct />} />
-          <Route path="/listproduct" element={<ListProduct />} />
+          <Route path="listproduct" element={<ListProduct />} />
           <Route path="edit/:id" element={<Edit />} />
         </Route>
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 }

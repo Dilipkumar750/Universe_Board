@@ -14,7 +14,7 @@ const MainProducts = () => {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-400 py-5">
    
-      <h2 className="text-4xl font-bold mb-8 text-red-500">Major Products</h2>
+      <h2 className="text-4xl font-bold mb-8 text-blue-800">Major Products</h2>
 
      
       <div className="grid md:grid-cols-3 gap-6 b" data-aos="fade-down">
@@ -57,7 +57,7 @@ const MainProducts = () => {
             <img src={experts} className="h-64 w-64 rounded-3xl object-cover border-4 border-white" alt="machinery image" />
           </div>
           <div className="text-center px-6 sm:flex-1" data-aos="fade-up">
-            <h3 className="font-extrabold text-5xl text-black leading-tight">
+            <h3 className="font-extrabold text-5xl text-blue-500 leading-tight">
             Universal Boards
             </h3>
             <h6 className="text-2xl text-black mt-2">Quality You Can Trust</h6>

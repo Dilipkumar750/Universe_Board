@@ -4,7 +4,7 @@ import medical from '../../assets/medical.png';
 
 const InputField = ({ label, type, placeholder }) => (
   <div>
-    <label className="text-gray-200 text-sm block mb-2">{label}</label>
+    <label className="text-black text-sm font-bold block mb-2">{label}</label>
     <input
       type={type}
       placeholder={placeholder}
@@ -43,8 +43,8 @@ const Contact = () => {
 
 
       <div className="-mt-16 mb-6 px-4">
-        <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-gray-500 rounded-md">
-          <h2 className="text-4xl text-red-500 font-bold text-center">Product Inquiry</h2>
+        <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-gray-400 rounded-xl">
+          <h2 className="text-4xl text-black font-bold text-center">Product Inquiry</h2>
 
 
           <div className="mt-6 text-white flex flex-col md:flex-row">
@@ -54,15 +54,15 @@ const Contact = () => {
                 Whether you have a question, need more information about our services, or want to discuss a potential partnership,
                 we would love to hear from you. Feel free to reach out to us through any of the following ways:
               </p>
-              <p className="mt-4 font-semibold text-red-500">Address:</p>
+              <p className="mt-4 font-semibold text-black">Address:</p>
               Universe Educational Visuals<br />
               9/W, 1A, Akilandeswari Nagar,<br />
               Canara Bank Colony,Ammapatti Salai, <br />
               Thuraiyur, Dhan Lakshmi Nagar<br />
               Tiruchirappalli - 621010, Tamil Nadu.
-              <p className="mt-4 font-semibold text-red-500">Phone:</p>
+              <p className="mt-4 font-semibold text-black">Phone:</p>
               <p>+8048955493</p>
-              <p className="mt-4 font-semibold text-red-500">Email:</p>
+              <p className="mt-4 font-semibold text-black">Email:</p>
               <p>info@universeeducationalvisuals.com</p>
             </div>
             <div className="md:flex-1 flex justify-center">
@@ -71,7 +71,7 @@ const Contact = () => {
           </div>
 
           {/* Inquiry Form */}
-          <form className="mt-8 grid sm:grid-cols-2 gap-6 " onSubmit={handleSubmit}>
+          <form className="mt-8 grid sm:grid-cols-2 gap-6" onSubmit={handleSubmit}>
             <InputField label="Your Name" type="text" placeholder="Enter Name" />
             <InputField label="Your Email" type="email" placeholder="Email" />
             <InputField label="Your Number" type="tel" placeholder="Phone No." />
@@ -80,7 +80,7 @@ const Contact = () => {
             <InputField label="Subject" type="text" placeholder="Subject" />
 
             <div className="col-span-full">
-              <label className="text-white text-sm block mb-2">Message</label>
+              <label className="text-black text-sm block mb-2 font-bold">Message</label>
               <textarea
                 placeholder="Message"
                 rows="6"
@@ -91,7 +91,7 @@ const Contact = () => {
 
             <div className="flex items-center col-span-full">
               <input id="checkbox1" type="checkbox" className="w-4 h-4 mr-3 shrink-0" required />
-              <label htmlFor="checkbox1" className="text-sm text-gray-500">
+              <label htmlFor="checkbox1" className="text-sm text-white">
                 I agree to the <a href="/TermsAndConditions" className="underline">Terms and Conditions</a> and <a href="/PrivacyPolicy" className="underline">Privacy Policy</a>
               </label>
             </div>

@@ -1,98 +1,125 @@
 import React, { useState } from "react";
-
-const Signup = () => {
-  const [registerDetails, setRegisterDetails] = useState({
-    name: "",
-    username: "",
-    password: "",
-    confirmPassword: "",
-  });
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+const Register = () => {
+  const navigation = useNavigate();
+  const [formData, setFormData] = useState({ username: "", email: "", password: "" });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setRegisterDetails({ ...registerDetails, [name]: value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (registerDetails.password !== registerDetails.confirmPassword) {
-      alert("Passwords do not match");
-      return;
+    try {
+      const response = await axios.post("http://localhost:8000/auth/register", formData);
+      navigation("/")
+    } catch (err) {
+      console.error(err);
+      alert("Error occurred during registration.");
     }
-
-   
-    const response = await fetch("http://localhost:4000/signup", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: registerDetails.name,
-        username: registerDetails.username,
-        password: registerDetails.password,
-      }),
-    });
-
-    const data = await response.json();
-    console.log(data); 
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h1 className="text-2xl font-semibold mb-6 text-center">Signup</h1>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        backgroundColor: "#f3f4f6",
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: "#ffffff",
+          padding: "2rem",
+          borderRadius: "0.5rem",
+          boxShadow: "0 10px 15px rgba(0, 0, 0, 0.1)",
+          width: "24rem",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "1.5rem",
+            fontWeight: "600",
+            marginBottom: "1.5rem",
+            textAlign: "center",
+          }}
+        >
+          Register
+        </h1>
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-gray-700">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={registerDetails.name}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Username</label>
+          <div style={{ marginBottom: "1rem" }}>
+            <label style={{ display: "block", color: "#4a5568" }}>Username</label>
             <input
               type="text"
               name="username"
-              value={registerDetails.username}
+              placeholder="Username"
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
+              style={{
+                width: "100%",
+                padding: "0.5rem",
+                border: "1px solid #cbd5e0",
+                borderRadius: "0.5rem",
+                outline: "none",
+                boxSizing: "border-box",
+              }}
             />
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Password</label>
+          <div style={{ marginBottom: "1rem" }}>
+            <label style={{ display: "block", color: "#4a5568" }}>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={handleChange}
+              required
+              style={{
+                width: "100%",
+                padding: "0.5rem",
+                border: "1px solid #cbd5e0",
+                borderRadius: "0.5rem",
+                outline: "none",
+                boxSizing: "border-box",
+              }}
+            />
+          </div>
+          <div style={{ marginBottom: "1rem" }}>
+            <label style={{ display: "block", color: "#4a5568" }}>Password</label>
             <input
               type="password"
               name="password"
-              value={registerDetails.password}
+              placeholder="Password"
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Confirm Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={registerDetails.confirmPassword}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
-              required
+              style={{
+                width: "100%",
+                padding: "0.5rem",
+                border: "1px solid #cbd5e0",
+                borderRadius: "0.5rem",
+                outline: "none",
+                boxSizing: "border-box",
+              }}
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition duration-300"
+            style={{
+              width: "100%",
+              backgroundColor: "black",
+              color: "#ffffff",
+              padding: "0.5rem",
+              borderRadius: "0.5rem",
+              border: "none",
+              cursor: "pointer",
+              transition: "background-color 0.3s",
+            }}
+            onMouseOver={(e) => (e.target.style.backgroundColor = "black")}
+            onMouseOut={(e) => (e.target.style.backgroundColor = "black")}
           >
-            Signup
+            Register
           </button>
         </form>
       </div>
@@ -100,4 +127,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Register;

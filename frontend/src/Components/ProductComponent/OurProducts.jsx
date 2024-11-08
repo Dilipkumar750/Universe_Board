@@ -127,7 +127,7 @@ const CategorySection = () => {
         style={{ backgroundImage: `url(${productImage})` }}>
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className=" md:text-left w-96">
-            <h2 className="text-2xl mb-4 font-bold text-white-500">
+            <h2 className="text-2xl mb-4 font-bold text-blue-700">
               Transform Your Learning Environment with Universe Educational Visuals
             </h2>
             <p className="text-base text-red font-bold text-justify leading-5">Explore our range of educational tools, from interactive and smart boards to projectors and notice boards. Enhance your classroom experience with innovative solutions and captivating displays. Elevate your teaching with our extensive offerings!</p>
@@ -168,9 +168,9 @@ const CategorySection = () => {
 
             {Object.keys(categories).map((category, index) => (
               <div className="border-b border-gray-700 mb-4" key={index}>
-                <h2 className="bg-slate-600 px-4 py-3 rounded-xl">
+                <h2 className="bg-white px-4 py-3 rounded-xl">
                   <button
-                    className="flex justify-between w-full text-left text-md font-medium text-white hover:text-pink-200 transition duration-200 ease-in-out"
+                    className="flex justify-between w-full text-left text-md font-medium text-black hover:text-pink-200 transition duration-200 ease-in-out"
                     onClick={() => toggleCategory(category)}
                   >
                     {category}
@@ -185,13 +185,13 @@ const CategorySection = () => {
                 </h2>
 
                 {categories[category].length > 0 && (
-                  <div className={`${openCategory === category ? "block" : "hidden"} bg-slate-700 ml-16 rounded-md mt-2`}>
-                    <div className="text-gray-300">
+                  <div className={`${openCategory === category ? "block" : "hidden"} bg-white ml-16 rounded-md mt-2`}>
+                    <div className="text-black">
                       {categories[category].map((subCategory, subIndex) => (
                         <button
                           onClick={() => handleSubCategory(subCategory)}
                           key={subIndex}
-                          className="text-sm pl-8 pr-3 py-2 block text-slate-300 hover:text-white hover:bg-slate-500 transition duration-200 ease-in-out"
+                          className="text-sm pl-8 pr-3 py-2 block text-black transition duration-200 ease-in-out"
                         >
                           {subCategory}
                         </button>
