@@ -4,6 +4,7 @@ import Hero from './Hero';
 import Innovation from './Innovation';
 import MainProducts from './MainProducts';
 import Turnover from './Turnover';
+import Test from './Test';
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
             <Hero />
             <Innovation />
             <Turnover/>
+            <Test />
             <MainProducts />
         </>
     )
