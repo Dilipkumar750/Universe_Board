@@ -39,6 +39,8 @@ const Turnover = () => {
   ];
 
   return (
+
+    
     <div className="relative z-10 p-6 space-y-6 bg-white shadow-lg rounded-lg bg-opacity-80">
       <h2 className="text-4xl font-bold mb-8 text-center text-blue-800" data-aos="fade-up">Who We Are</h2>
 
@@ -111,6 +113,8 @@ const Turnover = () => {
 
 
     </div>
+
+    
   );
 };
 
