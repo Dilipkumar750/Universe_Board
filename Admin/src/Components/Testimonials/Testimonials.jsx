@@ -78,7 +78,7 @@ const AdminAddTestimonial = () => {
             ))}
           </div>
         </div>
-
+            
         <button type="submit" style={styles.button}>Add Testimonial</button>
       </form>
     </div>

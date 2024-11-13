@@ -1,80 +1,71 @@
 import { useEffect, useState } from 'react';
 import review from "../../assets/review.png";
-
-const testimonials = [
-  { 
-    name: "John Doe", 
-    title: "CEO of Company A", 
-    text: "This service is amazing! It has changed my life for the better.", 
-    rating: 5 
-  },
-  { 
-    name: "Jane Smith", 
-    title: "Marketing Manager", 
-    text: "The experience was fantastic. Highly recommended for anyone looking to improve their business.", 
-    rating: 4 
-  },
-  { 
-    name: "Alice Johnson", 
-    title: "Project Lead", 
-    text: "A wonderful product! It has helped us increase efficiency and productivity.", 
-    rating: 5 
-  },
-  { 
-    name: "Bob Brown", 
-    title: "Entrepreneur", 
-    text: "I couldn't be happier with the results. Excellent customer support as well.", 
-    rating: 4 
-  },
-  { 
-    name: "Charlie Lee", 
-    title: "Product Designer", 
-    text: "Professional and reliable service. I would definitely work with them again.", 
-    rating: 5 
-  },
-];
+import { getAllTestimonials } from '../../slices/TestimonialSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
 const TestimonialCarousel = () => {
+  const dispatch = useDispatch();
+  const { data: testimonials, loading, error } = useSelector((state) => state.testimonial.getAllTestimonials);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    if (testimonials?.length) {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
+    let interval;
+    if (testimonials?.length) {
+      interval = setInterval(nextSlide, 3000);
+    }
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonials]);
+
+  useEffect(() => {
+    dispatch(getAllTestimonials());
+  }, [dispatch]);
 
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       stars.push(
-        <svg 
-          key={i} 
-          xmlns="http://www.w3.org/2000/svg" 
-          className={`w-5 h-5 ${i <= rating ? 'text-yellow-500' : 'text-gray-300'}`} 
-          fill="currentColor" 
+        <svg
+          key={i}
+          xmlns="http://www.w3.org/2000/svg"
+          className={`w-5 h-5 ${i <= rating ? 'text-yellow-500' : 'text-gray-300'}`}
+          fill="currentColor"
           viewBox="0 0 24 24">
-          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
         </svg>
       );
     }
     return stars;
   };
 
+  if (loading) {
+    return <div>Loading testimonials...</div>;
+  }
+
+  if (error) {
+    return <div>Error loading testimonials: {error}</div>;
+  }
+
+  if (!testimonials || testimonials.length === 0) {
+    return <div>No testimonials available.</div>;
+  }
+
   return (
-    <div className="font-[sans-serif] bg-gray-500 py-12 px-6 min-h-screen flex flex-col items-center justify-center">
+    <div className="font-[sans-serif] bg-blue-300 py-12 px-6 min-h-screen flex flex-col items-center justify-center">
       <h1 className="text-3xl font-bold text-center text-white mb-10">Our Clients Say:</h1>
-      
+
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
-        
         <div className="bg-white p-8 rounded-lg shadow-xl max-w-md md:max-w-lg md:order-1 text-center">
-          <p className="text-xl font-semibold mb-4">{`"${testimonials[currentIndex].text}"`}</p>
-          <p className="font-medium">{testimonials[currentIndex].name}</p>
-          <p className="text-gray-500">{testimonials[currentIndex].title}</p>
+          <p className="text-xl font-semibold mb-4">{`"${testimonials[currentIndex]?.text}"`}</p>
+          <p className="font-medium">{testimonials[currentIndex]?.name}</p>
+          <p className="text-gray-500">{testimonials[currentIndex]?.title}</p>
           <div className="flex justify-center mt-2">
-            {renderStars(testimonials[currentIndex].rating)}
+            {renderStars(testimonials[currentIndex]?.rating)}
           </div>
         </div>
 
@@ -99,7 +90,6 @@ const TestimonialCarousel = () => {
             </button>
           </div>
         </div>
-
       </div>
 
       <div className="mt-6 flex space-x-2">

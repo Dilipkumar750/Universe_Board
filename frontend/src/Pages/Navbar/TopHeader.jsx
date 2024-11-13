@@ -2,13 +2,15 @@ import { IoArrowForward } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import logo from '../../assets/logo.png';
 
 function TopHeader() {
   return (
-    <section className="d-flex flex-column flex-md-row align-items-center justify-content-between bg-black text-white py-2 px-3 sticky-top z-50">
+    <section className="d-flex flex-column flex-md-row align-items-center justify-content-between bg-black text-blue-400 py-2 px-3 sticky-top z-50">
       {/* Left section with the company name */}
-      <div className="d-flex align-items-center mb-2 mb-md-0 ms-md-3">
-        <span className="fs-2">Universe Visuals</span>
+      <div className="d-flex align-items-center mb-2 mb-md-0 ms-md-3 center">
+        <img src={logo} alt="Company Logo" className="h-20 w-20 ml-20" />
+        <span className="fs-2 ms-2">Universe Visuals</span>
       </div>
 
       {/* Right section with contact button and details */}

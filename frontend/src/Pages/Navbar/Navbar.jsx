@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className="bg-white mt-0 ml-10"> 
             <div className="max-w-full flex flex-wrap items-center justify-between mx-auto">
                 <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src={logo} className="h-28" alt="Logo" />
+                    {/* <img src={logo} className="h-28" alt="Logo" /> */}
                 </Link>
 
                 <button

@@ -57,7 +57,7 @@ const Innovation = () => {
         <div className="container page-padding relative z-10">
           <div className="about-cards flex gap-10 -mt-[8.5rem] md1000:flex-col"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
-            <div className="mt-[6rem] relative col-span-1">
+            <div className="mt-[6rem] relative col-span-1 ml-10">
               <h2 className="text-3xl md:text-[36px] font-semibold leading-tight mb-6 text-blue-700">
                 Innovative Technology Solutions for Your Business
               </h2>
