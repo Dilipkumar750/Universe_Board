@@ -31,7 +31,7 @@ const About = () => {
             Our Company
           </h2>
           <p className="text-black mt-6 text-base leading-relaxed justify-center text-justify">
-            Universe Educational Visuals aims to provide our clients with the
+            Universe Visuals aims to provide our clients with the
             best range of products by procuring them from reliable vendors. This
             success is made possible by the unwavering support of our esteemed
             vendors, who deliver world-class products. With our offerings, we
@@ -127,7 +127,7 @@ const About = () => {
                 Vision
               </h1>
               <p className="text-xl text-justify text-white">
-                Universe Educational Visuals aims to be a global leader in
+                Universe Visuals aims to be a global leader in
                 premium, innovative, and reliable educational and display
                 products. Our goal is to empower institutions, corporate
                 entities, and homes worldwide by offering solutions that enhance

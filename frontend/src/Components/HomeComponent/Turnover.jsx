@@ -21,22 +21,22 @@ const Turnover = () => {
     { label: "Quality Measures / Testing Facilities", value: "Yes" },
   ];
 
-  const companyProfileData = [
-    { label: "Nature of Business", value: "Manufacturer", icon: <FaIndustry /> },
-    { label: "Additional Business", value: "Factory / Manufacturing", icon: <MdBusiness /> },
-    { label: "Total Number of Employees", value: "Upto 10 People", icon: <FaUserFriends /> },
-    { label: "GST Registration Date", value: "01-07-2017", icon: <MdDateRange /> },
-    { label: "Legal Status of Firm", value: "Proprietorship", icon: <RiGovernmentLine /> },
-    { label: "Annual Turnover", value: "40 L - 1.5 Cr", icon: <FaMoneyBillWave /> },
-    { label: "Banker", value: "Canara Bank", icon: <MdOutlineAccountBalance /> },
-    { label: "GST No.", value: "33AFGPH9414 L1ZC", icon: <AiOutlineBarcode /> },
-    { label: "Customized Packaging", value: "Yes", icon: <BsBoxSeam /> },
-    { label: "Payment Terms", value: "D/A", icon: <AiOutlineDollarCircle /> },
-    { label: "Payment Mode", value: "Cash", icon: <AiOutlineAudit /> },
-    { label: "Shipment Mode", value: "By Air, By Road", icon: <FaShippingFast /> },
-    { label: "No. of Research / QC Staff", value: "1 - 5 People", icon: <MdOutlinePeople /> },
-    { label: "No. of Skilled Staff", value: "1 - 5 People", icon: <BsGear /> },
-  ];
+  // const companyProfileData = [
+  //   { label: "Nature of Business", value: "Manufacturer", icon: <FaIndustry /> },
+  //   { label: "Additional Business", value: "Factory / Manufacturing", icon: <MdBusiness /> },
+  //   { label: "Total Number of Employees", value: "Upto 10 People", icon: <FaUserFriends /> },
+  //   { label: "GST Registration Date", value: "01-07-2017", icon: <MdDateRange /> },
+  //   { label: "Legal Status of Firm", value: "Proprietorship", icon: <RiGovernmentLine /> },
+  //   { label: "Annual Turnover", value: "40 L - 1.5 Cr", icon: <FaMoneyBillWave /> },
+  //   { label: "Banker", value: "Canara Bank", icon: <MdOutlineAccountBalance /> },
+  //   { label: "GST No.", value: "33AFGPH9414 L1ZC", icon: <AiOutlineBarcode /> },
+  //   { label: "Customized Packaging", value: "Yes", icon: <BsBoxSeam /> },
+  //   { label: "Payment Terms", value: "D/A", icon: <AiOutlineDollarCircle /> },
+  //   { label: "Payment Mode", value: "Cash", icon: <AiOutlineAudit /> },
+  //   { label: "Shipment Mode", value: "By Air, By Road", icon: <FaShippingFast /> },
+  //   { label: "No. of Research / QC Staff", value: "1 - 5 People", icon: <MdOutlinePeople /> },
+  //   { label: "No. of Skilled Staff", value: "1 - 5 People", icon: <BsGear /> },
+  // ];
 
   return (
 
@@ -93,9 +93,9 @@ const Turnover = () => {
           ))}
         </div>
       </div>
-      <h2 className="text-4xl font-bold mb-8 text-center text-blue-800" data-aos="fade-up">About Our Company</h2>
+      {/* <h2 className="text-4xl font-bold mb-8 text-center text-blue-800" data-aos="fade-up">About Our Company</h2> */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {companyProfileData.map((item, index) => (
           <div
             key={index}
@@ -109,7 +109,7 @@ const Turnover = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
 
     </div>

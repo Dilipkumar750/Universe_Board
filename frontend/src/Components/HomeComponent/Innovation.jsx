@@ -62,7 +62,7 @@ const Innovation = () => {
                 Innovative Technology Solutions for Your Business
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify">
-                Universe Educational Visuals is dedicated to enhancing the educational experience with a diverse range of visual and interactive tools.
+                Universe Visuals is dedicated to enhancing the educational experience with a diverse range of visual and interactive tools.
                 Founded with a commitment to innovation, we offer solutions tailored to meet the unique needs of educators, students, and institutions globally.
                 <br />
                 <br />
@@ -82,7 +82,7 @@ const Innovation = () => {
 
                   <div>
                     <h2 className="uppercase font-bold text-[24px] text-primary leading-snug">
-                      <CountUp end={150} duration={20} suffix=" +" />
+                      <CountUp end={3000} duration={20} suffix=" +" />
                     </h2>
                     <h3 className="uppercase font-semibold text-[12px] leading-snug text-gray-700">
                       Completed Projects
@@ -93,7 +93,7 @@ const Innovation = () => {
 
                   <div>
                     <h2 className="uppercase font-bold text-[24px] text-primary leading-snug">
-                      <CountUp end={91} duration={30} suffix=" +" />
+                      <CountUp end={1000} duration={30} suffix=" +" />
                     </h2>
                     <h3 className="uppercase font-semibold text-[12px] leading-snug text-gray-700">
                       Happy Clients
@@ -104,7 +104,7 @@ const Innovation = () => {
 
                   <div>
                     <h2 className="uppercase font-bold text-[24px] text-primary leading-snug">
-                      <CountUp end={110} duration={25} suffix=" +" />
+                      <CountUp end={1500} duration={25} suffix=" +" />
                     </h2>
                     <h3 className="uppercase font-semibold text-[12px] leading-snug text-gray-700">
                       Customer Service
@@ -135,7 +135,7 @@ const Innovation = () => {
                 Our Educational Tools in Action: Real Success Stories
               </h2>
               <p className="mt-4 text-black text-justify">
-                At Universe Educational Visuals, innovation drives everything we create. We offer a wide range of products, including smart boards, projectors, and various writing boards, both ceramic and magnetic, to enhance your educational experience.
+                At Universe Visuals, innovation drives everything we create. We offer a wide range of products, including smart boards, projectors, and various writing boards, both ceramic and magnetic, to enhance your educational experience.
                 <br />
                 Our dedicated team continually develops tools such as display boards, notice boards with sliding glass doors, and press graph boards, ensuring they meet the changing needs of educators and students.
               </p>
