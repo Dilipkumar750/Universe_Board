@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="grid md:grid-cols-2 items-center md:gap-10 gap-6">
         <div className="max-md:order-1 max-md:text-center">
           <p className="mt-4 text-5xl font-extrabold text-blue-500">
-             Universe Educational Visuals
+             Universe Visuals
           </p>
           <h2 className="text-gray-800 md:text-5xl text-3xl font-bold mb-4 md:!leading-[55px]">
           Enriching Classrooms with Quality School Essentials.          </h2>
@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex md:h-[400px] md:w-[550px] p-2 overflow-x-hidden  flex-col" data-aos="fade-left">
+        <div className="hidden md:flex md:h-full md:w-full p-2 overflow-x-hidden  flex-col" data-aos="fade-left">
           {/* Custom carousel with automatic scroll */}
           <div className="relative w-full h-full overflow-hidden rounded-lg p-1"> {/* Added padding here */}
             {swiperImages.map((image, index) => (

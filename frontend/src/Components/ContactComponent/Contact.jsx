@@ -50,12 +50,12 @@ const Contact = () => {
           <div className="mt-6 text-white flex flex-col md:flex-row">
             <div className="md:flex-1" data-aos="fade-right">
               <p>
-                At Universe Educational Visuals, We are always here to help you connect, grow, and explore new opportunities.
+                At Universe Visuals, We are always here to help you connect, grow, and explore new opportunities.
                 Whether you have a question, need more information about our services, or want to discuss a potential partnership,
                 we would love to hear from you. Feel free to reach out to us through any of the following ways:
               </p>
               <p className="mt-4 font-semibold text-black">Address:</p>
-              Universe Educational Visuals<br />
+              Universe Visuals<br />
               9/W, 1A, Akilandeswari Nagar,<br />
               Canara Bank Colony,Ammapatti Salai, <br />
               Thuraiyur, Dhan Lakshmi Nagar<br />

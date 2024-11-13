@@ -128,7 +128,7 @@ const CategorySection = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className=" md:text-left w-96">
             <h2 className="text-2xl mb-4 font-bold text-blue-700">
-              Transform Your Learning Environment with Universe Educational Visuals
+              Transform Your Learning Environment with Universe Visuals
             </h2>
             <p className="text-base text-red font-bold text-justify leading-5">Explore our range of educational tools, from interactive and smart boards to projectors and notice boards. Enhance your classroom experience with innovative solutions and captivating displays. Elevate your teaching with our extensive offerings!</p>
           </div>

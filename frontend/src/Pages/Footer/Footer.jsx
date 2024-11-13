@@ -47,7 +47,7 @@ const ColorFoot = () => (
           </li>
         </ul>
         <address className="font-bold text-white text-sm space-y-1">
-          <span className="text-red-600 font-bold text-2xl">Universe Educational Visuals</span>
+          <span className="text-red-600 font-bold text-2xl">Universe Visuals</span>
           <br />
           9/W, 1A, Akilandeswari Nagar,
           <br />
@@ -167,7 +167,7 @@ const ColorFoot = () => (
     </div>
 
     <p className="text-white text-sm mt-10 text-center">
-      © Universe Educational Visuals All rights reserved.
+      © Universe Visuals All rights reserved ♥ UltraFly Solutions Pvt Limited
     </p>
   </footer>
 );
