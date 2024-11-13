@@ -150,7 +150,7 @@ const CategorySection = () => {
 
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sidebar */}
-          <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-purple-800 via-blue-800 to-blue-300 rounded-lg shadow-lg p-6">
+          <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 rounded-lg shadow-lg p-6">
             <div className="border-b border-gray-700 mb-4">
               <h2 className="px-4 py-3 bg-slate-800 rounded-md">
                 <button

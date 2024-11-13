@@ -10,7 +10,7 @@ const ColorFoot = () => (
         <img
           src={logo}
           alt="Gravity Global Exports Logo"
-          className="w-28 scale-150 "
+          className="w-28 scale-150 p-3"
         />
         <ul className="flex space-x-6 my-2">
           <li>

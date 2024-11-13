@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex md:h-full md:w-full p-2 overflow-x-hidden  flex-col" data-aos="fade-left">
+        <div className="hidden md:flex md:h-[350px] md:w-[550px] p-2 overflow-x-hidden  flex-col" data-aos="fade-left">
           {/* Custom carousel with automatic scroll */}
           <div className="relative w-full h-full overflow-hidden rounded-lg p-1"> {/* Added padding here */}
             {swiperImages.map((image, index) => (
