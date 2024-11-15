@@ -11,7 +11,6 @@ import whyUs from "../../assets/whyUs.jpg";
 import { Link } from "react-router-dom";
 import Projectmagement from "../../assets/project.jpg"
 
-
 const products = [
   { image: imageOne, quote: "Make Every Presentation Shine – Top-Quality Projectors on Sale!" },
   { image: imageTwo, quote: "Unbeatable Price, Unmatched Quality – Get Your Green School Board Today!" },
@@ -22,8 +21,9 @@ const products = [
 const About = () => {
   return (
     <div className="font-sans">
-      <div className="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-gray-400">
-        <div
+      <div
+        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700">       
+     <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
         >
