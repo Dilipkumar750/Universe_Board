@@ -159,7 +159,7 @@ const ColorFoot = () => (
             <a
               href="tel:9965085475"
               className="text-white hover:text-green-300 text-sm">
-              9965085475
+              99650 85475
             </a>
           </li>
         </ul>
