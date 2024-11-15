@@ -129,7 +129,7 @@ const TermsAndConditions = () => {
         <p style={sectionStyle}>
           If you have any questions or concerns about these Terms, please contact us at:
           <br />
-          <strong>Universal Educational Visuals</strong>
+          <strong>Universal Visuals</strong>
           <br />
           9/W, 1A, Akilandeswari Nagar,
           <br />
@@ -141,7 +141,7 @@ const TermsAndConditions = () => {
           <br />
           Phone: +91 80489 55493
           <br />
-          Email: info@universeeducationalvisuals.com
+          Email: info@universevisuals.com
         </p>
       </div>
     </div>

@@ -19,35 +19,39 @@ const MainProducts = () => {
     { image: experts, title: 'Podium', description: 'Manufacturing sturdy and stylish podiums for educational and professional settings, designed for ease of use and long-lasting durability.' },
     { image: experts1, title: 'Green Board', description: 'High-quality green boards perfect for classrooms and offices, offering smooth writing surfaces that are easy to clean and maintain.' },
   ];
-  
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-400 py-5">
-      <h2 className="text-4xl font-bold mb-8 text-blue-800">Major Products</h2>
+    <div className="flex flex-col items-center min-h-screen bg-gray-400 py-5 px-4">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-blue-800 text-center">Major Products</h2>
 
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={1}
+        spaceBetween={20}
         freeMode={true}
         pagination={{
           clickable: true,
         }}
         autoplay={{
-          delay: 1000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         loop={true}
         modules={[FreeMode, Pagination, Autoplay]}
+        breakpoints={{
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3, spaceBetween: 30 },
+        }}
         className="mySwiper w-full"
       >
         {products.map((product, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white shadow-md rounded-xl w-80 border border-red-500">
+            <div className="bg-white shadow-md rounded-xl w-full md:w-80 border border-red-500 mx-auto">
               <div className="p-4 text-center h-32">
-                <h3 className="text-lg font-semibold">{product.title}</h3>
-                <p className="text-sm text-gray-600 mt-2">{product.description}</p>
+                <h3 className="text-base md:text-lg font-semibold">{product.title}</h3>
+                <p className="text-sm md:text-base text-gray-600 mt-2">{product.description}</p>
               </div>
-              <div className="overflow-hidden rounded-t-xl h-64 group p-3 rounded-sm">
+              <div className="overflow-hidden rounded-t-lg h-64 group p-5 rounded-sm">
                 <img
                   src={product.image}
                   alt={product.title}

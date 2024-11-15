@@ -138,6 +138,8 @@ const Innovation = () => {
                 At Universe Visuals, innovation drives everything we create. We offer a wide range of products, including smart boards, projectors, and various writing boards, both ceramic and magnetic, to enhance your educational experience.
                 <br />
                 Our dedicated team continually develops tools such as display boards, notice boards with sliding glass doors, and press graph boards, ensuring they meet the changing needs of educators and students.
+                With our premium selection, including welcome boards with gold frames and educational tools, we are committed to shaping the future of education, making it more interactive and engaging for all.
+
               </p>
               <div data-aos="zoom-in" className="flex justify-start">
                 <Link to="/Contact">

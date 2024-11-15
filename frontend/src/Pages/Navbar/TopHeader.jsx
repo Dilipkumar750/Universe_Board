@@ -29,8 +29,8 @@ function TopHeader() {
 
         {/* Contact details */}
         <div className="align-items-center gap-3">
-          <a href="mailto:info@universeeducationalvisuals.com" className="text-white d-flex align-items-center gap-2">
-            <IoIosMail /> info@universeeducationalvisuals.com
+          <a href="mailto:info@universevisuals.com" className="text-white d-flex align-items-center gap-2">
+            <IoIosMail /> info@universevisuals.com
           </a>
           <a href="tel:9965085475" className="text-white d-flex align-items-center gap-2">
             <FaPhoneAlt /> 9965085475
