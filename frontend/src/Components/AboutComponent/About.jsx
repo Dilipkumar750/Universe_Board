@@ -12,18 +12,18 @@ import { Link } from "react-router-dom";
 import Projectmagement from "../../assets/project.jpg"
 
 const products = [
-  { image: imageOne, quote: "Make Every Presentation Shine – Top-Quality Projectors on Sale!" },
-  { image: imageTwo, quote: "Unbeatable Price, Unmatched Quality – Get Your Green School Board Today!" },
-  { image: imageThree, quote: "Learning and Fun Meet Here – Kindergarten Tables on Sale!" },
-  { image: imageFour, quote: "Encourage Learning and Creativity with a Kid-Friendly Table!" },
+  { title:"Green Board", image: imageOne, quote: "Make Every Presentation Shine – Top-Quality Projectors on Sale!" },
+  { title:"Play Desk", image: imageTwo, quote: "Unbeatable Price, Unmatched Quality – Get Your Green School Board Today!" },
+  { title:"Projector", image: imageThree, quote: "Learning and Fun Meet Here – Kindergarten Tables on Sale!" },
+  { title:"Single Desk", image: imageFour, quote: "Encourage Learning and Creativity with a Kid-Friendly Table!" },
 ];
 
 const About = () => {
   return (
     <div className="font-sans">
       <div
-        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700">       
-     <div
+        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700">
+        <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
         >
@@ -65,8 +65,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center mt-5 mb-5 p-4 ">
-        <h1 className="text-3xl font-bold mb-4 text-center text-blue-500">
+      <div className="flex flex-col items-center mt-5 mb-5 p-4">
+        <h1 className="text-3xl font-bold mb-4 text-center text-[#002B5B]"> {/* Dark Blue Heading */}
           Our Famous Products
         </h1>
 
@@ -74,27 +74,32 @@ const About = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative shadow-md rounded-xl w-full sm:w-80 border border-red-500 overflow-hidden"
+              className="relative shadow-md rounded-xl w-full sm:w-80 border border-gray-300 overflow-hidden"
             >
               <div className="overflow-hidden rounded-t-xl h-64 group p-3 relative">
-                {/* {/ Image /} */}
+                {/* Image */}
                 <img
                   src={product.image}
                   alt={`Product ${index + 1}`}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:translate-y-full rounded-md"
                 />
 
-                {/* {/ Overlay /} */}
-                <div className="absolute inset-0 bg-white bg-opacity-80 flex items-center justify-center transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-                  <p className="text-black text-xl font-semibold text-center px-4">
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-[#F8F9FA] bg-opacity-80 flex items-center justify-center transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
+                  <p className="text-[#4B5563] text-xl font-semibold text-center px-4"> {/* Grayish Blue Text */}
                     {product.quote}
                   </p>
                 </div>
+                
+              </div>
+              <div className="p-4 bg-white text-center">
+                <h3 className="text-lg font-semibold text-[#002B5B]">{product.title}</h3> {/* Dark Blue Title */}
               </div>
             </div>
           ))}
         </div>
       </div>
+
 
 
       <div className="py-8 bg-white flex flex-col md:flex-row items-center">

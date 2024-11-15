@@ -67,13 +67,13 @@ const TestimonialCarousel = () => {
   }
 
   return (
-    <div className="font-[sans-serif] bg-blue-300 py-12 px-6 min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-10">Our Clients Say:</h1>
+    <div className="font-[sans-serif] bg-gradient-to-r from-gray-100 via-gray-300 to-blue-500 py-12 px-6 min-h-screen flex flex-col items-center justify-center">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">Our Clients Say:</h1>
 
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-4xl mx-auto">
         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-xl w-full md:w-96 lg:w-1/2 text-center md:order-1">
-          <p className="text-lg sm:text-xl font-semibold mb-4">{`"${testimonials[currentIndex]?.text}"`}</p>
-          <p className="font-medium">{testimonials[currentIndex]?.name}</p>
+          <p className="text-lg sm:text-xl font-semibold mb-4 text-gray-800">{`"${testimonials[currentIndex]?.text}"`}</p>
+          <p className="font-medium text-gray-700">{testimonials[currentIndex]?.name}</p>
           <p className="text-gray-500">{testimonials[currentIndex]?.title}</p>
           <div className="flex justify-center mt-2">{renderStars(testimonials[currentIndex]?.rating)}</div>
         </div>
@@ -82,18 +82,18 @@ const TestimonialCarousel = () => {
           <img src={review} alt="Review" className="object-cover h-full w-full rounded-lg shadow-lg" />
           <div className="absolute inset-0 flex items-center justify-between px-4">
             <button
-              className="p-2 bg-gray-500 hover:bg-gray-700 rounded-full"
+              className="p-2 bg-gray-300 hover:bg-gray-400 rounded-full"
               onClick={() => setCurrentIndex((currentIndex - 1 + testimonials.length) % testimonials.length)}
             >
-              <svg className="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M15.75 18l-6-6 6-6" />
               </svg>
             </button>
             <button
-              className="p-2 bg-gray-500 hover:bg-gray-700 rounded-full"
+              className="p-2 bg-gray-300 hover:bg-gray-400 rounded-full"
               onClick={() => setCurrentIndex((currentIndex + 1) % testimonials.length)}
             >
-              <svg className="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M8.25 6l6 6-6 6" />
               </svg>
             </button>
@@ -106,7 +106,7 @@ const TestimonialCarousel = () => {
           <button
             key={idx}
             type="button"
-            className={`w-3 h-3 rounded-full ${idx === currentIndex ? 'bg-white' : 'bg-white opacity-50'}`}
+            className={`w-3 h-3 rounded-full ${idx === currentIndex ? 'bg-gray-800' : 'bg-gray-400'}`}
             onClick={() => setCurrentIndex(idx)}
           ></button>
         ))}
