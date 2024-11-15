@@ -43,11 +43,12 @@ const Contact = () => {
 
 
       <div className="-mt-16 mb-6 px-4">
-        <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-gray-400 rounded-xl">
+        <div className="mx-auto max-w-6xl shadow-lg p-8 relative bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 
+ rounded-xl">
           <h2 className="text-4xl text-black font-bold text-center">Product Inquiry</h2>
 
 
-          <div className="mt-6 text-white flex flex-col md:flex-row">
+          <div className="mt-6 text-black font-bold flex flex-col md:flex-row">
             <div className="md:flex-1" data-aos="fade-right">
               <p>
                 At Universe Visuals, We are always here to help you connect, grow, and explore new opportunities.
@@ -61,7 +62,7 @@ const Contact = () => {
               Thuraiyur, Dhan Lakshmi Nagar<br />
               Tiruchirappalli - 621010, Tamil Nadu.
               <p className="mt-4 font-semibold text-black">Phone:</p>
-              <p>+9965085475</p>
+              <p>99650 85475</p>
               <p className="mt-4 font-semibold text-black">Email:</p>
               <p>info@universevisuals.com</p>
             </div>

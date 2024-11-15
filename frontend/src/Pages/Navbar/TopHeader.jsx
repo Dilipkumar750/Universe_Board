@@ -9,7 +9,7 @@ function TopHeader() {
     <section
       className="
     d-flex flex-column flex-md-row align-items-center justify-content-between 
-    bg-gradient-to-r from-blue-200 via-blue-500 to-blue-600 
+    bg-gradient-to-r from-violet-200 via-violet-500 to-violet-600 
     text-blue-400 py-2 px-3 sticky-top z-50"
       role="banner">      {/* Left section with the company name */}
       <div className="d-flex align-items-center mb-2 mb-md-0 ms-md-3 center">

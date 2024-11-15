@@ -104,7 +104,7 @@ const ProductDetails = () => {
           </dl>
         </div>
       </div>
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-center mb-4 mt-4">
         <button
           className="bg-slate-700 text-slate-300 py-2 px-3 rounded-md me-2"
           onClick={() => navigate(-1)}
