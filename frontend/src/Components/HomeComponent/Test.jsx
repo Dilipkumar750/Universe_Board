@@ -30,7 +30,7 @@ const TestimonialCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 3000); // Change testimonial every 3 seconds
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -78,23 +78,25 @@ const TestimonialCarousel = () => {
 
   return (
     <>
-      {/* Adding inline keyframes in a style tag */}
+    <h2
+        className="text-4xl font-extrabold text-center mt-10 text-blue-800"
+        data-aos="fade-up"
+      >
+       Our Clients Says:
+      </h2>
       <style>{keyframes}</style>
       <div className="relative px-4 py-10 max-w-5xl mx-auto font-[sans-serif] my-6">
-        {/* Floating circle */}
         <div
           className="absolute w-40 h-40 bg-blue-300 rounded-full opacity-50 -top-10 right-10 md:-top-10 md:-left-32"
           style={{ animation: "floating 4s ease-in-out infinite" }}
         ></div>
 
-        {/* Rotating block */}
         <div
           className="absolute w-16 h-16 bg-orange-300 opacity-70 rounded-md top-20 right-10"
           style={{ animation: "rotate 6s linear infinite" }}
         ></div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Image and Details */}
           <div className="flex items-center space-x-6">
             <img
               src={testimonials[currentIndex].image}
@@ -108,7 +110,6 @@ const TestimonialCarousel = () => {
             </div>
           </div>
 
-          {/* Testimonial Text */}
           <div className="relative bg-gray-100 p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold text-gray-800">
               Classroom Furniture Designed for Learning.
@@ -121,7 +122,6 @@ const TestimonialCarousel = () => {
               {testimonials[currentIndex].content}
             </p>
 
-            {/* Decorative floating element */}
             <div
               className="absolute w-10 h-10 bg-blue-500 rounded-full top-[-20px] right-[-20px]"
               style={{ animation: "floating 3s ease-in-out infinite" }}

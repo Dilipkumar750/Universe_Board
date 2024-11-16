@@ -5,7 +5,6 @@ import { getAllProduct } from "../../slices/productSlice";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import ProductDetails from "./ProductDetails";
-
 const categories = {
   "Digital Podium": [],
   "Interactive ClassroomSolution": [
@@ -148,7 +147,7 @@ const CategorySection = () => {
         {/* Optional Heading */}
         {/* <h2 className="text-3xl text-white font-bold text-center mb-8">Product Categories</h2> */}
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8 ">
           {/* Sidebar */}
           <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 rounded-lg shadow-lg p-6">
             <div className="border-b border-gray-700 mb-4">
@@ -167,7 +166,7 @@ const CategorySection = () => {
             </div>
 
             {Object.keys(categories).map((category, index) => (
-              <div className="border-b border-gray-700 mb-4" key={index}>
+              <div className="border-b border-gray-700 mb-4 " key={index}>
                 <h2 className="bg-white px-4 py-3 rounded-xl">
                   <button
                     className="flex justify-between w-full text-left text-md font-medium text-black hover:text-pink-200 transition duration-200 ease-in-out"

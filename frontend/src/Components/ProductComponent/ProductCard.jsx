@@ -1,6 +1,6 @@
 import React from 'react';
 import { getImageUrl, getProductById } from '../../slices/productSlice';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 function ProductCard({ product }) {
@@ -29,13 +29,23 @@ function ProductCard({ product }) {
           <h3 className="text-lg font-semibold text-black">{product.title}</h3>
           <p className="text-sm text-black-200 mt-2">{product.description}</p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-2">
           <button
             onClick={handleViewClick} // Call handleViewClick on button click
             className="text-white px-4 py-2 rounded-lg bg-gray-600"
           >
             View
           </button>
+          <Link to="/Contact">
+            <button
+
+              onClick={handleViewClick} // Call handleViewClick on button click
+              className="text-white px-4 py-2 rounded-lg bg-green-600"
+            >
+              Buy
+
+            </button>
+          </Link>
         </div>
       </div>
     </div>
