@@ -53,9 +53,9 @@ const ColorFoot = () => (
           <br />
           Canara Bank Colony, Ammapatti Salai,
           <br />
-          Thuraiyur, Dhan Lakshmi Nagar
+          Thuraiyur, Trichy Dt,<br/> Tamilnadu, Code: 33
           <br />
-          Tiruchirappalli - 621010, Tamil Nadu.
+          GSTIN/ UIN: 33BFVPM5221C1ZL
         </address>
 
       </div>
