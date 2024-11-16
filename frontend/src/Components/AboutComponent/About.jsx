@@ -20,9 +20,9 @@ const products = [
 
 const About = () => {
   return (
-    <div className="font-sans">
+    <div className="font-sans font-bold">
       <div
-        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700">
+        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gradient-to-r from-blue-200 via-blue-300 to-blue-500">
         <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
@@ -30,7 +30,7 @@ const About = () => {
           <h2 className="text-blue-700 lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
-          <p className="text-black mt-6 text-base leading-relaxed justify-center text-justify">
+          <p className="text-black mt-6 text-lg leading-relaxed justify-center text-justify">
             Universe Visuals aims to provide our clients with the
             best range of products by procuring them from reliable vendors. This
             success is made possible by the unwavering support of our esteemed
@@ -95,7 +95,9 @@ const About = () => {
               <div className="p-4 bg-white text-center">
                 <h3 className="text-lg font-semibold text-[#002B5B]">{product.title}</h3> {/* Dark Blue Title */}
               </div>
+              
             </div>
+          
           ))}
         </div>
       </div>
