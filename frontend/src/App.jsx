@@ -6,7 +6,6 @@ import Contact from './Components/ContactComponent/Contact';
 import Home from './Components/HomeComponent/Home';
 import TopHeader from './Pages/Navbar/TopHeader';
 import Hero from './Components/HomeComponent/Hero';
-import Navbar from './Pages/Navbar/Navbar';
 import Innovation from './Components/HomeComponent/Innovation';
 import MainProducts from './Components/HomeComponent/MainProducts';
 import Footer from './Pages/Footer/Footer';
@@ -33,7 +32,6 @@ function App() {
   return (
     <>
       <TopHeader />
-      <Navbar />
       <ScrollToTop /> 
       <Routes>
         <Route path='/' element={<Home />} />
