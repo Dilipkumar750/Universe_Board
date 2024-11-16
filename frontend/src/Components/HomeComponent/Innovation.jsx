@@ -53,7 +53,7 @@ const Innovation = () => {
 
   return (
     <section className="relative font-inter antialiased">
-      <section className="relative flex flex-col justify-between gap-2 about-section pb-10 mt-5 bg-gray-200">
+      <section className="relative flex flex-col justify-between  gap-2 about-section pb-10 mt-5 bg-gray-200">
         <div className="container page-padding relative z-10">
           <div className="about-cards flex gap-10 -mt-[8.5rem] md1000:flex-col"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
@@ -71,7 +71,7 @@ const Innovation = () => {
               </p>
 
             </div>
-            <div className="relative w-full flex justify-center items-center">
+            <div className="relative w-full flex justify-center items-center md:mt-12 mb-10 md:mb-0">
               <img
                 src={bgImage}
                 alt="background"
@@ -128,8 +128,8 @@ const Innovation = () => {
               />
             </div>
           </div>
-          <div className="relative flex items-center bg-gray-400 md:rounded-r-3xl">
-            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-400 md:rounded-l-3xl"></span>
+          <div className="relative flex items-center bg-blue-200 md:rounded-r-3xl">
+            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-blue-200 md:rounded-l-3xl"></span>
             <div className="p-5 sm:p-16 lg:p-24" data-aos="fade-left">
               <h2 className="text-2xl font-bold sm:text-3xl text-blue-800">
                 Our Educational Tools in Action: Real Success Stories
