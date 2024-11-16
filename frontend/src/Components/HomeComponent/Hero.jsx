@@ -1,61 +1,94 @@
-import { useEffect, useState } from 'react';
-import hero from '../../assets/hero.jpg';
-import swiper1 from '../../assets/swiper1.jpg';
-import swiper2 from '../../assets/swiper2.jpg';
-import swiper3 from '../../assets/swiper3.jpg';
-import swiper4 from '../../assets/swiper8.png';
-import swiper5 from '../../assets/classroom.png';
-import swiper6 from '../../assets/classroom2.jpg';
-import swiper7 from '../../assets/swiper7.png';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FaSchool, FaChair, FaBook } from "react-icons/fa";  // For classroom-related icons
+import { FaPaintBrush, FaTools, FaHammer } from "react-icons/fa"; // For customizable designs
+import { FaWrench, FaBuilding, FaStar } from "react-icons/fa";  // For durability
+import { FaMoneyBill, FaChartLine, FaCheckCircle } from "react-icons/fa"; // For affordability
 
-const swiperImages = [hero, swiper1, swiper2, swiper3, swiper4, swiper5, swiper6, swiper7];
+import swiper1 from "../../assets/hero/slide1.jpg";
+import swiper2 from "../../assets/hero/slide2.jpg";
+import swiper3 from "../../assets/hero/slide3.jpg";
+import swiper4 from "../../assets/hero/slide4.jpg";
+import logo from "../../assets/logo.png";  // Your shop's logo
 
-const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
-  // Function to change the index
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % swiperImages.length);
-  };
+// Import required modules
+import { Autoplay, Pagination } from "swiper/modules";
 
-  useEffect(() => {
-    // Set interval to auto-change the image every 3 seconds
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
+const slides = [
+  {
+    image: swiper1,
+    title: "Welcome to Classroom Bench Makers",
+    description: "We design durable and comfortable benches to create the best learning environment.",
+    icons: [<FaSchool key="school" />, <FaChair key="chair" />, <FaBook key="book" />],
+  },
+  {
+    image: swiper2,
+    title: "Customizable Designs",
+    description: "Our benches are tailored to suit various classroom sizes and themes.",
+    icons: [<FaPaintBrush key="paint" />, <FaTools key="tools" />, <FaHammer key="hammer" />],
+  },
+  {
+    image: swiper3,
+    title: "Durability Guaranteed",
+    description: "Our benches are made with high-quality materials for long-lasting use.",
+    icons: [<FaWrench key="wrench" />, <FaBuilding key="building" />, <FaStar key="star" />],
+  },
+  {
+    image: swiper4,
+    title: "Affordable Prices",
+    description: "We offer the best quality at prices that fit your budget.",
+    icons: [<FaMoneyBill key="money" />, <FaChartLine key="chart" />, <FaCheckCircle key="check" />],
+  },
+];
 
+export default function App() {
   return (
-    <div className="font-[sans-serif] h-[500px] w-full overflow-hidden">
-      <div className="relative w-full h-full">
-        {/* Swiper (Carousel) */}
-        {swiperImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
-            style={{
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '100vh', // Full viewport height
-              width: '100%', // Full width
-            }}
-          ></div>
-        ))}
+    <div className="h-screen w-full relative -mt-20">
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        speed={1500}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination]}
+        className="mySwiper"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative h-screen w-full">
+              <img
+                src={slide.image}
+                alt={`Slide ${index + 1}`}
+                className="object-cover h-full w-full"
+              />
+              <div className="absolute inset-0 flex justify-end items-center p-8">
+                <div className="bg-blue-100/50 backdrop-blur-sm rounded-[50px] p-8 shadow-lg text-center max-w-lg">
+                  
+                  {/* Logo and Shop Name at the Top */}
+                 <div className="h-24 w-28 mx-auto">
+                  <img src={logo} className=""/>
+                 </div>
 
-        {/* Carousel Navigation */}
-        <div className="absolute z-30 flex bottom-5 left-1/2 transform -translate-x-1/2 space-x-3">
-          {swiperImages.map((_, idx) => (
-            <button
-              key={idx}
-              type="button"
-              className={`w-3 h-3 rounded-full ${idx === currentIndex ? 'bg-white opacity-100' : 'bg-white opacity-50'}`}
-              onClick={() => setCurrentIndex(idx)} // Change slide on button click
-            ></button>
-          ))}
-        </div>
-      </div>
+                  {/* Card Content */}
+                  <h1 className="text-2xl font-bold text-gray-800">{slide.title}</h1>
+                  <p className="text-gray-800 mt-4">{slide.description}</p>
+                  <div className="flex justify-center mt-4 gap-4">
+                    {slide.icons.map((icon) => icon)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
-};
-
-export default Hero;
+}
