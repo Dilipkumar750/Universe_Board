@@ -92,7 +92,7 @@ const Header = () => {
         <div className="flex items-center gap-6">
         <Link to="/Contact">
             <button
-              className="bg-blue-200 text-gray-800 hover:text-white px-4 py-2 rounded-lg flex items-center shadow-lg transition-all duration-300 hover:bg-blue-800 "
+              className="bg-blue-200 text-gray-800 hover:text-white px-2 py-1 md:px-4 md:py-2 rounded-lg flex items-center shadow-lg transition-all duration-300 hover:bg-blue-800 "
               type="button"
             >
               Contact Us

@@ -1,117 +1,135 @@
-import { useEffect, useState } from 'react';
-import review from "../../assets/review.png";
-import { getAllTestimonials } from '../../slices/TestimonialSlice';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState, useEffect } from "react";
+import hand1 from "../../assets/hands/hand1.jpg";
+import hand2 from "../../assets/hands/hand2.jpg";
+import hand3 from "../../assets/hands/hand3.jpg";
 
-const defaultTestimonials = [
+const testimonials = [
   {
-    name: "Gunasekar",
-    rating: 4,
-    text: "Good product, quality is nice",
-    title: "Green board",
+    image: hand1,
+    name: "John Doe",
+    email: "johndoe23@gmail.com",
+    content: "The benches are sturdy and very comfortable for students.",
+  },
+  {
+    image: hand2,
+    name: "Jane Smith",
+    email: "janesmith89@gmail.com",
+    content: "The tables are customizable and fit perfectly in our classroom.",
+  },
+  {
+    image: hand3,
+    name: "Alice Brown",
+    email: "alicebrown456@gmail.com",
+    content: "The boards are excellent for teaching, with a smooth surface.",
   },
 ];
 
 const TestimonialCarousel = () => {
-  const dispatch = useDispatch();
-  const { data, isLoading, error } = useSelector((state) => state.testimonial.getAllTestimonials);
-  const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    if (testimonials?.length) {
+  useEffect(() => {
+    const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }
-  };
-
-  useEffect(() => {
-    let interval;
-    if (testimonials?.length) {
-      interval = setInterval(nextSlide, 3000);
-    }
+    }, 3000); // Change testimonial every 3 seconds
     return () => clearInterval(interval);
-  }, [testimonials]);
+  }, []);
 
-  useEffect(() => {
-    dispatch(getAllTestimonials());
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (data && data.length > 0) {
-      setTestimonials(data);
-    } else {
-      setTestimonials(defaultTestimonials);
-    }
-  }, [data]);
-
-  const renderStars = (rating) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <svg
-        key={i}
-        xmlns="http://www.w3.org/2000/svg"
-        className={`w-5 h-5 ${i < rating ? 'text-yellow-500' : 'text-gray-300'}`}
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-      </svg>
-    ));
+  const fadeInOutStyle = {
+    animation: "fadeInOut 3s ease-in-out infinite",
   };
 
-  if (isLoading) {
-    return <div className="text-center py-10">Loading testimonials...</div>;
-  }
+  const keyframes = `
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
 
-  if (error) {
-    return <div className="text-center py-10">Error loading testimonials: {error}</div>;
-  }
+    @keyframes floating {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  `;
 
   return (
-    <div className="font-[sans-serif] bg-gradient-to-r from-gray-100 via-gray-300 to-blue-500 py-12 px-6 min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">Our Clients Say:</h1>
+    <>
+      {/* Adding inline keyframes in a style tag */}
+      <style>{keyframes}</style>
+      <div className="relative px-4 py-10 max-w-5xl mx-auto font-[sans-serif] my-6">
+        {/* Floating circle */}
+        <div
+          className="absolute w-40 h-40 bg-blue-300 rounded-full opacity-50 -top-10 right-10 md:-top-10 md:-left-32"
+          style={{ animation: "floating 4s ease-in-out infinite" }}
+        ></div>
 
-      <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-4xl mx-auto">
-        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-xl w-full md:w-96 lg:w-1/2 text-center md:order-1">
-          <p className="text-lg sm:text-xl font-semibold mb-4 text-gray-800">{`"${testimonials[currentIndex]?.text}"`}</p>
-          <p className="font-medium text-gray-700">{testimonials[currentIndex]?.name}</p>
-          <p className="text-gray-500">{testimonials[currentIndex]?.title}</p>
-          <div className="flex justify-center mt-2">{renderStars(testimonials[currentIndex]?.rating)}</div>
-        </div>
+        {/* Rotating block */}
+        <div
+          className="absolute w-16 h-16 bg-orange-300 opacity-70 rounded-md top-20 right-10"
+          style={{ animation: "rotate 6s linear infinite" }}
+        ></div>
 
-        <div className="relative md:w-1/2 lg:w-[450px] h-48 sm:h-64 md:h-80">
-          <img src={review} alt="Review" className="object-cover h-full w-full rounded-lg shadow-lg" />
-          <div className="absolute inset-0 flex items-center justify-between px-4">
-            <button
-              className="p-2 bg-gray-300 hover:bg-gray-400 rounded-full"
-              onClick={() => setCurrentIndex((currentIndex - 1 + testimonials.length) % testimonials.length)}
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Image and Details */}
+          <div className="flex items-center space-x-6">
+            <img
+              src={testimonials[currentIndex].image}
+              alt={testimonials[currentIndex].name}
+              className="object-cover md:h-[250px] md:w-[250px] h-[150px] w-[150px] rounded-full shadow-lg"
+            />
+            <div>
+              <h4 className="text-lg font-semibold text-gray-800">
+                {testimonials[currentIndex].name}
+              </h4>
+            </div>
+          </div>
+
+          {/* Testimonial Text */}
+          <div className="relative bg-gray-100 p-6 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold text-gray-800">
+              Classroom Furniture Designed for Learning.
+            </h2>
+            <p
+              style={fadeInOutStyle}
+              className="mt-4 text-gray-600 text-sm"
+              key={currentIndex}
             >
-              <svg className="w-4 h-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M15.75 18l-6-6 6-6" />
-              </svg>
-            </button>
-            <button
-              className="p-2 bg-gray-300 hover:bg-gray-400 rounded-full"
-              onClick={() => setCurrentIndex((currentIndex + 1) % testimonials.length)}
-            >
-              <svg className="w-4 h-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M8.25 6l6 6-6 6" />
-              </svg>
-            </button>
+              {testimonials[currentIndex].content}
+            </p>
+
+            {/* Decorative floating element */}
+            <div
+              className="absolute w-10 h-10 bg-blue-500 rounded-full top-[-20px] right-[-20px]"
+              style={{ animation: "floating 3s ease-in-out infinite" }}
+            ></div>
           </div>
         </div>
       </div>
-
-      <div className="mt-6 flex space-x-2">
-        {testimonials.map((_, idx) => (
-          <button
-            key={idx}
-            type="button"
-            className={`w-3 h-3 rounded-full ${idx === currentIndex ? 'bg-gray-800' : 'bg-gray-400'}`}
-            onClick={() => setCurrentIndex(idx)}
-          ></button>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 
