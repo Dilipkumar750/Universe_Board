@@ -53,15 +53,15 @@ const Innovation = () => {
 
   return (
     <section className="relative font-inter antialiased">
-      <section className="relative flex flex-col justify-between  gap-2 about-section pb-10 mt-5 bg-gray-200">
+      <section className="relative flex flex-col justify-between  gap-2 about-section pb-10 mt-5 bg-blue-800">
         <div className="container page-padding relative z-10">
           <div className="about-cards flex gap-10 -mt-[8.5rem] md1000:flex-col"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
             <div className="mt-[6rem] relative col-span-1 ml-10">
-              <h2 className="text-3xl md:text-[36px] font-semibold leading-tight mb-6 text-blue-700">
+              <h2 className="text-3xl md:text-[36px] font-semibold leading-tight mb-6 text-black">
                 Innovative Technology Solutions for Your Business
               </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify">
+              <p className="text-base md:text-lg text-white leading-relaxed text-justify">
                 Universe Visuals is dedicated to enhancing the educational experience with a diverse range of visual and interactive tools.
                 Founded with a commitment to innovation, we offer solutions tailored to meet the unique needs of educators, students, and institutions globally.
                 <br />
@@ -128,13 +128,13 @@ const Innovation = () => {
               />
             </div>
           </div>
-          <div className="relative flex items-center bg-blue-200 md:rounded-r-3xl">
-            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-blue-200 md:rounded-l-3xl"></span>
+          <div className="relative flex items-center bg-blue-800 md:rounded-r-3xl">
+            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-blue-800 md:rounded-l-3xl"></span>
             <div className="p-5 sm:p-16 lg:p-24" data-aos="fade-left">
-              <h2 className="text-2xl font-bold sm:text-3xl text-blue-800">
+              <h2 className="text-2xl font-bold sm:text-3xl text-black">
                 Our Educational Tools in Action: Real Success Stories
               </h2>
-              <p className="mt-4 text-black text-justify">
+              <p className="mt-4 text-white text-justify">
                 At Universe Visuals, innovation drives everything we create. We offer a wide range of products, including smart boards, projectors, and various writing boards, both ceramic and magnetic, to enhance your educational experience.
                 <br />
                 Our dedicated team continually develops tools such as display boards, notice boards with sliding glass doors, and press graph boards, ensuring they meet the changing needs of educators and students.
