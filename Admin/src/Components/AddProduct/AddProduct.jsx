@@ -48,11 +48,10 @@ const AddProduct = () => {
 
   const handleDeleteDetail = (index) => {
     const values = [...details];
-    values.splice(index, 1); // Remove the detail at the specified index
+    values.splice(index, 1);
     setDetails(values);
   };
   const handleSubmit = () => {
-    // console.log(productDetails, image, details); // Log values
     dispatch(addProduct({ productDetails, image, details }));
   };
   

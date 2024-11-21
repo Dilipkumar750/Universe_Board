@@ -76,7 +76,7 @@ export default function App() {
               <div className="absolute inset-0 flex justify-end items-center p-8">
                 <div className="bg-blue-100/50 backdrop-blur-sm rounded-[50px] p-8 shadow-lg text-center max-w-lg">
                   {/* Logo at the top */}
-                  <div className="h-24 w-28 mx-auto">
+                  <div className="h-32 w-36 mx-auto">
                     <img src={logo} alt="Company Logo" className="h-full w-full object-contain" />
                   </div>
                   {/* Card Content */}

@@ -12,39 +12,40 @@ import { Link } from "react-router-dom";
 import Projectmagement from "../../assets/project.jpg"
 
 const products = [
-  { title:"Green Board", image: imageOne, quote: "Make Every Presentation Shine – Top-Quality Projectors on Sale!" },
-  { title:"Play Desk", image: imageTwo, quote: "Unbeatable Price, Unmatched Quality – Get Your Green School Board Today!" },
-  { title:"Projector", image: imageThree, quote: "Learning and Fun Meet Here – Kindergarten Tables on Sale!" },
-  { title:"Single Desk", image: imageFour, quote: "Encourage Learning and Creativity with a Kid-Friendly Table!" },
+  { title: "Green Board", image: imageOne, quote: "Make Every Presentation Shine – Top-Quality Projectors on Sale!" },
+  { title: "Play Desk", image: imageTwo, quote: "Unbeatable Price, Unmatched Quality – Get Your Green School Board Today!" },
+  { title: "Projector", image: imageThree, quote: "Learning and Fun Meet Here – Kindergarten Tables on Sale!" },
+  { title: "Single Desk", image: imageFour, quote: "Encourage Learning and Creativity with a Kid-Friendly Table!" },
 ];
 
 const About = () => {
   return (
     <div className="font-sans font-bold">
       <div
-        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gradient-to-r from-blue-200 via-blue-300 to-blue-500">
+        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gradient-to-r from-blue-800 via-blue-800 to-blue-800">
         <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
         >
-          <h2 className="text-blue-700 lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
+          <h2 className="text-black lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
-          <p className="text-black mt-6 text-lg leading-relaxed justify-center text-justify">
+          <p className="text-white mt-6 text-lg leading-relaxed justify-center text-justify">
             Universe Visuals aims to provide our clients with the
             best range of products by procuring them from reliable vendors. This
             success is made possible by the unwavering support of our esteemed
             vendors, who deliver world-class products. With our offerings, we
             meet the expectations of various entities, including hotels,
             restaurants, upscale homes, hospitals, management institutes, and
-            corporate offices. <br />
+            corporate offices.
+            <br />
+            <br />
             Additionally, our extensive distribution network allows us to cater
             to the bulk requirements of a large client base. Our satisfied
             clients have helped us become one of the top players in both
             national and international markets.
-          </p>
-          <br />
-          <p className="text-black mt-4 text-base leading-relaxed text-justify">
+            <br />
+            <br />
             Under the inspiring leadership of Mrs. Meena Harikrishnan, we have
             built goodwill in the industry. To lead the market in our domain, we
             are committed to providing nothing but the best.
@@ -65,42 +66,50 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center mt-5 mb-5 p-4">
-        <h1 className="text-3xl font-bold mb-4 text-center text-[#002B5B]"> {/* Dark Blue Heading */}
+      <div className="flex flex-col items-center mt-5 mb-5 p-4"  data-aos="fade-down">
+        <h1 className="text-4xl font-extrabold mb-6 text-center text-[#002B5B]">
           Our Famous Products
         </h1>
 
-        <div className="flex flex-wrap justify-center gap-6 border-solid border-spacing-3 border-black" data-aos="fade-up">
+        <div className="flex flex-wrap justify-center gap-8 border-solid border-spacing-4 border-black" data-aos="fade-down">
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative shadow-md rounded-xl w-full sm:w-80 border border-gray-300 overflow-hidden"
+              className="relative shadow-xl rounded-xl w-full sm:w-80 max-w-xs overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl"
             >
-              <div className="overflow-hidden rounded-t-xl h-64 group p-3 relative">
+              <div className="relative overflow-hidden rounded-t-xl h-72 group">
                 {/* Image */}
                 <img
                   src={product.image}
                   alt={`Product ${index + 1}`}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:translate-y-full rounded-md"
+                  className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110 rounded-md"
                 />
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-[#F8F9FA] bg-opacity-80 flex items-center justify-center transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-                  <p className="text-[#4B5563] text-xl font-semibold text-center px-4"> {/* Grayish Blue Text */}
-                    {product.quote}
-                  </p>
+                  <p className="text-[#000000] text-xl font-semibold text-center px-6">{product.quote}</p>
                 </div>
-                
               </div>
-              <div className="p-4 bg-white text-center">
-                <h3 className="text-lg font-semibold text-[#002B5B]">{product.title}</h3> {/* Dark Blue Title */}
+
+              <div className="p-6 bg-white text-center">
+                <h3 className="text-lg font-semibold text-[#002B5B] mb-2">{product.title}</h3>
+                <p className="text-sm text-gray-500">{product.description}</p>
+
+                {/* Button Section */}
+                <div className="flex justify-center mt-4 gap-4">
+                  <Link to={"/OurProducts"}>
+                    <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-200">
+                      More Product
+                    </button>
+                  </Link>
+
+                </div>
               </div>
-              
             </div>
-          
           ))}
         </div>
       </div>
+
 
 
 

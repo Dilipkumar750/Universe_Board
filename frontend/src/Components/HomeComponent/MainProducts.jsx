@@ -16,31 +16,31 @@ const MainProducts = () => {
       image: graining,
       title: "Projector",
       description:
-        "Explore our wide selection of premium projectors from trusted brands like Benq, Epson, Hitachi, Sony, and more.",
+        "Explore premium projectors from trusted brands like Benq, Epson, Sony.",
     },
     {
       image: agri,
       title: "Whiteboard Projector Screen",
       description:
-        "Enhance your presentations with our high-quality projector screens, designed with a whiteboard surface for seamless integration.",
+        "Enhance presentations with high-quality projector screens and whiteboard surfaces.",
     },
     {
       image: amusement,
       title: "Kids Indoor Game Equipment",
       description:
-        "Providing innovative and safe indoor play equipment for kids, including slides, swings, and more, tailored to create a fun learning environment.",
+        "Providing safe, innovative indoor play equipment for kids, including slides.",
     },
     {
       image: experts,
       title: "Podium",
       description:
-        "Manufacturing sturdy and stylish podiums for educational and professional settings, designed for ease of use and long-lasting durability.",
+        "Manufacturing sturdy, stylish podiums for educational and professional settings.",
     },
     {
       image: experts1,
       title: "Green Board",
       description:
-        "High-quality green boards perfect for classrooms and offices, offering smooth writing surfaces that are easy to clean and maintain.",
+        "High-quality green boards for classrooms and offices, easy to maintain.",
     },
   ];
 
@@ -90,28 +90,39 @@ const MainProducts = () => {
             <div className="relative flex w-[300px] md:w-[300px] h-[400px] flex-col rounded-xl bg-white text-gray-700 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-xl my-20">
               {/* Card with background image and gradient overlay */}
               <div
-                className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-cover bg-center text-white shadow-lg shadow-blue-500/40"
-                style={{ backgroundImage: `url(${product.image})` }}
+                className="relative mx-6 -mt-10 h-72 overflow-hidden rounded-2xl bg-cover bg-center text-white shadow-lg"
+                 data-aos="fade-down"
+                style={{
+                  backgroundImage: `url(${product.image})`,
+                  backgroundSize: "cover", // Ensure the background covers the space
+                }}
               >
                 {/* Optional: Overlay for a modern effect */}
-                <div className="absolute inset-0 bg-black opacity-10"></div>
+                <div className="absolute inset-0 opacity-10"></div>
               </div>
 
               {/* Heading and description below the image */}
               <div className="p-6">
-                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                <h5 className="mb-2 block font-sans text-xl text-center leading-snug tracking-normal text-blue-900 antialiased font-bold">
                   {product.title}
                 </h5>
-                <p className="block font-sans text-bold  leading-relaxed text-inherit antialiased">
+                {/* <p className="block font-sans text-bold  leading-relaxed text-inherit antialiased">
                   {product.description}
-                </p>
+                </p> */}
               </div>
 
               {/* Button section */}
-              <div className="p-6 pt-0">
-                <a href="https://wa.me/9965085475">
-                  <button className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                    Chat Now..
+              <div className="p-6 pt-0 flex justify-center">
+                <a
+                  href="https://wa.me/9965085475"
+                  aria-label="Chat with us on WhatsApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button
+                    className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:outline-none focus:ring-2 focus:ring-blue-300 active:opacity-85 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  >
+                    Chat Now...
                   </button>
                 </a>
               </div>

@@ -17,21 +17,21 @@ const Turnover = () => {
   ];
 
   return (
-    <div className="relative z-10 p-6 space-y-12 bg-gradient-to-br from-blue-50 to-blue-200 shadow-lg rounded-lg mt-24">
+    <div className="relative z-10 p-6 space-y-12 bg-gradient-to-br from-blue-800 to-blue-800 shadow-lg rounded-xl h-full">
       {/* Title */}
       <h2
-        className="text-4xl font-extrabold text-center text-blue-800"
-        data-aos="fade-up"
+        className="text-4xl font-extrabold text-center text-white"
+       
       >
         Who We Are
       </h2>
 
       {/* Card Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
         {/* Manufacturing Card */}
         <div
           className="group shadow-md bg-white border border-gray-200 p-6 rounded-lg text-center hover:bg-blue-50 hover:scale-105  transition-all duration-700"
-        >
+          data-aos="fade-left">
           <div className="flex justify-center items-center mb-3 text-5xl text-blue-600 group-hover:text-blue-800">
             <MdOutlinePrecisionManufacturing />
           </div>
@@ -46,7 +46,7 @@ const Turnover = () => {
         {/* Quality Card */}
         <div
           className="group shadow-md bg-white border border-gray-200 p-6 rounded-lg text-center hover:bg-blue-50 hover:scale-105 transition-all duration-300"
-        >
+          data-aos="fade-up">
           <div className="flex justify-center items-center mb-3 text-5xl text-blue-600 group-hover:text-blue-800">
             <TbManualGearbox />
           </div>
@@ -61,7 +61,7 @@ const Turnover = () => {
         {/* Target Market Card */}
         <div
           className="group shadow-md bg-white border border-gray-200 p-6 rounded-lg text-center hover:bg-blue-50 hover:scale-105 transition-all duration-300"
-        >
+          data-aos="fade-down">
           <div className="flex justify-center items-center mb-3 text-5xl text-blue-600 group-hover:text-blue-800">
             <PiTargetBold />
           </div>
@@ -76,7 +76,7 @@ const Turnover = () => {
         {/* Unique Selling Proposition Card */}
         <div
           className="group shadow-md bg-white border border-gray-200 p-6 rounded-lg text-center hover:bg-blue-50 hover:scale-105 transition-all duration-300"
-        >
+          data-aos="fade-right">
           <div className="flex justify-center items-center mb-3 text-5xl text-blue-600 group-hover:text-blue-800">
             <MdOutlinePointOfSale />
           </div>

@@ -35,17 +35,17 @@ const Header = () => {
     <header
       className={`${
         isScrolled
-          ? "bg-gradient-to-r from-blue-200 via-blue-500 to-blue-600 transition-all duration-1000"
+          ? "bg-gradient-to-r from-black via-black to-black transition-all duration-1000"
           : "backdrop-blur-xl transition-all duration-300"
       } sticky top-0 z-50 transition-all duration-600`}
     >
       <div className="max-w-screen-xl flex items-center justify-between px-4 py-3 mx-auto h-20">
         {/* Logo Section */}
         <div className="flex items-center gap-3">
-          <img src={logo} alt="Company Logo" className="h-10 w-10" />
+          <img src={logo} alt="Company Logo" className="h-20 w-32" />
           <span
-            className={`text-lg font-bold ${
-              isScrolled ? "text-white" : "text-blue-900"
+            className={`text-3xl font-bold ${
+              isScrolled ? "text-blue-600" : "text-blue-900"
             }`}
           >
             Universe Visuals
@@ -115,7 +115,15 @@ const Header = () => {
                 isScrolled ? "text-white" : "text-black"
               } hover:text-gray-300`}
             >
-              <FaPhoneAlt /> 9965085475
+              <FaPhoneAlt /> 99650 85475
+            </a>
+            <a
+              href="tel:9042122076"
+              className={`flex items-center gap-2 ${
+                isScrolled ? "text-white" : "text-black"
+              } hover:text-gray-300`}
+            >
+              <FaPhoneAlt />90421 22076
             </a>
           </div>
 

@@ -49,7 +49,7 @@ const ColorFoot = () => (
         <address className="font-bold text-white text-sm space-y-1">
           <span className="text-red-600 font-bold text-2xl">Universe Visuals</span>
           <br />
-          9/W, 1A, Akilandeswari Nagar,
+          9/W 2A, 1st Floor Akilandeswari Nagar,
           <br />
           Canara Bank Colony, Ammapatti Salai,
           <br />
@@ -160,6 +160,13 @@ const ColorFoot = () => (
               href="tel:9965085475"
               className="text-white hover:text-green-300 text-sm">
               99650 85475
+            </a>
+            </li>
+            <li>
+            <a
+              href="tel:9042122076"
+              className="text-white hover:text-green-300 text-sm">
+              90421 22076
             </a>
           </li>
         </ul>

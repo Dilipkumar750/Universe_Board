@@ -42,7 +42,7 @@ function ProductCard({ product }) {
               onClick={handleViewClick} // Call handleViewClick on button click
               className="text-white px-4 py-2 rounded-lg bg-green-600"
             >
-              Buy
+              Contact
 
             </button>
           </Link>
