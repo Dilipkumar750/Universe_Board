@@ -1,6 +1,5 @@
 const Testimonial = require('../models/testimonial');
 
-// Create a new testimonial
 exports.createTestimonial = async (req, res) => {
   const { name, title, text, rating } = req.body;
   try {
@@ -12,7 +11,6 @@ exports.createTestimonial = async (req, res) => {
   }
 };
 
-// Get all testimonials
 exports.getAllTestimonials = async (req, res) => {
   try {
     const testimonials = await Testimonial.find({});
@@ -22,7 +20,6 @@ exports.getAllTestimonials = async (req, res) => {
   }
 };
 
-// Delete a testimonial
 exports.deleteTestimonial = async (req, res) => {
   try {
     const { id } = req.params;

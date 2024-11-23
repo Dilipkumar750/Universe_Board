@@ -53,7 +53,7 @@ const ColorFoot = () => (
           <br />
           Canara Bank Colony, Ammapatti Salai,
           <br />
-          Thuraiyur, Trichy Dt,<br/> Tamilnadu, Code: 33
+          Thuraiyur, Trichy Dt,<br /> Tamilnadu, Code: 33
           <br />
           GSTIN/ UIN: 33BFVPM5221C1ZL
         </address>
@@ -161,8 +161,8 @@ const ColorFoot = () => (
               className="text-white hover:text-green-300 text-sm">
               99650 85475
             </a>
-            </li>
-            <li>
+          </li>
+          <li>
             <a
               href="tel:9042122076"
               className="text-white hover:text-green-300 text-sm">
@@ -172,7 +172,6 @@ const ColorFoot = () => (
         </ul>
       </div>
     </div>
-
     <p className="text-white text-sm mt-10 text-center">
       © Universe Visuals All rights reserved ♥ UltraFly Solutions Pvt Limited
     </p>

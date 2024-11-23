@@ -4,10 +4,10 @@ import { FaTree, FaLayerGroup, FaShapes } from "react-icons/fa";
 import { FaShieldAlt, FaToolbox, FaStar } from "react-icons/fa";
 import { FaMoneyBill, FaBalanceScale, FaCheckCircle } from "react-icons/fa";
 
-import swiper1 from "../../assets/hero/slide1.jpg";
-import swiper2 from "../../assets/hero/slide2.jpg";
+import swiper1 from "../../assets/hero/slide9.jpg";
+import swiper2 from "../../assets/hero/slide7.png";
 import swiper3 from "../../assets/hero/slide3.jpg";
-import swiper4 from "../../assets/hero/slide4.jpg";
+import swiper4 from "../../assets/hero/slide6.jpg";
 import logo from "../../assets/logo.png";
 
 import "swiper/css";

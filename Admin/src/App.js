@@ -10,7 +10,6 @@ import Edit from "./Components/editProduct/Edit";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import ListTestimonials from "./Components/Testimonials/ListTestimonials";
 
-
 function App() {
   return (
     <>
