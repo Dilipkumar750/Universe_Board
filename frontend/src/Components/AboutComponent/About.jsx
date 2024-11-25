@@ -1,4 +1,4 @@
-import about from "../../assets/Exhibition Display Boards.png";
+import about from "../../assets/hero/slide9.jpg";
 import imageOne from "../../assets/greenchalk borad.png";
 import imageTwo from "../../assets/kinds- school-desk.png";
 import imageThree from "../../assets/projector.png";

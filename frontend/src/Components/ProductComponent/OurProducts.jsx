@@ -80,14 +80,18 @@ const CategorySection = () => {
   const [selectedSubCategory, setSelectedSubCategory] = useState(null);
   const [showProductDetails, setShowProductDetails] = useState(false);
 
+  // Fetch products on component mount
   useEffect(() => {
-    if (allProduct) {
-      filterProducts();
-    }
+    dispatch(getAllProduct());
+  }, [dispatch]);
+
+  // Filter products whenever category or subcategory changes
+  useEffect(() => {
+    filterProducts();
   }, [allProduct, selectedCategory, selectedSubCategory]);
 
   const filterProducts = () => {
-    let filteredProducts = allProduct;
+    let filteredProducts = allProduct || [];
 
     if (selectedCategory) {
       filteredProducts = filteredProducts.filter(
@@ -105,53 +109,66 @@ const CategorySection = () => {
   };
 
   const toggleCategory = (category) => {
-    setOpenCategory(openCategory === category ? null : category);
     setSelectedCategory(category);
     setSelectedSubCategory(null);
     setShowProductDetails(false);
   };
 
   const handleSubCategory = (subCategory) => {
-    setShowProductDetails(false);
     setSelectedSubCategory(subCategory);
+    setShowProductDetails(false);
   };
 
-  useEffect(() => {
-    dispatch(getAllProduct());
-  }, [dispatch]);
+  const handleCategoryHover = (category) => {
+    setOpenCategory(category);
+    setSelectedCategory(category);
+    setSelectedSubCategory(null);
+    setShowProductDetails(false);
+  };
+
+  const handleMouseLeaveCategory = () => {
+    setOpenCategory(null);
+  };
 
   return (
     <div className="h-full">
+      {/* Header Section */}
       <div
         className="relative text-black py-8 px-8 font-sans bg-white sm:bg-cover sm:bg-center"
-        style={{ backgroundImage: `url(${productImage})` }}>
+        style={{ backgroundImage: `url(${productImage})` }}
+      >
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className=" md:text-left w-96">
+          <div className="md:text-left w-96">
             <h2 className="text-2xl mb-4 font-bold text-blue-700">
               Transform Your Learning Environment with Universe Visuals
             </h2>
-            <p className="text-base text-red font-bold text-justify leading-5">Explore our range of educational tools, from interactive and smart boards to projectors and notice boards. Enhance your classroom experience with innovative solutions and captivating displays. Elevate your teaching with our extensive offerings!</p>
+            <p className="text-base text-red font-bold text-justify leading-5">
+              Explore our range of educational tools, from interactive and
+              smart boards to projectors and notice boards. Enhance your
+              classroom experience with innovative solutions and captivating
+              displays. Elevate your teaching with our extensive offerings!
+            </p>
           </div>
 
           <div className="w-fit">
             <Link to={"/Contact"}>
               <button
                 type="button"
-                className="bg-black text-white py-3 px-6 font-semibold rounded">
+                className="bg-black text-white py-3 px-6 font-semibold rounded"
+              >
                 Contact Us Today
               </button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        {/* Optional Heading */}
-        {/* <h2 className="text-3xl text-white font-bold text-center mb-8">Product Categories</h2> */}
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8 ">
+      {/* Main Content Section */}
+      <div className="bg-white p-8 rounded-lg shadow-lg">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sidebar */}
           <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 rounded-lg shadow-lg p-6">
-            <div className=" border-gray-700 mb-2">
+            <div className="border-gray-700 mb-2">
               <h2 className="px-4 py-3 bg-slate-800 rounded-md">
                 <button
                   className="flex justify-between w-full text-left text-lg font-semibold text-white hover:text-pink-200 transition duration-200 ease-in-out"
@@ -167,16 +184,27 @@ const CategorySection = () => {
             </div>
 
             {Object.keys(categories).map((category, index) => (
-              <div className=" border-gray-700 mb-2 " key={index}>
+              <div
+                className="border-gray-700 mb-2"
+                key={index}
+                onMouseEnter={() => handleCategoryHover(category)}
+                onMouseLeave={handleMouseLeaveCategory}
+              >
                 <h2 className="bg-white px-4 py-3 rounded-xl">
                   <button
-                    className="flex justify-between w-full text-left text-md font-medium text-black hover:text-pink-200 transition duration-200 ease-in-out"
                     onClick={() => toggleCategory(category)}
+                    className={`flex justify-between w-full text-left text-md font-medium transition duration-200 ease-in-out ${
+                      selectedCategory === category
+                        ? "text-blue-500"
+                        : "text-black"
+                    }`}
                   >
                     {category}
                     {categories[category].length > 0 && (
                       <span
-                        className={`transition-transform transform ${openCategory === category ? "rotate-90" : ""}`}
+                        className={`transition-transform transform ${
+                          openCategory === category ? "rotate-90" : ""
+                        }`}
                       >
                         ➔
                       </span>
@@ -185,13 +213,21 @@ const CategorySection = () => {
                 </h2>
 
                 {categories[category].length > 0 && (
-                  <div className={`${openCategory === category ? "block" : "hidden"} bg-white ml-16 rounded-md mt-2`}>
+                  <div
+                    className={`${
+                      openCategory === category ? "block" : "hidden"
+                    } bg-white ml-16 rounded-md mt-2`}
+                  >
                     <div className="text-black">
                       {categories[category].map((subCategory, subIndex) => (
                         <button
                           onClick={() => handleSubCategory(subCategory)}
                           key={subIndex}
-                          className="text-sm pl-8 pr-3 py-2 block text-black transition duration-200 ease-in-out"
+                          className={`text-sm pl-8 pr-3 py-2 block transition duration-200 ease-in-out ${
+                            selectedSubCategory === subCategory
+                              ? "text-blue-500"
+                              : "text-black"
+                          }`}
                         >
                           {subCategory}
                         </button>
@@ -207,7 +243,9 @@ const CategorySection = () => {
           <div className="md:col-span-2 h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {Products?.length === 0 ? (
               <div className="text-center text-red-500 font-semibold text-lg">
-                No products available.
+                {selectedSubCategory
+                  ? `No products found for "${selectedSubCategory}"`
+                  : `No products found for "${selectedCategory}"`}
               </div>
             ) : (
               <>
@@ -229,7 +267,6 @@ const CategorySection = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
