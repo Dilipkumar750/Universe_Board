@@ -50,7 +50,7 @@ export default function App() {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 1500,
           disableOnInteraction: false,
         }}
         speed={1500}

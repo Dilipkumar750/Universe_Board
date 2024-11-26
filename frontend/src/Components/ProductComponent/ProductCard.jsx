@@ -11,7 +11,7 @@ function ProductCard({ product }) {
     // Navigate to the product details page with the product ID
     navigate(`/product/${product._id}`);
     dispatch(getProductById({ id: product._id }))
-    // console.log("idddd", product._id)
+  console.log("idddd", product._id)
   };
 
   return (

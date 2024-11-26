@@ -43,10 +43,10 @@ const MainProducts = () => {
         "High-quality green boards for classrooms and offices, easy to maintain.",
     },
   ];
-
+  // text-[#0277BD]
   return (
-    <div className="flex flex-col items-center min-h-[80vh] bg-gray-50 py-10">
-      <h2 className="text-2xl font-bold mb-10 text-[#0277BD] text-center">
+    <div className="flex flex-col items-center min-h-[80vh] bg-[#0277BD]  py-10">
+      <h2 className="text-2xl font-bold mb-10  text-gray-50 text-center">
         Major Products
       </h2>
 
