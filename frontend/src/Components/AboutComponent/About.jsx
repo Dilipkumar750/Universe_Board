@@ -20,17 +20,17 @@ const products = [
 
 const About = () => {
   return (
-    <div className="font-sans font-bold">
+    <div className="font-sans font-semibold">
       <div
-        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gradient-to-r from-blue-800 via-blue-800 to-blue-800">
+        className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 ">
         <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
         >
-          <h2 className="text-black lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
+          <h2 className="text-blue-600 lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
-          <p className="text-white mt-6 text-lg leading-relaxed justify-center text-justify">
+          <p className="text-black mt-6 text-lg leading-relaxed justify-center text-justify">
             Universe Visuals aims to provide our clients with the
             best range of products by procuring them from reliable vendors. This
             success is made possible by the unwavering support of our esteemed
