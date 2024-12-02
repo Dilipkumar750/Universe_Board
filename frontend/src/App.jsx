@@ -43,7 +43,6 @@ function App() {
         <Route path='/OurProducts' element={<OurProducts />} />
         <Route path="/product/:id" element={<ProductDetails />} />  
               <Route path='/Turnover' element={<Turnover />} />
-             
         <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
         <Route path='/TermsAndConditions' element={<TermsAndConditions />} />
       </Routes>

@@ -21,7 +21,7 @@ const Edit = () => {
     category: "",
     subCategory: "",
   });
-  const [details, setDetails] = useState([{ name: "", value: "" }]); // New state for product details
+  const [details, setDetails] = useState([{ name: "", value: "" }]); 
 
 
   const categories = {
@@ -127,14 +127,14 @@ const Edit = () => {
   useEffect(() => {
     if (product) {
       setProductDetails(product);
-      setDetails(product.details || [{ name: "", value: "" }]); // Initialize details from product
+      setDetails(product.details || [{ name: "", value: "" }]); 
       setImage(null);
     }
   }, [product]);
 
   const updateProductHandler = async () => {
     try {
-      await dispatch(updateProduct({ productDetails, image, details })); // Include details in update
+      await dispatch(updateProduct({ productDetails, image, details })); 
       navigate("/home/listproduct");
     } catch (error) {
       console.error("Failed to update product:", error);
@@ -144,9 +144,9 @@ const Edit = () => {
   const handleDetailChange = (index, event) => {
     const { name, value } = event.target;
     setDetails((prevDetails) => {
-      const updatedDetails = [...prevDetails]; // Create a shallow copy of the details array
-      updatedDetails[index] = { ...updatedDetails[index], [name]: value }; // Create a new object for the specific detail
-      return updatedDetails; // Return the updated array
+      const updatedDetails = [...prevDetails]; 
+      updatedDetails[index] = { ...updatedDetails[index], [name]: value }; 
+      return updatedDetails;
     });
   };
 
@@ -167,7 +167,6 @@ const Edit = () => {
 
   return (
     <div className="addproduct">
-      {/* Product title, description, category, and subcategory inputs */}
       <div className="addproduct-itemfield">
         <p>Product Title</p>
         <input
@@ -228,7 +227,6 @@ const Edit = () => {
         </div>
       </div>
 
-      {/* Product Details Section */}
       <div className="addproduct-itemfield">
         <label>Product Details</label>
         {details.map((detail, index) => (
@@ -267,7 +265,6 @@ const Edit = () => {
         ))}
       </div>
 
-      {/* Image Upload Section */}
       <div className="addproduct-itemfield">
         <p>Upload Image</p>
         <label htmlFor="file-input">

@@ -68,13 +68,13 @@ const MainProducts = () => {
         className="mySwiper"
         breakpoints={{
           320: {
-            slidesPerView: 1, // 1 card on mobile
+            slidesPerView: 1, 
           },
           768: {
-            slidesPerView: 2, // 2 cards on tablet
+            slidesPerView: 2, 
           },
           1024: {
-            slidesPerView: 3, // 3 cards on laptop
+            slidesPerView: 3,
           },
         }}
       >
@@ -88,30 +88,24 @@ const MainProducts = () => {
         {products.map((product, index) => (
           <SwiperSlide key={index} className="flex justify-center">
             <div className="relative flex w-[300px] md:w-[300px] h-[400px] flex-col rounded-xl bg-white text-gray-700 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-xl my-20">
-              {/* Card with background image and gradient overlay */}
               <div
                 className="relative mx-6 -mt-10 h-72 overflow-hidden rounded-2xl bg-cover bg-center text-white shadow-lg"
                  data-aos="fade-down"
                 style={{
                   backgroundImage: `url(${product.image})`,
-                  backgroundSize: "cover", // Ensure the background covers the space
+                  backgroundSize: "cover", 
                 }}
               >
-                {/* Optional: Overlay for a modern effect */}
                 <div className="absolute inset-0 opacity-10"></div>
               </div>
 
-              {/* Heading and description below the image */}
               <div className="p-6">
                 <h5 className="mb-2 block font-sans text-xl text-center leading-snug tracking-normal text-blue-900 antialiased font-bold">
                   {product.title}
                 </h5>
-                {/* <p className="block font-sans text-bold  leading-relaxed text-inherit antialiased">
-                  {product.description}
-                </p> */}
+                
               </div>
 
-              {/* Button section */}
               <div className="p-6 pt-0 flex justify-center">
                 <a
                   href="https://wa.me/9965085475"
