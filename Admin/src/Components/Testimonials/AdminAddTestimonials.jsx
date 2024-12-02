@@ -12,7 +12,7 @@ const { loading, error,data } = useSelector((state) => state.testimonial.addTest
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTestimonial = { name, title, text, rating };
-    addTestimonial(newTestimonial); // Dispatch to Redux or API call
+    addTestimonial(newTestimonial); 
     setName('');
     setTitle('');
     setText('');

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllTestimonials } from "../../slices/testimonialSlice";
-import { FaStar } from "react-icons/fa"; // Import for the star rating
+import { FaStar } from "react-icons/fa"; 
 import hand1 from "../../assets/hands/hand1.jpg";
 import hand2 from "../../assets/hands/hand2.jpg";
 import hand3 from "../../assets/hands/hand3.jpg";
@@ -14,14 +14,13 @@ const TestimonialCarousel = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fetch testimonials if they are not loaded
+
   useEffect(() => {
     if (!testimonials) {
       dispatch(getAllTestimonials());
     }
   }, [dispatch, testimonials]);
 
-  // Auto-rotate testimonials
   useEffect(() => {
     if (testimonials && testimonials.length > 0) {
       const interval = setInterval(() => {
@@ -31,7 +30,6 @@ const TestimonialCarousel = () => {
     }
   }, [testimonials]);
 
-  // Error handling
   if (loading) {
     return <p className="text-center">Loading testimonials...</p>;
   }
@@ -40,12 +38,9 @@ const TestimonialCarousel = () => {
     return <p className="text-center text-red-500">Error loading testimonials: {error}</p>;
   }
 
-  // Check if testimonials are available
   if (!testimonials || testimonials.length === 0) {
     return <p className="text-center">No testimonials available.</p>;
   }
-
-  // Function to render star rating
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -77,11 +72,10 @@ const TestimonialCarousel = () => {
     }
   `;
 
-  // Function to assign a hand image as a fallback
   const getHandImage = (index) => {
     if (index === 0) return hand1;
     if (index === 1) return hand2;
-    return hand3; // Default to hand3 if no other condition matches
+    return hand3;
   };
 
   return (
@@ -102,7 +96,7 @@ const TestimonialCarousel = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex items-center space-x-6">
             <img
-              src={testimonials[currentIndex]?.image || getHandImage(currentIndex)} // Fallback to hand images
+              src={testimonials[currentIndex]?.image || getHandImage(currentIndex)} 
               alt={testimonials[currentIndex]?.name}
               className="object-cover md:h-[250px] md:w-[250px] h-[150px] w-[150px] rounded-full shadow-lg"
             />

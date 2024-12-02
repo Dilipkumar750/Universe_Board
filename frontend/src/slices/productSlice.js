@@ -65,7 +65,6 @@ const productSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      // get all package
       .addCase(getAllCategory.pending, (state) => {
         state.getAllCategory.isLoading = true;
       })
@@ -77,7 +76,6 @@ const productSlice = createSlice({
         state.getAllCategory.isLoading = false;
         state.getAllCategory.error = action.payload;
       })
-      // get sub category
       .addCase(getAllSubCategory.pending, (state) => {
         state.getAllSubCategory.isLoading = true;
       })
@@ -89,7 +87,6 @@ const productSlice = createSlice({
         state.getAllSubCategory.isLoading = false;
         state.getAllSubCategory.error = action.payload;
       })
-      // get all proudct
       .addCase(getAllProduct.pending, (state) => {
         state.getAllProduct.isLoading = true;
       })
@@ -101,18 +98,17 @@ const productSlice = createSlice({
         state.getAllProduct.isLoading = false;
         state.getAllProduct.error = action.payload;
       })
-      // get ProductByid
       .addCase(getProductById.pending, (state) => {
         state.getProductById.loading = true;
         state.getProductById.error = null;
       })
       .addCase(getProductById.fulfilled, (state, action) => {
         state.getProductById.loading = false;
-        state.getProductById.data = action.payload; // Store the product data
+        state.getProductById.data = action.payload;
       })
       .addCase(getProductById.rejected, (state, action) => {
         state.getProductById.loading = false;
-        state.getProductById.error = action.error; // Store the error
+        state.getProductById.error = action.error; 
       });
 
   },

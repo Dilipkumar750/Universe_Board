@@ -80,12 +80,10 @@ const CategorySection = () => {
   const [selectedSubCategory, setSelectedSubCategory] = useState(null);
   const [showProductDetails, setShowProductDetails] = useState(false);
 
-  // Fetch products on component mount
   useEffect(() => {
     dispatch(getAllProduct());
   }, [dispatch]);
 
-  // Filter products whenever category or subcategory changes
   useEffect(() => {
     filterProducts();
   }, [allProduct, selectedCategory, selectedSubCategory]);
@@ -132,7 +130,6 @@ const CategorySection = () => {
 
   return (
     <div className="h-full">
-      {/* Header Section */}
       <div
         className="relative text-black py-8 px-8 font-sans bg-white sm:bg-cover sm:bg-center"
         style={{ backgroundImage: `url(${productImage})` }}
@@ -163,10 +160,8 @@ const CategorySection = () => {
         </div>
       </div>
 
-      {/* Main Content Section */}
       <div className="bg-white p-8 rounded-lg shadow-lg">
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Sidebar */}
           <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 rounded-lg shadow-lg p-6">
             <div className="border-gray-700 mb-2">
               <h2 className="px-4 py-3 bg-slate-800 rounded-md">

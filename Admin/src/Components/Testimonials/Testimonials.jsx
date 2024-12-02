@@ -14,7 +14,6 @@ const AdminAddTestimonial = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTestimonial = { name, title, text, rating };
-    // console.log('New Testimonial:', newTestimonial);
     dispatch(addTestimonial({name, title, text, rating}))
     setName('');
     setTitle('');

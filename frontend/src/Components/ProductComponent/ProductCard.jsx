@@ -5,13 +5,11 @@ import { useDispatch } from 'react-redux';
 
 function ProductCard({ product }) {
   const imageUrl = getImageUrl(product.image);
-  const navigate = useNavigate(); // Use the useNavigate hook from React Router
+  const navigate = useNavigate(); 
   const dispatch = useDispatch()
   const handleViewClick = () => {
-    // Navigate to the product details page with the product ID
     navigate(`/product/${product._id}`);
     dispatch(getProductById({ id: product._id }))
-    // console.log("idddd", product._id)
   };
 
   return (
@@ -31,7 +29,7 @@ function ProductCard({ product }) {
         </div>
         <div className="flex justify-center gap-2">
           <button
-            onClick={handleViewClick} // Call handleViewClick on button click
+            onClick={handleViewClick} 
             className="text-white px-4 py-2 rounded-lg bg-gray-600"
           >
             View
@@ -39,7 +37,7 @@ function ProductCard({ product }) {
           <Link to="/Contact">
             <button
 
-              onClick={handleViewClick} // Call handleViewClick on button click
+              onClick={handleViewClick} 
               className="text-white px-4 py-2 rounded-lg bg-green-600"
             >
               Contact

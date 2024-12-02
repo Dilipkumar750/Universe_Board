@@ -20,7 +20,6 @@ const Home = () => {
         <div className='font-bold'>
             <Hero />
             <Innovation />
-            
             <Turnover/>
             <Test />
             <MainProducts />

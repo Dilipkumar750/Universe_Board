@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteTestimonial, getAllTestimonials } from '../../slices/testimonialSlice';
-import { Link } from 'react-router-dom';
 
 const ListTestimonials = () => {
   const dispatch = useDispatch();

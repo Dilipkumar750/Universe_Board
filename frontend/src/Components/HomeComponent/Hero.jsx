@@ -65,21 +65,18 @@ export default function App() {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="relative h-screen w-full">
-              {/* Background Image */}
               <img
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
                 className="object-cover h-full w-full"
                 loading="lazy"
-                onError={(e) => (e.target.src = "/fallback-image.jpg")} // Fallback for broken image links
+                onError={(e) => (e.target.src = "/fallback-image.jpg")}
               />
               <div className="absolute inset-0 flex justify-end items-center p-8">
                 <div className="bg-blue-100/50 backdrop-blur-sm rounded-[50px] p-8 shadow-lg text-center max-w-lg">
-                  {/* Logo at the top */}
                   <div className="h-32 w-36 mx-auto">
                     <img src={logo} alt="Company Logo" className="h-full w-full object-contain" />
                   </div>
-                  {/* Card Content */}
                   <h1 className="text-2xl font-bold text-gray-800">{slide.title}</h1>
                   <p className="text-gray-800 mt-4">{slide.description}</p>
                   <div className="flex justify-center mt-4 gap-4">

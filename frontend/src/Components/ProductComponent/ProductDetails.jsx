@@ -4,44 +4,32 @@ import { useSelector, useDispatch } from "react-redux";
 import { getProductById, getImageUrl } from "../../slices/productSlice";
 
 const ProductDetails = () => {
-  const { id } = useParams(); // Get product ID from URL parameters
+  const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // Get product data, loading state, and error from Redux state
   const { data: product, loading, error } = useSelector((state) => state.product.getProductById);
 
   useEffect(() => {
     if (id) {
       dispatch(getProductById({ id })).then(() => {
-        // console.log("Fetched product data:", product);
       });
-      // console.log("Fetching product with ID:", id);
     }
   }, [dispatch, id]);
 
-
-  // console.log("Current product state:", product?.data?.category);
-  // console.log("Current product state:", product);
-
-
-  // Display loading message
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  // Handle any errors from the API call
   if (error) {
     console.error("Error fetching product:", error);
     return <div className="text-center text-red-500">Error: {error.message}</div>;
   }
 
-  // Ensure the product object is defined and has the expected structure
   if (!product?.data || !product?.data?._id) {
     return <div className="text-center text-red-500">Product not found.</div>;
   }
 
-  // Get the image URL from the product data
   const imageUrl = getImageUrl(product?.data?.image);
 
   return (

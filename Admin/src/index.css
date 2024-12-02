@@ -4,3 +4,6 @@ body {
   background: #ffffff;
   height: 100vh;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

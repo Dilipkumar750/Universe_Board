@@ -18,7 +18,6 @@ const Turnover = () => {
 
   return (
     <div className="relative z-10 p-6 space-y-12 bg-gradient-to-br from-blue-800 to-blue-800 shadow-lg rounded-xl h-full">
-      {/* Title */}
       <h2
         className="text-4xl font-extrabold text-center text-white"
        
@@ -26,9 +25,7 @@ const Turnover = () => {
         Who We Are
       </h2>
 
-      {/* Card Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
-        {/* Manufacturing Card */}
         <div
           className="group shadow-md bg-white border border-gray-200 p-6 rounded-lg text-center hover:bg-blue-50 hover:scale-105  transition-all duration-700"
           data-aos="fade-left">
@@ -43,7 +40,6 @@ const Turnover = () => {
           </p>
         </div>
 
-        {/* Quality Card */}
         <div
           className="group shadow-md bg-white border border-gray-200 p-6 rounded-lg text-center hover:bg-blue-50 hover:scale-105 transition-all duration-300"
           data-aos="fade-up">
@@ -58,7 +54,6 @@ const Turnover = () => {
           </p>
         </div>
 
-        {/* Target Market Card */}
         <div
           className="group shadow-md bg-white border border-gray-200 p-6 rounded-lg text-center hover:bg-blue-50 hover:scale-105 transition-all duration-300"
           data-aos="fade-down">
@@ -73,7 +68,6 @@ const Turnover = () => {
           </p>
         </div>
 
-        {/* Unique Selling Proposition Card */}
         <div
           className="group shadow-md bg-white border border-gray-200 p-6 rounded-lg text-center hover:bg-blue-50 hover:scale-105 transition-all duration-300"
           data-aos="fade-right">
