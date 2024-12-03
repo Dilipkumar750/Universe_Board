@@ -80,7 +80,7 @@ const TestimonialCarousel = () => {
 
   return (
     <>
-      <h2 className="text-4xl font-extrabold text-center mt-10 text-blue-800" data-aos="fade-up">
+      <h2 className="text-4xl font-bold text-center mt-10 text-[#003366]" data-aos="fade-up">
         Our Clients Say:
       </h2>
       <style>{keyframes}</style>

@@ -57,92 +57,64 @@ const AddProduct = () => {
   
 
   const categories = {
-    "Interactive ClassroomSolution": [
-      "Interactive Flat Panel",
-      "Led Touch Screen Interactive Board",
-      "Interactive Whiteboard Smart Classroom Set",
-      "Smart Class Speaker"
+    "Interactive Panels": [
+      "65’ interactive Panel android",
+      "65’ interactive panel android with Window",
+      "75’ interactive Panel android",
+      "75’ interactive panel android with Window",
+      "86’ interactive Panel android",
+      "86’ interactive panel android with Window",
+      "98’ interactive Panel android",
+      "98’ interactive panel android with Window",
+    ],
+    "Smart Class Setups": [
+      "82 Interactive Board",
+      "92 Interactive Board",
+      "102 Interactive Board",
+      "Smart class Speaker",
     ],
     "Writing Boards": [
-      "Magnetic White Marker Writing Board",
-      "Ceramic Green Chalk Writing Board",
-      "E3 Ceramic Whiteboard 8X4FT",
-      "Ceramic White Marker Writing Board"
+  
+      "Ceramic Green Board (Customized size)",
+      "Magnetic Green Board (Customized size)",
+      "Non Magnetic Green Board (Customized size)",
+      "Ceramic White Board (Customized size)",
+      "Magnetic White Board (Customized size)",
+      "Non Magnetic White Board (Customized size)",
+      "Green Board & White Board (Customized size)",
+      "Green Board & Notice Board (Customized size)",
+      "White Board & Notice Board (Customized size)",
+      "Monthly & Weekly Planner Board (Customized size)",
+      "Time Table & Data Entry Board (Customized size)",
     ],
     "Display Boards": [
-      "Pin Up Notice Boards",
-      "Welcome Board",
-      "Exhibition Display Boards",
-      "Lobby Information Board"
+      "Preshograph Board",
+      "Grooved Board",
+      "Lobby Information Board",
+      "Exhibition Display Board",
+      "Three Leg Stand",
+      "Four Leg Stand",
+      "Movable Stand",
+      "Revolving Stand",
     ],
     "Classroom Furniture": [
-      "Two Seating Classroom Desk",
-      "SS Steel Desk Bench",
-      "School Chair & Desks",
-      "Single Seating Desk"
+      "SS Desk and Bench",
+      "MS with Powder Coated Desk And Bench",
+      "Wooden Top with MS Leg Desk And Bench",
     ],
-    "Stands For Display Board": [
-      "Four Leg Display Stand",
-      "Map Storage Stand"
+    "Kindergarten Items": [],
+    "Playground Items": [
+      "Indoor",
+      "Outdoor",
     ],
-    "Digital Podium": [],
-    "Combination Boards": [
-      "Green Board with Notice/Pinup Board",
-      "Whiteboard and Notice Board"
+    "Laboratory Furniture": [],
+    "Podiums": [
+      "Digital Podium",
+      "Wooden Podium",
     ],
-    "Glass Covered Notice Boards": [
-      "Notice Board With Wooden Frame",
-      "Notice Board with Sliding Door"
-    ],
-    "Projectors": [
-      "Benq",
-      "EPSON",
-      "HITACHI",
-      "SONY",
-      "LG",
-      "DELL",
-      "PANASONIC",
-      "INFOCUS"
-    ],
-    "Schedule Planning Boards": [
-      "Weekly Planner",
-      "Monthly Planner Display Board"
-    ],
-    "Sign Boards": [
-      "Lactern Podium",
-      "Fixograph Letter Boards"
-    ],
-    "Projector Screens": [
-      "Whiteboard Projector Screen"
-    ],
-    "Sliding Glass Notice Boards": [
-      "Notice Board With Glass Door"
-    ],
-    "Kids Indoor Game Equipment": [
-      "Indoor Slide"
-    ],
-    "Display Board Accessories": [
-      "Magnetic Letters"
-    ],
-    "Digital Classroom Solutions": [
-      "Digital Classroom Solutions"
-    ],
-    "Outdoor Play Equipments": [
-      "Multiplay system"
-    ],
-    "Digital Projectors": [
-      "BenQ MX808PST Digital Projector"
-    ],
-    "Keyring Display Cabinets": [
-      "Key cabinets"
-    ],
-    "Outdoor Playground Equipment": [
-      "Kids play equipment"
-    ],
-    "Facilities": [
-      "Digital Library"
-    ]
+    "Other Items": [],
   };
+  
 
   return (
     <div className="addproduct">

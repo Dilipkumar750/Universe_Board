@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const ColorFoot = () => (
   <footer className="bg-black ps-20 md:p-10 font-[sans-serif] tracking-wide">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-1 ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mt-1 ">
       <div className="lg:col-span-2">
         <img
           src={logo}
@@ -69,21 +69,14 @@ const ColorFoot = () => (
             <Link
               to="/OurProducts"
               className="text-white hover:text-green-300 text-sm">
-              Digital Podium
+              Interactive Panel
             </Link>
           </li>
           <li>
             <Link
               to="/OurProducts"
               className="text-white hover:text-green-300 text-sm">
-              Projector
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-green-300 text-sm">
-              Sign Board
+              Smart Class Setups
             </Link>
           </li>
           <li>
@@ -97,7 +90,56 @@ const ColorFoot = () => (
             <Link
               to="/OurProducts"
               className="text-white hover:text-green-300 text-sm">
-              Digital Projector
+              Display Boards
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/OurProducts"
+              className="text-white hover:text-green-300 text-sm">
+              Classroom Furniture
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="text-lg font-semibold mb-6 text-red-500">
+          Product List
+        </h4>
+        <ul className="space-y-4">
+          <li>
+            <Link
+              to="/OurProducts"
+              className="text-white hover:text-green-300 text-sm">
+             Kindergarten Items
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/OurProducts"
+              className="text-white hover:text-green-300 text-sm">
+              Playground Items
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/OurProducts"
+              className="text-white hover:text-green-300 text-sm">
+             Laboratory Furniture
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/OurProducts"
+              className="text-white hover:text-green-300 text-sm">
+              Pordium
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/OurProducts"
+              className="text-white hover:text-green-300 text-sm">
+              Other Items
             </Link>
           </li>
         </ul>
