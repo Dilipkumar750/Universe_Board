@@ -13,10 +13,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white sticky top-0 z-50">
-      <div className="max-w-screen-xl flex items-center justify-between mx-auto h-20">
+    <header className="bg-white sticky px-4 top-0 z-50">
+      <div className="max-w-full flex items-center justify-between mx-auto h-20">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="Company Logo" className="h-20 w-28 ml-0" />
+          <img src={logo} alt="Company Logo" className="h-20 w-28" />
           <span className="text-3xl font-bold text-blue-900">
             Universe Visuals
           </span>
@@ -40,7 +40,7 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <Link to="/Contact">
             <button
-              className="bg-blue-200 text-gray-800 hover:text-white md:px-4 md:py-2 rounded-lg flex items-center shadow-lg transition-all duration-300 hover:bg-blue-800"
+              className="bg-blue-200 text-gray-800 hover:text-white px-4 py-2 rounded-lg flex items-center shadow-lg transition-all duration-300 hover:bg-blue-800"
               type="button"
             >
               Contact Us
@@ -62,6 +62,7 @@ const Header = () => {
             </a>
           </div>
         </div>
+
 
         <button
           onClick={toggleMenu}
@@ -86,51 +87,50 @@ const Header = () => {
             />
           </svg>
         </button>
-        <div
-          className={`${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          } transform transition-all duration-500 w-full md:hidden fixed inset-0 bg-white z-50`}
-          id="navbar-default"
-        >
-          <ul className="flex flex-col space-y-4 bg-white">
-            <li>
-              <Link
-                to="/"
-                onClick={toggleMenu}
-                className="block text-black hover:bg-red-100 rounded"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/About"
-                onClick={toggleMenu}
-                className="block text-black hover:bg-red-100 rounded"
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/OurProducts"
-                onClick={toggleMenu}
-                className="block text-black hover:bg-red-100 rounded"
-              >
-                Our Products
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Contact"
-                onClick={toggleMenu}
-                className="block text-black hover:bg-red-100 rounded"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
+
+        {/* Mobile Dropdown Menu */}
+        {isOpen && (
+          <div className="md:hidden absolute top-20 right-4 bg-white shadow-lg w-48 rounded-lg py-2">
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/"
+                  onClick={toggleMenu}
+                  className="block text-black hover:bg-gray-100 px-4 py-2 rounded"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/About"
+                  onClick={toggleMenu}
+                  className="block text-black hover:bg-gray-100 px-4 py-2 rounded"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/OurProducts"
+                  onClick={toggleMenu}
+                  className="block text-black hover:bg-gray-100 px-4 py-2 rounded"
+                >
+                  Our Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Contact"
+                  onClick={toggleMenu}
+                  className=" block text-black hover:bg-gray-100 px-4 py-2 rounded"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </header>
   );

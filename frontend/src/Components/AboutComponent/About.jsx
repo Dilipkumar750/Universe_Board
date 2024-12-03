@@ -1,5 +1,5 @@
-import about from "../../assets/hero/slide9.jpg";
-import imageOne from "../../assets/greenchalk borad.png";
+import about from "../../assets/hero/slide9.webp";
+import imageOne from "../../assets/classchair.jpg";
 import imageTwo from "../../assets/kinds- school-desk.png";
 import imageThree from "../../assets/projector.png";
 import imageFour from "../../assets/single seating desk.png";
@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import Projectmagement from "../../assets/project.jpg"
 
 const products = [
-  { title: "Green Board", image: imageOne, quote: "Make Every Presentation Shine – Top-Quality Projectors on Sale!" },
+  { title: "Single Desk", image: imageOne, quote: "Upgrade Your Classroom – Premium Class Chairs and Single Desks Available Now!" },
   { title: "Play Desk", image: imageTwo, quote: "Unbeatable Price, Unmatched Quality – Get Your Green School Board Today!" },
   { title: "Projector", image: imageThree, quote: "Learning and Fun Meet Here – Kindergarten Tables on Sale!" },
   { title: "Single Desk", image: imageFour, quote: "Encourage Learning and Creativity with a Kid-Friendly Table!" },
@@ -51,7 +51,7 @@ const About = () => {
             are committed to providing nothing but the best.
           </p>
           <Link to={"/Contact"}>
-            <button class="w-[150px] bg-white h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-red-500 before:to-red-600 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-black">
+            <button class="w-[150px] bg-white h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-blue-500 before:to-blue-600 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-black">
               Get Started
             </button>
           </Link>

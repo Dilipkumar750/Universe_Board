@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Parallax, Pagination, Autoplay } from "swiper/modules";
-import agri from "../../assets/agri.jpg";
+import agri from "../../assets/agri1.png";
 import amusement from "../../assets/download.jpeg";
 import graining from "../../assets/projector1.jpg";
 import experts from "../../assets/pordium3.jpg";
@@ -20,9 +20,9 @@ const MainProducts = () => {
     },
     {
       image: agri,
-      title: "Whiteboard Projector Screen",
+      title: "School Scientific Laboratory",
       description:
-        "Enhance presentations with high-quality projector screens and whiteboard surfaces.",
+        "Enhance learning and research with state-of-the-art laboratory equipment and advanced scientific tools for precise experimentation.",
     },
     {
       image: amusement,
@@ -46,8 +46,8 @@ const MainProducts = () => {
 
   return (
     <div className="flex flex-col items-center min-h-[80vh] bg-gray-50 py-10">
-      <h2 className="text-2xl font-bold mb-10 text-[#0277BD] text-center">
-        Major Products
+      <h2 className="text-4xl font-bold mb-10 text-[#003366] text-center">
+        Major Products:
       </h2>
 
       <Swiper

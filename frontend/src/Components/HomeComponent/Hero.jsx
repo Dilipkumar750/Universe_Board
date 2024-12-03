@@ -4,10 +4,10 @@ import { FaTree, FaLayerGroup, FaShapes } from "react-icons/fa";
 import { FaShieldAlt, FaToolbox, FaStar } from "react-icons/fa";
 import { FaMoneyBill, FaBalanceScale, FaCheckCircle } from "react-icons/fa";
 
-import swiper1 from "../../assets/hero/slide5.jpg";
+import swiper1 from "../../assets/hero/slide9.jpg";
 import swiper2 from "../../assets/hero/slide7.png";
 import swiper3 from "../../assets/hero/slide6.jpg";
-import swiper4 from "../../assets/hero/slide8.jpg";
+import swiper4 from "../../assets/hero/slide11.jpeg";
 import logo from "../../assets/logo.png";
 
 import "swiper/css";
@@ -44,7 +44,7 @@ const slides = [
 
 export default function App() {
   return (
-    <div className="h-screen w-full relative -mt-20">
+    <div className="h-screen w-full relative">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -74,7 +74,7 @@ export default function App() {
               />
               <div className="absolute inset-0 flex justify-end items-center p-8">
                 <div className="bg-blue-100/50 backdrop-blur-sm rounded-[50px] p-8 shadow-lg text-center max-w-lg">
-                  <div className="h-32 w-36 mx-auto">
+                  <div className="h-16 w-20 mx-auto">
                     <img src={logo} alt="Company Logo" className="h-full w-full object-contain" />
                   </div>
                   <h1 className="text-2xl font-bold text-gray-800">{slide.title}</h1>
