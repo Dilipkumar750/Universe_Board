@@ -34,7 +34,7 @@ const ProductDetails = () => {
 
   return (
     <div className="container bg-white p-4 my-4 rounded relative">
-      <h1 className="text-3xl font-bold text-black mb-4 text-center">Details of {product?.data?.title}</h1>
+      <h1 className="text-3xl font-bold text-[#003366] mb-4 text-center">Details of {product?.data?.title}</h1>
       <div className="grid md:grid-cols-3 gap-4">
         <div className="flex justify-center">
           <img
