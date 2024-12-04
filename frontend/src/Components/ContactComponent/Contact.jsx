@@ -66,7 +66,7 @@ const Contact = () => {
 
       {/* Inquiry Section */}
       <div className="-mt-12 sm:-mt-16 mb-6 px-4">
-        <div className="mx-auto max-w-6xl shadow-lg p-6 sm:p-8 relative bg-blue-300 rounded-xl">
+        <div className="mx-auto max-w-6xl shadow-lg p-6 sm:p-8 relative bg-gray-300 rounded-xl">
           <h2 className="text-2xl sm:text-4xl text-[#003366] font-bold text-center">
             Product Inquiry
           </h2>

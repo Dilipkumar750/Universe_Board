@@ -1,7 +1,7 @@
 import about from "../../assets/hero/slide9.webp";
 import imageOne from "../../assets/classchair.jpg";
 import imageTwo from "../../assets/kinds- school-desk.png";
-import imageThree from "../../assets/projector.png";
+import imageThree from "../../assets/projector1.jpg";
 import imageFour from "../../assets/single seating desk.png";
 import vision from "../../assets/vision.jpg";
 import mission from "../../assets/mission.jpg";
@@ -20,17 +20,17 @@ const products = [
 
 const About = () => {
   return (
-    <div className="font-sans font-semibold">
+    <div className="font-sans font-medium">
       <div
         className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 ">
         <div
           className="max-lg:order-1 max-lg:text-center sm:p-12 p-4"
           data-aos="fade-right"
         >
-          <h2 className="text-blue-600 lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
+          <h2 className="text-[#003366] lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
-          <p className="text-black mt-6 text-lg leading-relaxed justify-center text-justify">
+          <p className="text-gray-800 mt-6 text-lg leading-relaxed justify-center text-justify">
             Universe Visuals aims to provide our clients with the
             best range of products by procuring them from reliable vendors. This
             success is made possible by the unwavering support of our esteemed
@@ -115,10 +115,10 @@ const About = () => {
 
       <div className="py-8 bg-white flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 p-4" data-aos="fade-right">
-          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-blue-500">
+          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-[#003366]">
             Project Management
           </h1>
-          <p className="text-center md:text-left font-serif text-xl leading-relaxed">
+          <p className="text-center md:text-left text-xl leading-relaxed">
             Our Project Management team ensures seamless coordination and efficient execution of every project from start to finish. We prioritize clear communication, effective resource allocation, and timely delivery to consistently exceed client expectations. With a commitment to innovation and quality, our team drives successful project outcomes by working closely with clients to achieve their goals on time and within budget.
           </p>
         </div>

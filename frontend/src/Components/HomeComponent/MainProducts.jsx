@@ -9,6 +9,7 @@ import graining from "../../assets/projector1.jpg";
 import experts from "../../assets/pordium3.jpg";
 import experts1 from "../../assets/green board.jpg";
 import slide1 from "../../assets/hero/slide2.jpg";
+import { FaWhatsapp } from "react-icons/fa";
 
 const MainProducts = () => {
   const products = [
@@ -68,10 +69,10 @@ const MainProducts = () => {
         className="mySwiper"
         breakpoints={{
           320: {
-            slidesPerView: 1, 
+            slidesPerView: 1,
           },
           768: {
-            slidesPerView: 2, 
+            slidesPerView: 2,
           },
           1024: {
             slidesPerView: 3,
@@ -90,10 +91,10 @@ const MainProducts = () => {
             <div className="relative flex w-[300px] md:w-[300px] h-[400px] flex-col rounded-xl bg-white text-gray-700 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-xl my-20">
               <div
                 className="relative mx-6 -mt-10 h-72 overflow-hidden rounded-2xl bg-cover bg-center text-white shadow-lg"
-                 data-aos="fade-down"
+                data-aos="fade-down"
                 style={{
                   backgroundImage: `url(${product.image})`,
-                  backgroundSize: "cover", 
+                  backgroundSize: "cover",
                 }}
               >
                 <div className="absolute inset-0 opacity-10"></div>
@@ -103,7 +104,7 @@ const MainProducts = () => {
                 <h5 className="mb-2 block font-sans text-xl text-center leading-snug tracking-normal text-blue-900 antialiased font-bold">
                   {product.title}
                 </h5>
-                
+
               </div>
 
               <div className="p-6 pt-0 flex justify-center">
@@ -114,10 +115,12 @@ const MainProducts = () => {
                   rel="noopener noreferrer"
                 >
                   <button
-                    className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:outline-none focus:ring-2 focus:ring-blue-300 active:opacity-85 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:outline-none focus:ring-2 focus:ring-blue-300 active:opacity-85 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none flex items-center justify-center space-x-2"
                   >
-                    Chat Now...
+                    <FaWhatsapp className="text-white text-2xl" />
+                    <span>Chat Now</span>
                   </button>
+
                 </a>
               </div>
             </div>
