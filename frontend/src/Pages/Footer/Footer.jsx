@@ -4,20 +4,23 @@ import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
 const ColorFoot = () => (
-  <footer className="bg-gray-600 ps-20 md:p-10 font-[sans-serif] tracking-wide">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mt-1 ">
-      <div className="lg:col-span-2">
+  <footer className="bg-black p-4 md:p-10 font-[sans-serif] tracking-wide">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-4">
+      
+      {/* Logo and Social Links */}
+      <div className="lg:col-span-2 flex flex-col items-start">
         <img
           src={logo}
           alt="Gravity Global Exports Logo"
-          className="w-28 scale-150 p-3"
+          className="w-32 md:w-28 scale-150 p-3"
         />
         <ul className="flex space-x-6 my-2">
           <li>
             <a
               href="#"
               aria-label="Facebook"
-              className="text-white text-2xl hover:bg-white">
+              className="text-white text-3xl hover:text-gray-400"
+            >
               <SiFacebook />
             </a>
           </li>
@@ -25,7 +28,8 @@ const ColorFoot = () => (
             <a
               href="#"
               aria-label="Instagram"
-              className="text-white text-2xl hover:bg-white">
+              className="text-white text-3xl hover:text-gray-400"
+            >
               <FaInstagram />
             </a>
           </li>
@@ -33,7 +37,8 @@ const ColorFoot = () => (
             <a
               href="#"
               aria-label="YouTube"
-              className="text-white text-2xl hover:bg-white">
+              className="text-white text-3xl hover:text-gray-400"
+            >
               <FaYoutube />
             </a>
           </li>
@@ -41,181 +46,118 @@ const ColorFoot = () => (
             <a
               href="https://wa.me/9965085475"
               aria-label="WhatsApp"
-              className="text-white text-2xl hover:bg-white">
+              className="text-white text-3xl hover:text-gray-400"
+            >
               <FaWhatsapp />
             </a>
           </li>
         </ul>
-        <address className="font-bold text-white text-sm space-y-1">
+        <address className="font-bold text-white text-sm space-y-1 mt-4">
           <span className="text-blue-600 font-bold text-2xl">Universe Visuals</span>
           <br />
           9/W 2A, 1st Floor Akilandeswari Nagar,
           <br />
           Canara Bank Colony, Ammapatti Salai,
           <br />
-          Thuraiyur, Trichy Dt,<br /> Tamilnadu, Code: 33
+          Thuraiyur, Trichy Dt, Tamilnadu, Code: 33
           <br />
-          GSTIN/ UIN: 33BFVPM5221C1ZL
+          GSTIN/UIN: 33BFVPM5221C1ZL
         </address>
-
       </div>
 
+      {/* Product List 1 */}
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-blue-400">
-          Product List
-        </h4>
-        <ul className="space-y-4">
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Interactive Panel
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Smart Class Setups
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Writing Boards
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Display Boards
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Classroom Furniture
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h4 className="text-lg font-semibold mb-6 text-blue-400">
-          Product List
-        </h4>
-        <ul className="space-y-4">
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-             Kindergarten Items
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Playground Items
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-             Laboratory Furniture
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Pordium
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Other Items
-            </Link>
-          </li>
+        <h4 className="text-lg font-semibold mb-6 text-blue-400">Product List</h4>
+        <ul className="space-y-2">
+          {[
+            "Interactive Panel",
+            "Smart Class Setups",
+            "Writing Boards",
+            "Display Boards",
+            "Classroom Furniture",
+          ].map((item) => (
+            <li key={item}>
+              <Link
+                to="/OurProducts"
+                className="text-white hover:text-gray-400 text-sm"
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
+      {/* Product List 2 */}
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-blue-400">
-          Information
-        </h4>
-        <ul className="space-y-4">
-          <li>
-            <Link to="/" className="text-white hover:text-black text-sm">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/OurProducts"
-              className="text-white hover:text-black text-sm">
-              Product List
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/About"
-              className="text-white hover:text-black text-sm">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/TermsAndConditions"
-              className="text-white hover:text-black text-sm">
-              Terms & Conditions
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/PrivacyPolicy"
-              className="text-white hover:text-black text-sm">
-              Privacy Policy
-            </Link>
-          </li>
+        <h4 className="text-lg font-semibold mb-6 text-blue-400">Product List</h4>
+        <ul className="space-y-2">
+          {[
+            "Kindergarten Items",
+            "Playground Items",
+            "Laboratory Furniture",
+            "Pordium",
+            "Other Items",
+          ].map((item) => (
+            <li key={item}>
+              <Link
+                to="/OurProducts"
+                className="text-white hover:text-gray-400 text-sm"
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
+
+      {/* Information */}
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-blue-400">
-          Contact Us
-        </h4>
-        <ul className="space-y-4">
-          <li>
-            <a
-              href="mailto:info@universevisuals.com"
-              className="text-white hover:text-black text-sm">
-              info@universevisuals.com
-            </a>
-          </li>
-          <li>
-            <a
-              href="tel:9965085475"
-              className="text-white hover:text-black text-sm">
-              99650 85475
-            </a>
-          </li>
-          <li>
-            <a
-              href="tel:9042122076"
-              className="text-white hover:text-black text-sm">
-              90421 22076
-            </a>
-          </li>
+        <h4 className="text-lg font-semibold mb-6 text-blue-400">Information</h4>
+        <ul className="space-y-2">
+          {[
+            { label: "Home", path: "/" },
+            { label: "Product List", path: "/OurProducts" },
+            { label: "About Us", path: "/About" },
+            { label: "Terms & Conditions", path: "/TermsAndConditions" },
+            { label: "Privacy Policy", path: "/PrivacyPolicy" },
+          ].map((item) => (
+            <li key={item.label}>
+              <Link
+                to={item.path}
+                className="text-white hover:text-gray-400 text-sm"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Contact Us */}
+      <div>
+        <h4 className="text-lg font-semibold mb-6 text-blue-400">Contact Us</h4>
+        <ul className="space-y-2">
+          {[
+            { text: "info@universevisuals.com", href: "mailto:info@universevisuals.com" },
+            { text: "99650 85475", href: "tel:9965085475" },
+            { text: "90421 22076", href: "tel:9042122076" },
+          ].map((item) => (
+            <li key={item.text}>
+              <a
+                href={item.href}
+                className="text-white hover:text-gray-400 text-sm"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
+
     <p className="text-white text-sm mt-10 text-center">
-      © Universe Visuals All rights reserved ♥ UltraFly Solutions Pvt Limited
+      © Universe Visuals All rights reserved <span className="text-red-600">♥</span> Prepared by UltraFly Solutions Pvt Limited
     </p>
   </footer>
 );
