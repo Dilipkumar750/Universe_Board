@@ -53,7 +53,7 @@ const Innovation = () => {
 
   return (
     <section className="relative font-inter antialiased">
-      <section className="relative flex flex-col justify-between gap-2 about-section pb-10 mt-5 bg-gray-300">
+      <section className="relative flex flex-col justify-between gap-2 about-section pb-10 mt-5 bg-gray-200">
         <div className="container page-padding relative z-10">
           <div className="about-cards flex gap-10 -mt-[8.5rem] md1000:flex-col"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 mb-16">
@@ -128,13 +128,13 @@ const Innovation = () => {
               />
             </div>
           </div>
-          <div className="relative flex items-center bg-gray-400 md:rounded-r-3xl"data-aos="fade-left">
-            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-400 md:rounded-l-3xl"></span>
+          <div className="relative flex items-center bg-gray-700 md:rounded-r-3xl"data-aos="fade-left">
+            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-700 md:rounded-l-3xl"></span>
             <div className="p-5 sm:p-16 lg:p-24" >
-              <h2 className="text-2xl font-bold sm:text-3xl text-[#003366]">
+              <h2 className="text-2xl font-bold sm:text-3xl text-[#b1c9e1]">
                 Our Educational Tools in Action: Real Success Stories
               </h2>
-              <p className="mt-4 text-black text-justify font-medium">
+              <p className="mt-4 text-white text-justify font-medium">
                 At Universe Visuals, innovation drives everything we create. We offer a wide range of products, including smart boards, projectors, and various writing boards, both ceramic and magnetic, to enhance your educational experience.
                 <br /><br />
                 Our dedicated team continually develops tools such as display boards, notice boards with sliding glass doors, and press graph boards, ensuring they meet the changing needs of educators and students.
@@ -144,7 +144,7 @@ const Innovation = () => {
               <div data-aos="zoom-in" className="flex justify-start">
                 <Link to="/Contact">
                   <button
-                    className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#ff6700] bg-white backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                    className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#000000] bg-white backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
                     type="button"
                   >
                     Get in Touch

@@ -4,10 +4,10 @@ import { FaTree, FaLayerGroup, FaShapes } from "react-icons/fa";
 import { FaShieldAlt, FaToolbox, FaStar } from "react-icons/fa";
 import { FaMoneyBill, FaBalanceScale, FaCheckCircle } from "react-icons/fa";
 
-import swiper1 from "../../assets/hero/slide9.jpg";
+import swiper1 from "../../assets/hero/slide12.png";
 import swiper2 from "../../assets/hero/slide7.png";
-import swiper3 from "../../assets/hero/slide6.jpg";
-import swiper4 from "../../assets/hero/slide11.jpeg";
+import swiper3 from "../../assets/hero/slide13.avif";
+import swiper4 from "../../assets/hero/slide2.jpg";
 import logo from "../../assets/logo.png";
 
 import "swiper/css";
@@ -64,15 +64,15 @@ export default function App() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-screen w-full">
+            <div className="relative h-screen w-screen">
               <img
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
-                className="object-cover h-full w-full"
+                className="object-fit h-full w-full"
                 loading="lazy"
                 onError={(e) => (e.target.src = "/fallback-image.jpg")}
               />
-              <div className="absolute inset-0 flex justify-end items-center p-8">
+              <div className="absolute inset-0 flex justify-start items-end p-8 mb-16">
                 <div className="bg-blue-100/50 backdrop-blur-sm rounded-[50px] p-8 shadow-lg text-center max-w-lg">
                   <div className="h-16 w-20 mx-auto">
                     <img src={logo} alt="Company Logo" className="h-full w-full object-contain" />

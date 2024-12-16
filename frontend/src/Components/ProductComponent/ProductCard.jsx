@@ -27,7 +27,7 @@ function ProductCard({ product }) {
           className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-110"
         />
       </div>
-      <div className="flex flex-col justify-between h-60 p-4 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-400">
+      <div className="flex flex-col justify-between h-60 p-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-300">
         <div className="text-center flex-grow">
           <h3 className="text-lg font-semibold text-black">{product.title}</h3>
           <p
@@ -40,7 +40,7 @@ function ProductCard({ product }) {
           {!isExpanded && product.description.length > 100 && ( // Adjust threshold for the "More" button
             <button
               onClick={handleMoreClick}
-              className="mt-3 px-4 py-1 text-white rounded-full shadow-lg text-sm font-bold uppercase tracking-wide transition-all duration-300"
+              className="mt-3 px-4 py-1 text-black rounded-full shadow-lg text-sm font-bold uppercase tracking-wide transition-all duration-300"
             >
               Read More..
             </button>
