@@ -29,7 +29,7 @@ const Login = ({ setToken }) => {
 
   return (
     <div>
-      {error && <div style={{ color: 'red' }}>{error}</div>}  {/ Display error if exists /}
+      {error && <div style={{ color: 'red' }}>{error}</div>} 
       <form onSubmit={handleSubmit}>
         <input
           type="email"
