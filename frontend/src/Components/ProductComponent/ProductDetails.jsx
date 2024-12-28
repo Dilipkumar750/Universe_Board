@@ -57,26 +57,28 @@ const ProductDetails = () => {
               <dt className="text-sm font-medium text-black">Details:</dt>
               <dd className="text-sm text-black col-span-2">
                 {product?.data?.details && product?.data?.details.length > 0 ? (
-                  <table className="min-w-full border border-gray-300">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border border-gray-300 px-4 py-2 text-left">Detail Name</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {product?.data?.details.map((detail) => (
-                        <tr key={detail._id} className="bg-white">
-                          <td className="border border-gray-300 px-4 py-2">
-                            <strong>{detail.name}</strong>
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {detail.value}
-                          </td>
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full border border-gray-300">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="border border-gray-300 px-4 py-2 text-left">Detail Name</th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">Value</th>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody>
+                        {product?.data?.details.map((detail) => (
+                          <tr key={detail._id} className="bg-white">
+                            <td className="border border-gray-300 px-4 py-2">
+                              <strong>{detail.name}</strong>
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2">
+                              {detail.value}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 ) : (
                   <p>No details available</p>
                 )}

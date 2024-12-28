@@ -157,7 +157,7 @@ const ColorFoot = () => (
     </div>
 
     <p className="text-white text-sm mt-10 text-center">
-      © Universe Visuals All rights reserved <span className="text-red-600">♥</span> Prepared by UltraFly Solutions Pvt Limited
+      © Universe Visuals All rights reserved <span className="text-red-600">♥</span> Prepared by Ultrafly Solutions Private Limited
     </p>
   </footer>
 );

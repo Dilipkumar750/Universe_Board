@@ -179,7 +179,7 @@ const AboutUs = () => {
   return (
     <div className="font-sans font-medium">
       {/* About Section */}
-      <div className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6">
+      <div className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gray-200">
         <div className="max-lg:order-1 max-lg:text-center sm:p-12 p-4" data-aos="fade-right">
           <h2 className="text-[#003366] lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
