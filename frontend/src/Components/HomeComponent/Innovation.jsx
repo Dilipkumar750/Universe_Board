@@ -3,6 +3,7 @@ import industry from "../../assets/industry.jpg";
 import bgImage from "../../assets/innovation-transformed.jpg";
 import { useState, useEffect } from "react";
 import CountUp from "react-countup";
+import bgblue from "../../assets/bgblue.png";
 
 const Innovation = () => {
   const [sales, setSales] = useState(0);
@@ -53,15 +54,21 @@ const Innovation = () => {
 
   return (
     <section className="relative font-inter antialiased">
-      <section className="relative flex flex-col justify-between gap-2 about-section pb-10 mt-5 bg-gray-200">
+      {/* Main section with background */}
+      <section
+        className="relative flex flex-col justify-between gap-2 about-section pb-10 mt-5"
+        style={{ backgroundImage: `url(${bgblue})`, backgroundSize: "cover" }}
+      >
         <div className="container page-padding relative z-10">
+          {/* About section card (if needed) */}
           <div className="about-cards flex gap-10 -mt-[8.5rem] md1000:flex-col"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 mb-16">
+            {/* Text content */}
             <div className="mt-[6rem] relative col-span-1 ml-10">
-              <h2 className="text-3xl md:text-[36px] font-bold leading-tight mb-6 text-[#003366]">
+              <h2 className="text-3xl md:text-[36px] font-bold leading-tight mb-6 text-[#98CE16]">
                 Innovative Technology Solutions for Your Business
               </h2>
-              <p className="text-base md:text-lg text-gray-800 leading-relaxed text-justify font-medium">
+              <p className="text-base md:text-lg text-white leading-relaxed text-justify font-medium">
                 Universe Visuals is dedicated to enhancing the educational experience with a diverse range of visual and interactive tools.
                 Founded with a commitment to innovation, we offer solutions tailored to meet the unique needs of educators, students, and institutions globally.
                 <br />
@@ -69,8 +76,8 @@ const Innovation = () => {
                 Our product lineup includes smart boards, projectors, ceramic and magnetic writing boards, and various display boards like notice boards with sliding glass doors and press graph boards.
                 We continuously work to develop tools that support effective learning environments, making us a trusted partner for schools, colleges, and universities.
               </p>
-
             </div>
+            {/* Image content */}
             <div className="relative w-full flex justify-center items-center md:mt-12 mb-10 md:mb-0">
               <img
                 src={bgImage}
@@ -78,35 +85,35 @@ const Innovation = () => {
                 className="absolute inset-0 w-3/4 h-[400px] object-cover opacity-[0.7] rounded-lg max-lg:mx-auto lg:top-20 lg:left-28"
               />
               <div className="relative grid gap-6 mt-4">
+                {/* Completed Projects CountUp */}
                 <div className="flex flex-row items-center text-center bg-white rounded-lg shadow-lg py-2 px-4 w-48 transform -translate-x-20 md:-translate-x-60 lg:-translate-x-40 mt-4 hover:scale-105 transition-all duration-300 ease-in-out">
-
                   <div>
-                    <h2 className="uppercase font-bold text-[24px] text-primary leading-snug">
+                    <h2 className="uppercase font-bold text-[24px] text-[#98CE16] leading-snug">
                       <CountUp end={3000} duration={20} suffix=" +" />
                     </h2>
-                    <h3 className="uppercase font-semibold text-[12px] leading-snug text-gray-700">
+                    <h3 className="uppercase font-bold text-[12px] leading-snug text-gray-700">
                       Completed Projects
                     </h3>
                   </div>
                 </div>
+                {/* Happy Clients CountUp */}
                 <div className="flex flex-row items-center text-center bg-white rounded-lg shadow-lg py-2 px-4 w-48 transform translate-x-20 md:translate-x-60 lg:translate-x-60 mt-12 hover:scale-105 transition-all duration-300 ease-in-out">
-
                   <div>
-                    <h2 className="uppercase font-bold text-[24px] text-primary leading-snug">
+                    <h2 className="uppercase font-bold text-[24px] text-[#98CE16] leading-snug">
                       <CountUp end={1000} duration={30} suffix=" +" />
                     </h2>
-                    <h3 className="uppercase font-semibold text-[12px] leading-snug text-gray-700">
+                    <h3 className="uppercase font-bold text-[12px] leading-snug text-gray-700">
                       Happy Clients
                     </h3>
                   </div>
                 </div>
+                {/* Customer Service CountUp */}
                 <div className="flex flex-row items-center text-center bg-white rounded-lg shadow-lg py-2 px-4 w-48 transform -translate-x-20 md:-translate-x-60 lg:-translate-x-40 mt-6 hover:scale-105 transition-all duration-300 ease-in-out">
-
                   <div>
-                    <h2 className="uppercase font-bold text-[24px] text-primary leading-snug">
+                    <h2 className="uppercase font-bold text-[24px] text-[#98CE16] leading-snug">
                       <CountUp end={1500} duration={25} suffix=" +" />
                     </h2>
-                    <h3 className="uppercase font-semibold text-[12px] leading-snug text-gray-700">
+                    <h3 className="uppercase font-bold text-[12px] leading-snug text-gray-700">
                       Customer Service
                     </h3>
                   </div>
@@ -116,8 +123,11 @@ const Innovation = () => {
           </div>
         </div>
       </section>
+
+      {/* Second Section */}
       <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 mt-9 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Image section */}
           <div className="relative z-10 lg:py-16">
             <div className="relative h-64 sm:h-80 lg:h-full">
               <img
@@ -128,23 +138,28 @@ const Innovation = () => {
               />
             </div>
           </div>
-          <div className="relative flex items-center bg-gray-700 md:rounded-r-3xl"data-aos="fade-left">
-            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-700 md:rounded-l-3xl"></span>
-            <div className="p-5 sm:p-16 lg:p-24" >
-              <h2 className="text-2xl font-bold sm:text-3xl text-[#b1c9e1]">
+
+          {/* Text section */}
+          <div
+            className="relative flex items-center bg-gradient-to-r from-[#092252] to-[#2963c0] md:rounded-r-3xl"
+            data-aos="fade-left"
+          >
+            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-[#092252] md:rounded-l-3xl"></span>
+            <div className="p-5 sm:p-16 lg:p-24">
+              <h2 className="text-2xl font-bold sm:text-3xl text-[#98CE16]">
                 Our Educational Tools in Action: Real Success Stories
               </h2>
               <p className="mt-4 text-white text-justify font-medium">
                 At Universe Visuals, innovation drives everything we create. We offer a wide range of products, including smart boards, projectors, and various writing boards, both ceramic and magnetic, to enhance your educational experience.
-                <br /><br />
+                <br />
+                <br />
                 Our dedicated team continually develops tools such as display boards, notice boards with sliding glass doors, and press graph boards, ensuring they meet the changing needs of educators and students.
                 With our premium selection, including welcome boards with gold frames and educational tools, we are committed to shaping the future of education, making it more interactive and engaging for all.
-
               </p>
               <div data-aos="zoom-in" className="flex justify-start">
                 <Link to="/Contact">
                   <button
-                    className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#000000] bg-white backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                    className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#98CE16] bg-gradient-to-t from-[#000000] via-[#22459c] to-[#4c72b0] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
                     type="button"
                   >
                     Get in Touch

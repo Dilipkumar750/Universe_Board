@@ -115,11 +115,12 @@ const MainProducts = () => {
                   rel="noopener noreferrer"
                 >
                   <button
-                    className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:outline-none focus:ring-2 focus:ring-blue-300 active:opacity-85 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none flex items-center justify-center space-x-2"
+                    className="select-none rounded-lg py-3 px-6 bg-gradient-to-t from-[#000000] via-[#22459c] to-[#4c72b0] text-center font-sans text-xs font-extrabold uppercase text-[#98CE16] shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:outline-none focus:ring-2 focus:ring-blue-300 active:opacity-85 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none flex items-center justify-center space-x-2"
                   >
-                    <FaWhatsapp className="text-white text-2xl" />
+                    <FaWhatsapp className="text-[#98ce16] text-2xl" />
                     <span>Chat Now</span>
                   </button>
+
 
                 </a>
               </div>

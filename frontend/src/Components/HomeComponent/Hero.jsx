@@ -8,7 +8,7 @@ import swiper1 from "../../assets/hero/slide9.jpg";
 import swiper2 from "../../assets/hero/slide7.png";
 import swiper3 from "../../assets/hero/slide14.jpeg";
 import swiper4 from "../../assets/hero/slide2.jpg";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo2.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -74,8 +74,8 @@ export default function App() {
               />
               <div className="absolute inset-0 flex justify-start items-end p-8 mb-16">
                 <div className="bg-blue-100/50 backdrop-blur-sm rounded-[50px] p-8 shadow-lg text-center max-w-lg">
-                  <div className="h-16 w-20 mx-auto">
-                    <img src={logo} alt="Company Logo" className="h-full w-full object-contain" />
+                  <div className="h-16 w-60 mx-auto">
+                    <img src={logo} alt="Company Logo" className="h-full w-60 object-contain" />
                   </div>
                   <h1 className="text-2xl font-bold text-gray-800">{slide.title}</h1>
                   <p className="text-gray-800 mt-4">{slide.description}</p>

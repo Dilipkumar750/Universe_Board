@@ -3,7 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo2.png";
+import bgvector from "../../assets/bgvector.jpg";
+import v from "../../assets/v1.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,18 +18,20 @@ const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="bg-white sticky px-6 top-0 z-50">
+    <header
+      className="bg-white sticky top-0 z-50 px-6 bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgvector})` }}
+    >
       <div className="max-w-full flex items-center justify-between mx-auto h-20">
-
         {/* Logo */}
         <div className="flex items-center gap-3">
           <Link to="/">
-            <img src={logo} alt="Company Logo" className="h-20 w-28" />
-
-          </Link>          
-          <span className="text-3xl font-bold text-blue-900">
-            Universe Visuals
+            <img src={logo} alt="Company Logo" className="h-24 w-32" />
+          </Link>
+          <span className="text-2xl font-bold text-[#97ce16] inline-flex items-center w-auto p-0">
+            Universe <img src={v} alt="Visuals logo" className="w-10 h-8 -mr-2" />isuals
           </span>
+
         </div>
 
         {/* Desktop Navigation */}
@@ -37,7 +41,7 @@ const Header = () => {
               key={path}
               to={path}
               className={`text-lg font-medium transition-all duration-300 
-                ${isActive(path) ? "border-b-4 border-blue-500 text-blue-700" : "text-black hover:text-gray-600"}`}
+                ${isActive(path) ? "border-b-4 border-[#c1ff31] text-white" : "text-[#c1ff31] hover:text-gray-200"}`}
             >
               {path === "/" ? "Home" : path.replace("/", "")}
             </Link>
@@ -48,13 +52,13 @@ const Header = () => {
         <div className="hidden md:flex flex-col text-md items-start gap-1">
           <a
             href="mailto:info@universevisuals.com"
-            className="flex items-center gap-2 text-black hover:text-gray-300"
+            className="flex items-center gap-2 text-white hover:text-gray-300"
           >
             <IoIosMail /> info@universevisuals.com
           </a>
           <a
             href="tel:9965085475"
-            className="flex items-center gap-2 text-black hover:text-gray-300"
+            className="flex items-center gap-2 text-white hover:text-gray-300"
           >
             <FaPhoneAlt /> 99650 85475
           </a>
