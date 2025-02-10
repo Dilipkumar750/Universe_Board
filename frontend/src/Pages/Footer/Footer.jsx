@@ -1,10 +1,10 @@
 import { SiFacebook } from "react-icons/si";
 import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/UniverseVisuals.png";
 import { Link } from "react-router-dom";
-
+import bgvector from "../../assets/bgvector2.jpg";
 const ColorFoot = () => (
-  <footer className="bg-black p-4 md:p-10 font-[sans-serif] tracking-wide">
+  <footer className=" p-4 md:p-10 font-[sans-serif] tracking-wide" style={{ backgroundImage: `url(${bgvector})`, backgroundRepeat:'no-repeat', backgroundSize:'cover' }}>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-4">
       
       {/* Logo and Social Links */}
@@ -12,7 +12,7 @@ const ColorFoot = () => (
         <img
           src={logo}
           alt="Gravity Global Exports Logo"
-          className="w-32 md:w-28 scale-150 p-3"
+          className="w-60 md:w-48 scale-150 p-3"
         />
         <ul className="flex space-x-6 my-2">
           <li>
@@ -53,7 +53,7 @@ const ColorFoot = () => (
           </li>
         </ul>
         <address className="font-bold text-white text-sm space-y-1 mt-4">
-          <span className="text-blue-600 font-bold text-2xl">Universe Visuals</span>
+          <span className="text-[#98CE16] font-bold text-2xl">Universe Visuals</span>
           <br />
           9/W 2A, 1st Floor Akilandeswari Nagar,
           <br />
@@ -67,7 +67,7 @@ const ColorFoot = () => (
 
       {/* Product List 1 */}
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-blue-400">Product List</h4>
+        <h4 className="text-lg font-semibold mb-6 text-[#98CE16]">Product List</h4>
         <ul className="space-y-2">
           {[
             "Interactive Panel",
@@ -90,7 +90,7 @@ const ColorFoot = () => (
 
       {/* Product List 2 */}
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-blue-400">Product List</h4>
+        <h4 className="text-lg font-semibold mb-6 text-[#98CE16]">Product List</h4>
         <ul className="space-y-2">
           {[
             "Kindergarten Items",
@@ -113,7 +113,7 @@ const ColorFoot = () => (
 
       {/* Information */}
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-blue-400">Information</h4>
+        <h4 className="text-lg font-semibold mb-6 text-[#98CE16]">Information</h4>
         <ul className="space-y-2">
           {[
             { label: "Home", path: "/" },
@@ -136,7 +136,7 @@ const ColorFoot = () => (
 
       {/* Contact Us */}
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-blue-400">Contact Us</h4>
+        <h4 className="text-lg font-semibold mb-6 text-[#98CE16]">Contact Us</h4>
         <ul className="space-y-2">
           {[
             { text: "info@universevisuals.com", href: "mailto:info@universevisuals.com" },

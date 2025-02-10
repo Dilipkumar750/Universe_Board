@@ -20,7 +20,7 @@ const { loading, error,data } = useSelector((state) => state.testimonial.addTest
   };
 console.log(error,data)
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handle-Submit}>
       <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" required />
       <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required />
       <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Review" required />

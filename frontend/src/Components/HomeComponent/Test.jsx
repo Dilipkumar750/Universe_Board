@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllTestimonials } from "../../slices/testimonialSlice";
-import { FaStar } from "react-icons/fa"; 
+import { FaStar } from "react-icons/fa";
 import hand1 from "../../assets/hands/hand1.jpg";
 import hand2 from "../../assets/hands/hand2.jpg";
 import hand3 from "../../assets/hands/hand3.jpg";
@@ -96,7 +96,7 @@ const TestimonialCarousel = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex items-center space-x-6">
             <img
-              src={testimonials[currentIndex]?.image || getHandImage(currentIndex)} 
+              src={testimonials[currentIndex]?.image || getHandImage(currentIndex)}
               alt={testimonials[currentIndex]?.name}
               className="object-cover md:h-[250px] md:w-[250px] h-[150px] w-[150px] rounded-full shadow-lg"
             />

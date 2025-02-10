@@ -3,6 +3,7 @@ import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { TbManualGearbox } from "react-icons/tb";
 import { PiTargetBold } from "react-icons/pi";
 import { MdOutlinePointOfSale } from "react-icons/md";
+import bg from "../../assets/bginnovation.jpg"
 
 const Turnover = () => {
   const turnoverData = [
@@ -29,8 +30,8 @@ const Turnover = () => {
   ];
 
   return (
-    <div className="relative p-12 bg-gradient-to-r from-blue-200 to-white rounded-xl shadow-xl">
-      <h2 className="text-4xl font-bold text-center text-[#003366]">
+    <div className="relative p-12 rounded-xl shadow-xl" style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}>
+      <h2 className="text-4xl font-bold text-center text-[#98CE16]">
         Turnover Highlights
       </h2>
 

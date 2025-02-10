@@ -43,7 +43,7 @@ const AboutUs = () => {
       case "vision":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4">Our Vision</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Our Vision</h2>
             <div className="flex flex-wrap items-center justify-center">
               <img src={vision} alt="Vision" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
               <p className="w-full md:w-1/2 text-lg text-justify text-gray-700 px-4">
@@ -56,7 +56,7 @@ const AboutUs = () => {
       case "mission":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Our Mission</h2>
             <div className="flex flex-wrap items-center justify-center">
               <img src={mission} alt="Mission" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
               <p className="w-full md:w-1/2 text-lg text-justify text-gray-700 px-4">
@@ -69,7 +69,7 @@ const AboutUs = () => {
       case "products":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4">Our Products</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Our Products</h2>
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
@@ -104,7 +104,7 @@ const AboutUs = () => {
       case "team":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4">Our Team</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Our Team</h2>
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
@@ -139,7 +139,7 @@ const AboutUs = () => {
       case "why-us":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4">Why Us?</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Why Us?</h2>
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
@@ -173,7 +173,6 @@ const AboutUs = () => {
       default:
         return null;
     }
-
   };
 
   return (
@@ -181,7 +180,7 @@ const AboutUs = () => {
       {/* About Section */}
       <div className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gray-200">
         <div className="max-lg:order-1 max-lg:text-center sm:p-12 p-4" data-aos="fade-right">
-          <h2 className="text-[#003366] lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
+          <h2 className="text-[#98CE16] lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
           <p className="text-gray-800 mt-6 text-md leading-relaxed justify-center text-justify">
@@ -194,8 +193,11 @@ const AboutUs = () => {
             Under the inspiring leadership of Mrs. Meena Harikrishnan, we have built goodwill in the industry. To lead the market in our domain, we are committed to providing nothing but the best.
           </p>
           <Link to="/Contact">
-            <button className="w-[150px] bg-white h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-blue-500 before:to-blue-600 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-black">
-              Get Started
+            <button
+              className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#98CE16] bg-gradient-to-t from-[#000000] via-[#22459c] to-[#4c72b0] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+              type="button"
+            >
+              Get in Touch
             </button>
           </Link>
         </div>
@@ -237,7 +239,7 @@ const AboutUs = () => {
                 <h3 className="text-lg font-semibold text-[#002B5B] mb-2">{product.title}</h3>
                 <div className="flex justify-center mt-4 gap-4">
                   <Link to="/OurProducts">
-                    <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-200">
+                    <button className="bg-gradient-to-t from-[#000000] via-[#22459c] to-[#4c72b0] text-[#98CE16] py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-200">
                       More Products
                     </button>
                   </Link>
@@ -277,7 +279,7 @@ const AboutUs = () => {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 rounded-md font-medium transition-all duration-300
-              ${activeTab === tab ? "border-b-4 border-blue-500 bg-white text-gray-900" : "bg-transparent text-gray-700"}`}
+              ${activeTab === tab ? "border-b-4 border-[#98CE16] bg-white text-gray-900" : "bg-transparent text-gray-700"}`}
             >
               {tab.replace("-", " ").toUpperCase()}
             </button>
@@ -286,7 +288,7 @@ const AboutUs = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="tab-content mt-4 md:mt-8 mb-8 bg-white rounded-lg shadow-lg py-6 px-4 max-w-5xl mx-auto transition-transform duration-300 ease-in-out">
+        <div className="tab-content mt-4 md:mt-8 mb-8 bg-white border-[#092252] rounded-lg shadow-lg py-6 px-4 max-w-5xl mx-auto transition-transform duration-300 ease-in-out">
           {renderTabContent()}
         </div>
       </div>
