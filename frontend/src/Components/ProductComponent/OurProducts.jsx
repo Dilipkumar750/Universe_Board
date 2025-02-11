@@ -160,14 +160,14 @@ const CategorySection = () => {
 
       <div className="bg-white p-8 rounded-lg shadow-lg">
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 rounded-lg shadow-lg p-6">
+          <div className="md:sticky top-1 h-full w-full md:mr-8 bg-gradient-to-r from-gray-500 via-gray-400 to-gray-500 rounded-lg shadow-lg p-6">
             <div className="border-gray-700 mb-2">
               <h2 className="px-4 py-3 bg-slate-800 rounded-md">
                 <button
                   className="flex justify-between w-full text-left text-lg font-semibold text-white hover:text-pink-200 transition duration-200 ease-in-out"
                   onClick={() => {
                     setSelectedCategory(null);
-                    setSelectedSubCategory(null);
+                    setSelectedSubCategory(null);x
                     setProducts(allProduct);
                   }}
                 >

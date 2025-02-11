@@ -43,7 +43,7 @@ const AboutUs = () => {
       case "vision":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Our Vision</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-lime-600">Our Vision</h2>
             <div className="flex flex-wrap items-center justify-center">
               <img src={vision} alt="Vision" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
               <p className="w-full md:w-1/2 text-lg text-justify text-gray-700 px-4">
@@ -56,7 +56,7 @@ const AboutUs = () => {
       case "mission":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-lime-600">Our Mission</h2>
             <div className="flex flex-wrap items-center justify-center">
               <img src={mission} alt="Mission" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
               <p className="w-full md:w-1/2 text-lg text-justify text-gray-700 px-4">
@@ -69,7 +69,7 @@ const AboutUs = () => {
       case "products":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Our Products</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-lime-600">Our Products</h2>
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
@@ -104,7 +104,7 @@ const AboutUs = () => {
       case "team":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Our Team</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-lime-600">Our Team</h2>
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
@@ -139,7 +139,7 @@ const AboutUs = () => {
       case "why-us":
         return (
           <div>
-            <h2 className="text-3xl font-bold text-center mb-4 text-[#98CE16]">Why Us?</h2>
+            <h2 className="text-3xl font-bold text-center mb-4 text-lime-600">Why Us?</h2>
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
@@ -178,12 +178,12 @@ const AboutUs = () => {
   return (
     <div className="font-sans font-medium">
       {/* About Section */}
-      <div className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-gray-200">
+      <div className="grid lg:grid-cols-2 items-center gap-y-4 lg:gap-y-6 bg-black">
         <div className="max-lg:order-1 max-lg:text-center sm:p-12 p-4" data-aos="fade-right">
-          <h2 className="text-[#98CE16] lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
+          <h2 className="text-lime-600 lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">
             Our Company
           </h2>
-          <p className="text-gray-800 mt-6 text-md leading-relaxed justify-center text-justify">
+          <p className="text-white mt-6 text-md leading-relaxed justify-center text-justify">
             Universe Visuals aims to provide our clients with the best range of products by procuring them from reliable vendors. This success is made possible by the unwavering support of our esteemed vendors, who deliver world-class products. With our offerings, we meet the expectations of various entities, including hotels, restaurants, upscale homes, hospitals, management institutes, and corporate offices.
             <br />
             <br />
@@ -194,7 +194,7 @@ const AboutUs = () => {
           </p>
           <Link to="/Contact">
             <button
-              className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#98CE16] bg-gradient-to-t from-[#000000] via-[#22459c] to-[#4c72b0] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+              className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#f4f5f3] bg-gradient-to-t from-[#000000] via-[#232731] to-[#a8bcdb] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
               type="button"
             >
               Get in Touch

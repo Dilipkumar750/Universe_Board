@@ -54,10 +54,9 @@ const Innovation = () => {
 
   return (
     <section className="relative font-inter antialiased">
-      {/* Main section with background */}
+      { /* Main section with background */}
       <section
-        className="relative flex flex-col justify-between gap-2 about-section pb-10 mt-5"
-        style={{ backgroundImage: `url(${bgblue})`, backgroundSize: "cover" }}
+        className="relative flex flex-col justify-between gap-2 about-section pb-10 mt-5 bg-black shadow-lg"
       >
         <div className="container page-padding relative z-10">
           {/* About section card (if needed) */}
@@ -65,7 +64,7 @@ const Innovation = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 mb-16">
             {/* Text content */}
             <div className="mt-[6rem] relative col-span-1 ml-10">
-              <h2 className="text-3xl md:text-[36px] font-bold leading-tight mb-6 text-[#98CE16]">
+              <h2 className="text-3xl md:text-[36px] font-bold leading-tight mb-6 text-lime-600">
                 Innovative Technology Solutions for Your Business
               </h2>
               <p className="text-base md:text-lg text-white leading-relaxed text-justify font-medium">
@@ -133,7 +132,7 @@ const Innovation = () => {
               <img
                 alt="Industry"
                 src={industry}
-                className="absolute inset-0 h-full w-full object-cover md:rounded-3xl"
+                className="absolute inset-0 h-full w-full object-cover md:rounded-3xl shadow-lg"
                 data-aos="fade-right"
               />
             </div>
@@ -141,12 +140,12 @@ const Innovation = () => {
 
           {/* Text section */}
           <div
-            className="relative flex items-center bg-gradient-to-r from-[#092252] to-[#2963c0] md:rounded-r-3xl"
+            className="relative flex items-center bg-black md:rounded-r-3xl shadow-lg"
             data-aos="fade-left"
           >
-            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-[#092252] md:rounded-l-3xl"></span>
+            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 bg-black md:rounded-l-3xl  "></span>
             <div className="p-5 sm:p-16 lg:p-24">
-              <h2 className="text-2xl font-bold sm:text-3xl text-[#98CE16]">
+              <h2 className="text-2xl font-bold sm:text-3xl text-lime-600">
                 Our Educational Tools in Action: Real Success Stories
               </h2>
               <p className="mt-4 text-white text-justify font-medium">
@@ -159,7 +158,7 @@ const Innovation = () => {
               <div data-aos="zoom-in" className="flex justify-start">
                 <Link to="/Contact">
                   <button
-                    className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#98CE16] bg-gradient-to-t from-[#000000] via-[#22459c] to-[#4c72b0] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                    className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#ebf0e9] bg-gradient-to-t from-[#000000] via-[#232731] to-[#a8bcdb] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
                     type="button"
                   >
                     Get in Touch

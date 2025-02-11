@@ -4,7 +4,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { useState } from "react";
 import logo from "../../assets/logo2.png";
-import bgvector from "../../assets/bgvector.jpg";
 import v from "../../assets/v1.png";
 
 const Header = () => {
@@ -19,8 +18,8 @@ const Header = () => {
 
   return (
     <header
-      className="bg-white sticky top-0 z-50 px-6 bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgvector})` }}
+      className="bg-black sticky top-0 z-50 px-6 bg-cover bg-center shadow-slate-800"
+      
     >
       <div className="max-w-full flex items-center justify-between mx-auto h-20">
         {/* Logo */}
@@ -28,27 +27,24 @@ const Header = () => {
           <Link to="/">
             <img src={logo} alt="Company Logo" className="h-24 w-32" />
           </Link>
-          <span className="text-2xl font-bold text-[#97ce16] inline-flex items-center w-auto p-0">
-            Universe <img src={v} alt="Visuals logo" className="w-10 h-8 -mr-2" />isuals
-          </span>
 
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          {["/", "/About", "/OurProducts", "/Contact"].map((path) => (
-            <Link
-              key={path}
-              to={path}
-              className={`text-lg font-medium transition-all duration-300 
-                ${isActive(path) ? "border-b-4 border-[#c1ff31] text-white" : "text-[#c1ff31] hover:text-gray-200"}`}
-            >
-              {path === "/" ? "Home" : path.replace("/", "")}
-            </Link>
-          ))}
-        </div>
+          <div className="hidden md:flex items-center space-x-12">
+            {["/", "/About", "/OurProducts", "/Contact"].map((path) => (
+              <Link
+                key={path}
+                to={path}
+                className={`text-lg font-medium transition-all duration-200 ease-in-out 
+            ${isActive(path) ? "border-b-1 transition-all duration-100 border-[#fdfdfd] text-lime-600" : "text-lime-600 hover:text-white-200 hover:border-b-2 hover:border-[#fdfdfd]"}`}
+              >
+                {path === "/" ? "Home" : path.replace("/", "")}
+              </Link> 
+            ))}
+          </div>
 
-        {/* Contact Information */}
+          {/* Contact Information */}
         <div className="hidden md:flex flex-col text-md items-start gap-1">
           <a
             href="mailto:info@universevisuals.com"

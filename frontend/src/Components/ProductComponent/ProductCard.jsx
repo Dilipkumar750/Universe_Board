@@ -27,9 +27,9 @@ function ProductCard({ product }) {
           className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-110"
         />
       </div>
-      <div className="flex flex-col justify-between h-60 p-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-300">
-        <div className="text-center flex-grow">
-          <h3 className="text-lg font-semibold text-black">{product.title}</h3>
+      <div className="flex flex-col justify-between h-60 p-4 bg-gray-500">
+        <div className="text-center text-white flex-grow">
+          <h3 className="text-lg font-semibold text-white">{product.title}</h3>
           <p
             className={`text-sm text-black-200 mt-2 ${
               isExpanded ? '' : 'line-clamp-3'
@@ -54,7 +54,7 @@ function ProductCard({ product }) {
             View
           </button>
           <Link to="/Contact">
-            <button className="text-white px-4 py-2 rounded-lg bg-green-600">
+            <button className="text-white px-4 py-2 rounded-lg bg-blue-600">
               Contact
             </button>
           </Link>
