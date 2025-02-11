@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import about from "../../assets/bgabout.jpg";
+import about from "../../assets/company.jpg";
 import imageOne from "../../assets/classchair.jpg";
 import imageTwo from "../../assets/kinds- school-desk.png";
 import imageThree from "../../assets/projector1.jpg";
@@ -10,7 +10,7 @@ import mission from "../../assets/mission.jpg";
 import product from "../../assets/low-price.jpg";
 import ourTeam from "../../assets/ourTeam.jpg";
 import whyUs from "../../assets/whyUs.jpg";
-import ProjectManagement from "../../assets/project.jpg";
+import ProjectManagement from "../../assets/project2.png";
 
 const products = [
   {
@@ -45,7 +45,7 @@ const AboutUs = () => {
           <div>
             <h2 className="text-3xl font-bold text-center mb-4 text-lime-600">Our Vision</h2>
             <div className="flex flex-wrap items-center justify-center">
-              <img src={vision} alt="Vision" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
+              <img src={vision} alt="Vision" className="w-full h-60 md:w-1/4 mb-4 rounded-md" data-aos="fade-right" />
               <p className="w-full md:w-1/2 text-lg text-justify text-gray-700 px-4">
                 Universe Visuals aims to be a global leader in premium, innovative, and reliable educational and display products. We empower institutions, corporate entities, and homes worldwide with solutions that enhance visual communication and learning experiences.
               </p>
@@ -58,7 +58,7 @@ const AboutUs = () => {
           <div>
             <h2 className="text-3xl font-bold text-center mb-4 text-lime-600">Our Mission</h2>
             <div className="flex flex-wrap items-center justify-center">
-              <img src={mission} alt="Mission" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
+              <img src={mission} alt="Mission" className="w-full md:w-1/4 h-60 mb-4 rounded-md" data-aos="fade-right" />
               <p className="w-full md:w-1/2 text-lg text-justify text-gray-700 px-4">
                 We are committed to consistently delivering high-quality products that exceed client expectations through excellence and innovation. Our mission is to ensure global accessibility to world-class display and communication solutions.
               </p>
@@ -73,7 +73,7 @@ const AboutUs = () => {
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
-              <img src={product} alt="Products" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
+              <img src={product} alt="Products" className="w-full md:w-1/4 h-60 mb-4 rounded-md" data-aos="fade-right" />
 
               {/* Content Section */}
               <div className="w-full md:w-1/2 text-gray-700 px-4">
@@ -108,7 +108,7 @@ const AboutUs = () => {
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
-              <img src={ourTeam} alt="Our Team" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
+              <img src={ourTeam} alt="Our Team" className="w-full md:w-1/4 h-60 mb-4 rounded-md" data-aos="fade-right" />
 
               {/* Content Section */}
               <div className="w-full md:w-1/2 text-gray-700 px-4">
@@ -143,7 +143,7 @@ const AboutUs = () => {
 
             <div className="flex flex-wrap items-center justify-center">
               {/* Image Section */}
-              <img src={whyUs} alt="Why Us" className="w-full md:w-1/4 h-auto mb-4 rounded-md" data-aos="fade-right" />
+              <img src={whyUs} alt="Why Us" className="w-full md:w-1/4 h-60 mb-4 rounded-md" data-aos="fade-right" />
 
               {/* Content Section */}
               <div className="w-full md:w-1/2 text-gray-700 px-4">
@@ -205,7 +205,7 @@ const AboutUs = () => {
         <div className="lg:h-[480px] flex items-center" data-aos="fade-left">
           <img
             src={about}
-            className="w-full h-full rounded-3xl p-2"
+            className="w-full h-full rounded-3xl p-2 object-fill"
             alt="About Our Company"
           />
         </div>
@@ -213,7 +213,7 @@ const AboutUs = () => {
 
       {/* Products Section */}
       <div className="flex flex-col items-center mt-5 mb-5 p-4" data-aos="fade-down">
-        <h1 className="text-4xl font-extrabold mb-6 text-center text-[#002B5B]">
+        <h1 className="text-4xl font-extrabold mb-6 text-center text-[#98CE16]">
           Our Famous Products
         </h1>
 
@@ -251,9 +251,9 @@ const AboutUs = () => {
       </div>
 
       {/* Project Management Section */}
-      <div className="py-8 bg-white flex flex-col md:flex-row items-center">
+      <div className="py-8 bg-white flex flex-col md:flex-row items-center -mt-20">
         <div className="md:w-1/2 p-4" data-aos="fade-right">
-          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-[#003366]">
+          <h1 className="text-5xl font-bold mb-4 text-center md:text-left text-lime-600">
             Project Management
           </h1>
           <p className="text-center md:text-left text-md leading-relaxed">

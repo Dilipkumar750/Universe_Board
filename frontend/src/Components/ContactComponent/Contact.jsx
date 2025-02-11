@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import packing from "../../assets/packing.jpg";
 import medical from "../../assets/medical.png";
-
+import universevisuals from "../../assets/UniverseVisuals.png";
 const InputField = ({ label, type, placeholder }) => (
   <div>
     <label
-    className="text-black text-sm font-bold block mb-2"
+    className="text-[#98CE16] text-sm font-bold block mb-2"
     htmlFor={label.toLowerCase().replace(" ", "-")}
     >
       {label}
@@ -14,7 +14,7 @@ const InputField = ({ label, type, placeholder }) => (
       id={label.toLowerCase().replace(" ", "-")}
       type={type}
       placeholder={placeholder}
-      className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-red-500"
+      className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#98CE16]"
       required
     />
   </div>
@@ -67,7 +67,7 @@ const Contact = () => {
       {/* Inquiry Section */}
       <div className="-mt-12 sm:-mt-16 mb-6 px-4">
         <div className="mx-auto max-w-6xl shadow-lg p-6 sm:p-8 relative bg-black rounded-xl">
-          <h2 className="text-2xl sm:text-4xl text-white font-bold text-center">
+          <h2 className="text-2xl sm:text-4xl text-[#98CE16] font-bold text-center">
             Product Inquiry
           </h2>
 
@@ -79,19 +79,20 @@ const Contact = () => {
                 grow, and explore new opportunities. Feel free to reach out to
                 us through any of the following ways:
               </p>
-              <p className="mt-4 font-semibold text-[#50c233]">Address:</p>
+              <p className="mt-4 font-semibold text-[#98CE16]">Address:</p>
               <p>
-                Universe Visuals,
-                <br />
+                {/* Universe Visuals:
+                <br /> */}
+                <img src={universevisuals} alt="" className="w-48 h-32 ml-5 -mt-5 -mb-5" />
                 9/W 2A, 1st Floor Akilandeswari Nagar,
                 <br />
                 Canara Bank Colony, Ammapatti Salai,
                 <br />
-                Thuraiyur, Tiruchirappalli - 621010, Tamil Nadu.
+                Thuraiyur, Tiruchirappalli - 621010.
               </p>
-              <p className="mt-4 font-semibold text-[#50c233]">Phone:</p>
-              <p>99650 85475</p>
-              <p className="mt-4 font-semibold text-[#50c233]">Email:</p>
+              <p className="mt-4 font-semibold text-[#98CE16]">Phone:</p>
+              <p>+91 99650 85475</p>
+              <p className="mt-4 font-semibold text-[#98CE16]">Email:</p>
               <p>info@universevisuals.com</p>
             </div>
 
@@ -128,14 +129,14 @@ const Contact = () => {
             <InputField label="Subject" type="text" placeholder="Subject" />
 
             <div className="col-span-full">
-              <label className="text-black text-sm block mb-2 font-bold">
+              <label className="text-white text-sm block mb-2 font-bold">
                 Message
               </label>
               <textarea
                 name="message"
                 placeholder="Message"
                 rows="4"
-                className="w-full rounded-md px-4 border border-gray-300 text-sm pt-3 outline-blue-500"
+                className="w-full rounded-md px-4 border border-gray-300 text-sm pt-3 outline-[#98CE16]"
                 required
               />
             </div>
@@ -147,13 +148,13 @@ const Contact = () => {
                 className="w-4 h-4 mr-3"
                 required
               />
-              <label htmlFor="checkbox1" className="text-sm text-lime-600">
+              <label htmlFor="checkbox1" className="text-sm text-white">
                 I agree to the{" "}
-                <a href="/TermsAndConditions" className="underline">
+                <a href="/TermsAndConditions" className="underline text-blue-500">
                   Terms and Conditions
                 </a>{" "}
                 and{" "}
-                <a href="/PrivacyPolicy" className="underline">
+                <a href="/PrivacyPolicy" className="underline text-blue-500">
                   Privacy Policy
                 </a>
               </label>
@@ -161,7 +162,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="relative h-12 w-full sm:w-48 flex items-center justify-center bg-blue-600 text-white font-bold rounded-full overflow-hidden shadow-md hover:scale-95 transition duration-300 col-span-full sm:col-auto"
+              className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#ebf0e9] bg-gradient-to-t from-[#000000] via-[#232731] to-[#a8bcdb] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group w-1/3"
               disabled={loading}
             >
               {loading ? "Sending..." : "Send Message"}
