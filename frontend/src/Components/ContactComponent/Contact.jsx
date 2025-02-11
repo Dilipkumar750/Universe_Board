@@ -66,12 +66,12 @@ const Contact = () => {
 
       {/* Inquiry Section */}
       <div className="-mt-12 sm:-mt-16 mb-6 px-4">
-        <div className="mx-auto max-w-6xl shadow-lg p-6 sm:p-8 relative bg-gray-300 rounded-xl">
-          <h2 className="text-2xl sm:text-4xl text-[#003366] font-bold text-center">
+        <div className="mx-auto max-w-6xl shadow-lg p-6 sm:p-8 relative bg-black rounded-xl">
+          <h2 className="text-2xl sm:text-4xl text-white font-bold text-center">
             Product Inquiry
           </h2>
 
-          <div className="mt-6 text-black flex flex-col md:flex-row gap-6">
+          <div className="mt-6 text-white flex flex-col md:flex-row gap-6">
             {/* Contact Info */}
             <div className="md:flex-1">
               <p>
@@ -79,7 +79,7 @@ const Contact = () => {
                 grow, and explore new opportunities. Feel free to reach out to
                 us through any of the following ways:
               </p>
-              <p className="mt-4 font-semibold text-[#003366]">Address:</p>
+              <p className="mt-4 font-semibold text-[#50c233]">Address:</p>
               <p>
                 Universe Visuals,
                 <br />
@@ -89,9 +89,9 @@ const Contact = () => {
                 <br />
                 Thuraiyur, Tiruchirappalli - 621010, Tamil Nadu.
               </p>
-              <p className="mt-4 font-semibold text-[#003366]">Phone:</p>
+              <p className="mt-4 font-semibold text-[#50c233]">Phone:</p>
               <p>99650 85475</p>
-              <p className="mt-4 font-semibold text-[#003366]">Email:</p>
+              <p className="mt-4 font-semibold text-[#50c233]">Email:</p>
               <p>info@universevisuals.com</p>
             </div>
 
@@ -147,7 +147,7 @@ const Contact = () => {
                 className="w-4 h-4 mr-3"
                 required
               />
-              <label htmlFor="checkbox1" className="text-sm text-black">
+              <label htmlFor="checkbox1" className="text-sm text-lime-600">
                 I agree to the{" "}
                 <a href="/TermsAndConditions" className="underline">
                   Terms and Conditions

@@ -4,7 +4,7 @@ import logo from "../../assets/UniverseVisuals.png";
 import { Link } from "react-router-dom";
 import bgvector from "../../assets/bgvector2.jpg";
 const ColorFoot = () => (
-  <footer className=" p-4 md:p-10 font-[sans-serif] tracking-wide" style={{ backgroundImage: `url(${bgvector})`, backgroundRepeat:'no-repeat', backgroundSize:'cover' }}>
+  <footer className=" p-4 md:p-10 font-[sans-serif] tracking-wide bg-black" >
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-4">
       
       {/* Logo and Social Links */}

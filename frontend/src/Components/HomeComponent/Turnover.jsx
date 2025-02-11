@@ -30,8 +30,8 @@ const Turnover = () => {
   ];
 
   return (
-    <div className="relative p-12 rounded-xl shadow-xl" style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}>
-      <h2 className="text-4xl font-bold text-center text-[#98CE16]">
+    <div className="relative p-12 rounded-xl shadow-xl bg-gradient-to-t from-[#000000] via-[#979ba7] to-[#070707]">
+      <h2 className="text-4xl font-bold text-center text-lime-600">
         Turnover Highlights
       </h2>
 
