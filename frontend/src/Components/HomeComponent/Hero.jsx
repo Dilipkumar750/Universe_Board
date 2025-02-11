@@ -5,9 +5,9 @@ import { FaShieldAlt, FaToolbox, FaStar } from "react-icons/fa";
 import { FaMoneyBill, FaBalanceScale, FaCheckCircle } from "react-icons/fa";
 
 import swiper1 from "../../assets/hero/slide9.jpg";
-import swiper2 from "../../assets/hero/slide7.png";
+import swiper2 from "../../assets/amusementproduct.jpg";
 import swiper3 from "../../assets/hero/slide14.jpeg";
-import swiper4 from "../../assets/hero/slide2.jpg";
+import swiper4 from "../../assets/slider7.png";
 import logo from "../../assets/logo2.png";
 
 import "swiper/css";
@@ -72,13 +72,13 @@ export default function App() {
                 loading="lazy"
                 onError={(e) => (e.target.src = "/fallback-image.jpg")}
               />
-              <div className="absolute inset-0 flex justify-start items-end p-8 mb-16">
-                <div className="bg-blue-100/50 backdrop-blur-sm rounded-[50px] p-8 shadow-lg text-center max-w-lg">
+              <div className="absolute inset-0 flex justify-start items-start p-8 mt-6">
+                <div className="bg-black/50 backdrop-blur-sm rounded-[50px] p-8 shadow-lg text-center max-w-lg">
                   <div className="h-16 w-60 mx-auto">
                     <img src={logo} alt="Company Logo" className="h-full w-60 object-contain" />
                   </div>
-                  <h1 className="text-2xl font-bold text-gray-800">{slide.title}</h1>
-                  <p className="text-gray-800 mt-4">{slide.description}</p>
+                  <h1 className="text-2xl font-bold text-[#98CE16]">{slide.title}</h1>
+                  <p className="text-white mt-4">{slide.description}</p>
                   <div className="flex justify-center mt-4 gap-4">
                     {slide.icons.map((icon, i) => (
                       <div key={i} className="hover:text-blue-600 transition duration-200">

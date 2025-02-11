@@ -158,11 +158,13 @@ const Innovation = () => {
               <div data-aos="zoom-in" className="flex justify-start">
                 <Link to="/Contact">
                   <button
-                    className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#ebf0e9] bg-gradient-to-t from-[#000000] via-[#232731] to-[#a8bcdb] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                    className="font-sans mt-10 flex justify-center gap-2 items-center shadow-xl text-lg text-[#ebf0e9] bg-gradient-to-t from-[#000000] via-[#232731] to-[#a8bcdb] backdrop-blur-md lg:font-semibold border-gray-50 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group
+  transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-t hover:from-[#a8bcdb] hover:via-[#232731] hover:to-[#000000] hover:text-white hover:shadow-2xl"
                     type="button"
                   >
                     Get in Touch
                   </button>
+
                 </Link>
               </div>
             </div>
